@@ -1,0 +1,64 @@
+.container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  width: 155px;
+
+
+  &__icon {
+    transition-duration: .05s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.6,0);
+
+    &-selected {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-list {
+    padding: 8px 0;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    background-color: var(--basic-extra-light);
+
+
+    &__link {
+      padding: 8px 16px;
+
+      @include fonts($size: 1.4rem);
+    }
+
+    &__link:first-child {
+      @include fonts($size: 1.4rem, $weight: 700);
+    }
+
+    &__border {
+      width: 80%;
+      border: 1px solid var(--basic-neutral);
+    }
+  }
+}
+
+.catalog-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--special-light);
+
+  @include fonts($size: 1.6rem);
+}
+
+
+.isActive {
+  background-color: var(--special-bright);
+  color: var(--basic-extra-light);
+}

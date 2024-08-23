@@ -1,0 +1,46 @@
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      height: 36px;
+
+      @include fonts($size: 1.6rem);
+    }
+  }
+
+  &-burger-menu {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    &__phone {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+
+      @include fonts($size: 1.6rem, $weight: 700);
+    }
+
+    &__search {
+      padding: 8px;
+      border-radius: 27px;
+    }
+  }
+}

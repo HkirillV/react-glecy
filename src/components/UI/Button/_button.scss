@@ -1,0 +1,18 @@
+.button {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--basic-extra-light-icon);
+
+  @include fonts($size: 1.4rem, $weight: 400);
+}
+
+.isActive {
+  background-color: var(--special-bright);
+  color: var(--basic-extra-light);
+}
