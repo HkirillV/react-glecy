@@ -2,11 +2,11 @@ import {useState} from 'react'
 import {FiSearch, FiLogIn} from "react-icons/fi";
 import {SlBasket} from "react-icons/sl";
 
-import Button from '../UI/Button/Button';
-import Dropdown from "../UI/Dropdown/Dropdown";
-import Search from "../UI/Search/Search";
-import Auth from "../UI/Auth/Auth";
-import Basket from "../UI/Basket/Basket";
+import Button from '../../../UI/Button/Button.jsx';
+import Dropdown from "../../../UI/Dropdown/Dropdown.jsx";
+import Search from "../../../UI/Search/Search.jsx";
+import Auth from "../../../UI/Auth/Auth.jsx";
+import Basket from "../../../UI/Basket/Basket.jsx";
 
 const HeaderMenu = () => {
     const [contentType, setContentType] = useState(null);
@@ -22,12 +22,12 @@ const HeaderMenu = () => {
     return (
         <nav className="navigation">
             <div className="navigation-menu">
-                <a className="navigation-menu__logo" href="/index.html"><img src="/src/img/header/logo.svg" width="137"
+                <a className="navigation-menu__logo" href="/index.html"><img src="/src/assets/icons/header/logo.svg" width="137"
                                                                              height="56" loading="lazy" alt="/"/></a>
                 <ul className="navigation-menu-list">
                     <Dropdown onClick={(event) => handleClick('catalog', event)} isActive={contentType === 'catalog'}>Каталог</Dropdown>
-                    <li className="navigation-menu__link"><a href="/">Доставка и оплата</a></li>
-                    <li className="navigation-menu__link"><a href="/">О компании</a></li>
+                    <li className="navigation-menu__link"><a href="/public">Доставка и оплата</a></li>
+                    <li className="navigation-menu__link"><a href="/public">О компании</a></li>
                 </ul>
             </div>
             <div className="navigation-burger-menu">

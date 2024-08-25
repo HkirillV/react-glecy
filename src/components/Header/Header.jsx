@@ -1,4 +1,4 @@
-import HeaderMenu from "../HeaderMenu/HeaderMenu.jsx";
+import HeaderMenu from "./components/HeaderMenu/HeaderMenu.jsx";
 
 const Header = () => {
     return (

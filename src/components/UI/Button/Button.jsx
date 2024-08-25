@@ -1,3 +1,5 @@
+import './Button.scss'
+
 const Button = (props) => {
     const {children, onClick, isActive, type, categoryBtn} = props;
 

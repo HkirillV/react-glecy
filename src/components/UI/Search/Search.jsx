@@ -1,3 +1,5 @@
+import './Search.scss'
+
 const Search = ({isActive}) => {
 
     return (

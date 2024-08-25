@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import './DropDown.scss'
+
 import {IoIosArrowDown} from "react-icons/io";
 
 import Button from '../Button/Button.jsx';

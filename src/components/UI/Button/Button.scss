@@ -9,7 +9,7 @@
   cursor: pointer;
   background-color: var(--basic-extra-light-icon);
 
-  @include fonts($size: 1.4rem, $weight: 400);
+  @include fonts ($size: 1.4rem, $weight: 400);
 }
 
 .isActive {

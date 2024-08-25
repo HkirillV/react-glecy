@@ -1,5 +1,7 @@
-import Button from "../Button/Button.jsx";
 import {useState} from "react";
+
+import './Auth.scss'
+import Button from "../Button/Button.jsx";
 
 const Auth = ({isActive}) => {
     const [authenticated, setAuthenticated] = useState(false);
