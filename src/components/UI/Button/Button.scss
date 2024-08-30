@@ -1,3 +1,5 @@
+@import "@/styles/abstracts/mixins.scss";
+
 .button {
   display: flex;
   align-items: center;
@@ -12,7 +14,7 @@
   @include fonts ($size: 1.4rem, $weight: 400);
 }
 
-.isActive {
+.is-active {
   background-color: var(--special-bright);
   color: var(--basic-extra-light);
 }

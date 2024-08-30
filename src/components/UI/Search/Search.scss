@@ -1,9 +1,12 @@
+@import "@/styles/abstracts/mixins.scss";
+
 .search {
   position: absolute;
-  top: 50px;
+  top: 75px;
   right: 230px;
-  display: flex;
-  visibility: visible;
+  z-index: 10;
+  display: none;
+  visibility: hidden;
   max-width: 356px;
   width: 100%;
   border-radius: 4px;
@@ -25,7 +28,7 @@
   }
 }
 
-.visible-hidden {
-  display: none;
-  visibility: hidden;
+.is-active {
+  display: flex;
+  visibility: visible;
 }

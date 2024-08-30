@@ -1,10 +1,13 @@
-.auth-form-wrapper {
+@import "@/styles/abstracts/mixins.scss";
+
+.auth {
   position: absolute;
-  top: 50px;
+  top: 75px;
   right: 128px;
-  display: flex;
+  z-index: 10;
+  display: none;
   flex-direction: column;
-  visibility: visible;
+  visibility: hidden;
   padding: 48px;
   max-width: 324px;
   width: 100%;
@@ -15,6 +18,7 @@
 
   &__title {
     margin-bottom: 32px;
+    color: var(--basic-extra-dark);
 
     @include fonts($size: 2.4rem, $weight: 700);
   }
@@ -53,6 +57,7 @@
 }
 
 .auth-btn {
+  align-items: center;
   padding-inline: 32px;
   height: 44px;
   border-radius: 26px;
@@ -62,7 +67,7 @@
   @include fonts($size: 1.6rem, $weight: 700);
 }
 
-.visible-hidden {
-  display: none;
-  visibility: hidden;
+.is-active {
+  display: flex;
+  visibility: visible;
 }

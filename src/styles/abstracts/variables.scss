@@ -20,4 +20,16 @@
   --status-success: #00e484;
   --status-warning: #fd912e;
   --shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+  --basic-border-light: rgba(252, 252, 252, 0.4);
+  --basic-shadow-light:  0 4px 12px 0 rgba(45, 52, 64, 0.1);
+
+  --swiper-navigation-size-new: 12px;
 }
+
+$tablet: 1280px;
+$tablet-s: 1024px;
+$tablet-xs: 920px;
+$tablet-xxs: 768px;
+$mobile-s: 640px;
+$mobile-xs: 480px;
+$mobile-xxs: 375px

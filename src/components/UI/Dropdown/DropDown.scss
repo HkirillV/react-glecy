@@ -1,3 +1,5 @@
+@import "@/styles/abstracts/mixins.scss";
+
 .container {
   position: relative;
 }
@@ -5,13 +7,14 @@
 .dropdown {
   position: absolute;
   top: 40px;
+  z-index: 10;
   width: 155px;
 
 
   &__icon {
     transition-duration: .05s;
     transition-property: all;
-    transition-timing-function: cubic-bezier(.4,0,.6,0);
+    transition-timing-function: cubic-bezier(.4, 0, .6, 0);
 
     &-selected {
       transform: rotate(180deg);
@@ -26,13 +29,13 @@
     background-color: var(--basic-extra-light);
 
 
-    &__link {
+    &__item {
       padding: 8px 16px;
 
       @include fonts($size: 1.4rem);
     }
 
-    &__link:first-child {
+    &__item:first-child {
       @include fonts($size: 1.4rem, $weight: 700);
     }
 
@@ -41,24 +44,23 @@
       border: 1px solid var(--basic-neutral);
     }
   }
+
+  &-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--special-light);
+
+    @include fonts($size: 1.6rem);
+  }
 }
 
-.catalog-btn {
-  display: flex;
-  align-items: center;
-  column-gap: 6px;
-  padding: 6px 16px;
-  border-radius: 30px;
-  height: 32px;
-  border: none;
-  cursor: pointer;
-  background-color: var(--special-light);
-
-  @include fonts($size: 1.6rem);
-}
-
-
-.isActive {
+.is-active {
   background-color: var(--special-bright);
   color: var(--basic-extra-light);
 }

@@ -1,21 +1,27 @@
 import {Provider} from 'react-redux'
-import store from '@/store/store'
-import '@/styles/main.scss'
-import '@/App.scss'
+import {Routes, Route, Link, BrowserRouter} from "react-router-dom";
+import store from './store/store'
 
-import Header from '@/components/Header/Header';
-import '@/styles/main.scss'
-import '@/App.scss'
+import './styles/index.js'
+import './App.scss'
+import Header from '@/components/Layouts/Header';
+import Slide from "/src/components/Layouts/Slide";
 
 function App() {
 
-    return (
-      <Provider store={store}>
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
         <div className="app-container">
           <Header/>
+          <Slide/>
         </div>
-      </Provider>
-    )
+        <Routes>
+
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+  )
 }
 
 export default App

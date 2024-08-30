@@ -1,9 +1,12 @@
-.navigation {
+@import "@/styles/abstracts/mixins.scss";
+
+.header {
   position: relative;
   display: flex;
   justify-content: space-between;
+  padding: 24px 0;
 
-  &-menu {
+  &__navigation {
     display: flex;
     align-items: center;
     column-gap: 16px;
@@ -11,11 +14,9 @@
     &-list {
       display: flex;
       align-items: center;
-
-
     }
 
-    &__link {
+    &-item {
       display: flex;
       align-items: center;
       padding: 8px 16px;
@@ -25,22 +26,18 @@
     }
   }
 
-  &-burger-menu {
+  &__actions {
     display: flex;
     align-items: center;
     column-gap: 16px;
 
-    &__phone {
+    &-phone {
       display: flex;
       align-items: center;
       font-weight: 700;
 
       @include fonts($size: 1.6rem, $weight: 700);
     }
-
-    &__search {
-      padding: 8px;
-      border-radius: 27px;
-    }
   }
 }
+
