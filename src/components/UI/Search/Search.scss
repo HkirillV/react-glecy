@@ -14,6 +14,19 @@
   box-shadow: var(--shadow);;
   background-color: var(--basic-extra-light);
 
+  @include media-tablet-s {
+    top: 40%;
+    right: 30%;
+  }
+
+  @include media-mobile-s {
+    right: 20%;
+  }
+
+  @include media-mobile-xs {
+    right: 10%;
+  }
+
   &__input {
     margin: 24px 16px;
     padding-left: 15px;
@@ -25,6 +38,11 @@
     background-color: var(--basic-white);
 
     @include fonts($size: 1.6rem);
+
+    @include media-mobile-s {
+
+      @include fonts($size: 1.2rem);
+    }
   }
 }
 

@@ -3,6 +3,7 @@
 .basket {
   position: absolute;
   top: 75px;
+  right: 0;
   z-index: 10;
   display: none;
   flex-direction: column;
@@ -13,11 +14,31 @@
   background-color: var(--basic-extra-light);
   box-shadow: var(--box-shadow);
 
+  @include media-tablet-s {
+    top: 40%;
+    right: 30%;
+  }
+
+  @include media-mobile-s {
+    right: 20%;
+    padding: 20px;
+  }
+
+  @include media-mobile-xs {
+    right: 10%;
+    padding: 30px;
+  }
+
   &__title {
     margin-bottom: 32px;
     color: var(--basic-extra-dark);
 
     @include fonts($size: 2.4rem, $weight: 700);
+
+    @include media-mobile-s {
+
+      @include fonts($size: 1.8rem, $weight: 700);
+    }
   }
 
   &__list {
@@ -35,6 +56,11 @@
       color: var(--basic-extra-dark);
 
       @include fonts($size: 1.8rem, $weight: 700);
+
+      @include media-mobile-s {
+
+        @include fonts($size: 1.4rem, $weight: 700);
+      }
     }
   }
 }
@@ -43,6 +69,10 @@
   display: flex;
   align-items: center;
   column-gap: 72px;
+
+  @include media-mobile-xs {
+    column-gap: 40px;
+  }
 
   &__container {
     display: flex;
@@ -60,12 +90,16 @@
     color: var(--basic-neutral);
 
     @include fonts($size: 1.4rem, $weight: 400);
+
+    @include fonts($size: 1rem, $weight: 700);
   }
 
   &__title, &__price {
     color: var(--basic-extra-dark);
 
     @include fonts($size: 1.8rem, $weight: 700);
+
+    @include fonts($size: 1.4rem, $weight: 700);
   }
 
   &__btn {

@@ -16,7 +16,7 @@ const Slide = () => {
   const [secondSwiper, setSecondSwiper] = useState(null);
 
   return (
-    <div className="test">
+    <div className="slide-container">
       <Swiper
         modules={[Navigation, Pagination, Controller]}
         onSwiper={setFirstSwiper}
@@ -39,10 +39,7 @@ const Slide = () => {
             <div className='slide__container'>
               <img className="slide__image" src="/src/assets/images/slide/мороженое_1.png" width="312" height="507"
                    loading="lazy" alt="/"/>
-              <svg className="slide__image_background" width="312" height="312" viewBox="0 0 312 312" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="164.5" cy="156" rx="163.577" ry="156"/>
-              </svg>
+              <div className="slide__image_background" ></div>
             </div>
           </div>
         </SwiperSlide>
@@ -57,10 +54,7 @@ const Slide = () => {
             <div className='slide__container'>
               <img className="slide__image" src="/src/assets/images/slide/мороженое_2.png" width="312" height="507"
                    loading="lazy" alt="/"/>
-              <svg className="slide__image_background" width="312" height="312" viewBox="0 0 312 312" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="164.5" cy="156" rx="163.577" ry="156"/>
-              </svg>
+              <div className="slide__image_background"></div>
             </div>
           </div>
         </SwiperSlide>
@@ -75,10 +69,7 @@ const Slide = () => {
             <div className='slide__container'>
               <img className="slide__image" src="/src/assets/images/slide/мороженое_3.png" width="312" height="507"
                    loading="lazy" alt="/"/>
-              <svg className="slide__image_background" width="312" height="312" viewBox="0 0 312 312" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="164.5" cy="156" rx="163.577" ry="156"/>
-              </svg>
+              <div className="slide__image_background"></div>
             </div>
           </div>
         </SwiperSlide>
@@ -92,6 +83,7 @@ const Slide = () => {
         spaceBetween={0}
         slidesPerView={2}
         allowTouchMove={false}
+
         speed={700}
       >
         <SwiperSlide className="sub-slide__item">

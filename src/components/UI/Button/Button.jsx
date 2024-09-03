@@ -15,7 +15,7 @@ const Button = (props) => {
   return (
     <button
       className={classNames(className, {
-        'is-active': isActive,
+        'is-active-btn': isActive,
       })}
       type={type}
       onClick={onClick}>{children}</button>

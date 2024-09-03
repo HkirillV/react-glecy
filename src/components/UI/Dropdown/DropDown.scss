@@ -57,10 +57,20 @@
     background-color: var(--special-light);
 
     @include fonts($size: 1.6rem);
+
+    @include media-mobile-s {
+
+      @include fonts($size: 1.4rem);
+    }
+
+    @include media-mobile-xs {
+
+      padding: 6px 8px;
+    }
   }
 }
 
-.is-active {
+.is-active-btn {
   background-color: var(--special-bright);
   color: var(--basic-extra-light);
 }

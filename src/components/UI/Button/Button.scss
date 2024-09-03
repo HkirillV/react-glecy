@@ -14,7 +14,7 @@
   @include fonts ($size: 1.4rem, $weight: 400);
 }
 
-.is-active {
+.is-active-btn {
   background-color: var(--special-bright);
   color: var(--basic-extra-light);
 }

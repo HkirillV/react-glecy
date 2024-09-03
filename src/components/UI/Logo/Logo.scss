@@ -1,1 +1,8 @@
 @import "@/styles/abstracts/mixins.scss";
+
+.logo {
+  @include media-mobile-s {
+    display: none;
+    visibility: hidden;
+  }
+}
