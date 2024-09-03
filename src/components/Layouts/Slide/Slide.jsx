@@ -22,7 +22,7 @@ const Slide = () => {
         onSwiper={setFirstSwiper}
         loop={true}
         controller={{control: secondSwiper}}
-        spaceBetween={50}
+        spaceBetween={100}
         slidesPerView={1}
         navigation
         pagination={{clickable: true}}
