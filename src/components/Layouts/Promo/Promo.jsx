@@ -14,7 +14,7 @@ const Promo = () => {
               малинового варенья бесплатно.</p>
             <Button className="promo__button button" children="Хочу подарок"/>
           </div>
-          <img src="src/assets/icons/promo/malina.svg" width="219" height="268" loading="lazy" alt=""/>
+          <img className="promo__icon"  src="src/assets/icons/promo/malina.svg" width="219" height="268" loading="lazy" alt=""/>
         </div>
         <div className="promo__item">
           <div className="wrapper">
@@ -23,7 +23,7 @@ const Promo = () => {
               совершенно бесплатно.</p>
             <Button className="promo__button button" children="Хочу подарок"/>
           </div>
-          <img src="src/assets/icons/promo/marshmallows.svg" width="219" height="268" loading="lazy" alt=""/>
+          <img className="promo__icon" src="src/assets/icons/promo/marshmallows.svg" width="219" height="268" loading="lazy" alt=""/>
         </div>
       </div>
     </div>

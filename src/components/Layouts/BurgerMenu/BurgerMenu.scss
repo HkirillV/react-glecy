@@ -1,4 +1,5 @@
 @import "@/styles/abstracts/mixins.scss";
+
 .burger-menu {
   position: fixed;
   top: 0;
@@ -87,10 +88,14 @@
 
 .blur {
   position: absolute;
-  right: 40%;
+  right: 44%;
   width: 100%;
   height: 100%;
   backdrop-filter: blur(1px);
+
+  @include media-mobile-s {
+    right: 50%;
+  }
 }
 
 .is-active {

@@ -7,6 +7,7 @@ import './App.scss'
 import Header from '@/components/Layouts/Header';
 import Slide from "/src/components/Layouts/Slide";
 import Promo from "@/components/Layouts/Promo";
+import Products from "@/components/Layouts/Products";
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
         <Header/>
         <Slide/>
         <Promo/>
+        <Products/>
       </BrowserRouter>
     </Provider>
   )
