@@ -9,7 +9,7 @@ const Button = (props) => {
     children,
     onClick,
     isActive,
-    type
+    type = "button",
   } = props;
 
   return (

@@ -3,6 +3,7 @@
 
 .slide-container {
   display: flex;
+  margin-bottom: 80px;
 }
 
 .slide {
@@ -241,6 +242,10 @@
   }
 
   @include media-mobile-s {
+    left: 118px;
+  }
+
+  @include media-mobile-xs {
     left: 88px;
   }
 }

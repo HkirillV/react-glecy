@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import classNames from "classnames";
 import {SlBasket} from "react-icons/sl";
 import {FiLogIn, FiSearch} from "react-icons/fi";
 
@@ -12,8 +13,6 @@ import Search from "@/components/UI/Search";
 import Auth from "@/components/UI/Auth";
 import Basket from "@/components/Layouts/Basket";
 import BurgerMenu from "@/components/Layouts/BurgerMenu";
-import classNames from "classnames";
-
 
 const Header = () => {
   const [contentType, setContentType] = useState(null);

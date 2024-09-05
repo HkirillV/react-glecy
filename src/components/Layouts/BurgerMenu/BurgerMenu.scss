@@ -17,7 +17,7 @@
     width: 40%;
     height: 100%;
     background-color: var(--basic-neutral);
-    transition: all 0.5s;
+    transition: 0.2s;
 
     @include media-tablet-s {
       display: flex;
@@ -81,7 +81,7 @@
 }
 
 .burger-menu-btn.is-active {
-  transition: all 0.3s;
+  transition: 0.3s;
   transform: rotate(-90deg);
 }
 

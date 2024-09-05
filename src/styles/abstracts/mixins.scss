@@ -11,6 +11,10 @@
   @media (max-width: 1024px) { @content; }
 }
 
+@mixin media-tables-s-above {
+  @media (min-width: 1024px) { @content; }
+}
+
 @mixin media-tablet-xs {
   @media (max-width: 920px) { @content; }
 }

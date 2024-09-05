@@ -6,19 +6,16 @@ import './styles/index.js'
 import './App.scss'
 import Header from '@/components/Layouts/Header';
 import Slide from "/src/components/Layouts/Slide";
+import Promo from "@/components/Layouts/Promo";
 
-function App() {
+const App = () => {
 
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <div className="app-container">
-          <Header/>
-          <Slide/>
-        </div>
-        <Routes>
-
-        </Routes>
+        <Header/>
+        <Slide/>
+        <Promo/>
       </BrowserRouter>
     </Provider>
   )
