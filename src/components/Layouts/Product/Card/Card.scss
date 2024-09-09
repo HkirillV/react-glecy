@@ -1,5 +1,6 @@
 @import '@/styles/abstracts/mixins';
 
-.products {
-  margin-top: 80px;
+.card {
+  display: flex;
+  gap: 30px;
 }

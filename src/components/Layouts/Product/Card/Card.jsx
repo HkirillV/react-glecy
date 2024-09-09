@@ -5,13 +5,9 @@ import './Card.scss'
 
 const URL = 'http://localhost:3000/cards'
 
-const Card = (props) => {
-  const {
-    className,
-    children,
-  } = props
+const Card = () => {
 
-  const [cards, setCards] = useState([])
+  const [cards, setCards] = useState(null)
 
   useEffect(() => {
     const getData = async () => {
@@ -24,13 +20,14 @@ const Card = (props) => {
       }
     }
     getData()
-  }, [URL]);
+  }, []);
 
   return (
-    <div className={className}>
-      {cards.map((item) => (
-        <div className={item} key={item.id}>
-
+    <div className="card">
+      {cards && cards.map((item) => (
+        <div className="card__item" key={item.id}>
+          <p className="card__title">{item.title}</p>
+          <p className="card__text">{item.text}</p>
         </div>
       ))}
     </div>

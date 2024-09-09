@@ -1,13 +1,13 @@
 import {Provider} from 'react-redux'
-import {Routes, Route, Link, BrowserRouter} from "react-router-dom";
 import store from './store/store'
+import {Routes, Route, Link, BrowserRouter} from "react-router-dom";
 
 import './styles/index.js'
 import './App.scss'
 import Header from '@/components/Layouts/Header';
-import Slide from "/src/components/Layouts/Slide";
+import Slide from "@/components/Layouts/Slide";
 import Promo from "@/components/Layouts/Promo";
-import Products from "@/components/Layouts/Products";
+import Product from "@/components/Layouts/Product";
 
 const App = () => {
 
@@ -17,7 +17,7 @@ const App = () => {
         <Header/>
         <Slide/>
         <Promo/>
-        <Products/>
+        <Product/>
       </BrowserRouter>
     </Provider>
   )
