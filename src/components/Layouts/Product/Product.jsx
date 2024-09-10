@@ -5,7 +5,7 @@ const Product = () => {
 
   return (
     <div className="product">
-      <h4 className="product__title">Попробуйте самые популярные вкусы нашего мороженого</h4>
+      <h2 className="product__title">Попробуйте самые популярные вкусы нашего мороженого</h2>
       <Card/>
     </div>
   )
