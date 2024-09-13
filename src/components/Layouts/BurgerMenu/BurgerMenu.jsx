@@ -10,13 +10,14 @@ import Basket from "@/components/Layouts/Basket/index.js";
 
 const BurgerMenu = (props) => {
   const {
+    className,
     isActive,
     contentType,
     handleClick,
     setBurgerActive,
   } = props
   return (
-    <div className={classNames('burger-menu', {'is-active': isActive})} onClick={() => setBurgerActive(false)}>
+    <div className={classNames(className, {'is-active': isActive})} onClick={() => setBurgerActive(false)}>
       <div className="blur"/>
       <div className="burger-menu__content" onClick={(e) => e.stopPropagation()}>
         <Link className="header__overlay-menu-phone" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>

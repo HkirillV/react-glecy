@@ -3,15 +3,75 @@
   font-weight: $weight;
 }
 
-@mixin media-tablet {
+@mixin fluid-text($max: 36, $min: 18) {
+  font-size: clamp(#{$min}px, #{$max / 1366 * 100}vw, #{$max}px);
+}
+
+@mixin reset-link {
+  color: inherit;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin flex-center ($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50%, -50%
+}
+
+@mixin square ($size) {
+  width: $size;
+  aspect-ratio: 1;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin media-desktop-above {
+  @media (min-width: 1281px) { @content; }
+}
+
+@mixin media-desktop {
   @media (max-width: 1280px) { @content; }
 }
 
-@mixin media-tablet-s {
-  @media (max-width: 1024px) { @content; }
+@mixin media-table-above {
+  @media (max-width: 1025px) { @content; }
 }
 
-@mixin media-tables-s-above {
+@mixin media-table {
   @media (min-width: 1024px) { @content; }
 }
 

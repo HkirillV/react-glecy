@@ -1,13 +1,14 @@
 @import "@/styles/abstracts/mixins.scss";
+@import "@/styles/abstracts/utils.scss";
 
 .header {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0;
+  padding-block: 24px;
 
-  &__navigation {
+  &__menu {
     display: flex;
     align-items: center;
     column-gap: 16px;
@@ -42,11 +43,6 @@
     align-items: center;
     column-gap: 16px;
 
-    @include media-tablet-s {
-      display: none;
-      visibility: hidden;
-    }
-
     &-phone {
       display: flex;
       align-items: center;
@@ -57,17 +53,5 @@
   }
 }
 
-.visible-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 

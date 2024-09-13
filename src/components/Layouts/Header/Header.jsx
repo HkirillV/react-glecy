@@ -28,20 +28,21 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h1 className="visible-hidden">Магазин мороженого Глейси</h1>
-      <nav className="header__navigation">
-        <Logo/>
-        <ul className="header__navigation-list">
+      <h1 className="visually-hidden">Магазин мороженого Глейси</h1>
+      <Logo className="header__logo logo"/>
+      <nav className="header__menu">
+        <ul className="header__menu-list">
           <Dropdown onClick={(event) => handleClick('dropdown-btn', event)}
                     isActive={contentType === 'dropdown-btn'}>Каталог</Dropdown>
-          <li className="header__navigation-item"><Link className="header__navigation-link" to="/public">Доставка и
-            оплата</Link></li>
-          <li className="header__navigation-item"><Link className="header__navigation-link" to="/public">О
-            компании</Link>
+          <li className="header__menu-item">
+            <Link className="header__menu-link" to="/public">Доставка и оплата</Link>
+          </li>
+          <li className="header__menu-item">
+            <Link className="header__menu-link" to="/public">О компании</Link>
           </li>
         </ul>
       </nav>
-      <div className="header__overlay-menu">
+      <div className="header__overlay-menu hidden-mobile">
         <Link className="header__overlay-menu-phone" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
         <Button className={'button'} onClick={(event) => handleClick('search', event)}
                 isActive={contentType === 'search'} categoryBtn="button"><FiSearch/></Button>
@@ -55,10 +56,12 @@ const Header = () => {
           Товара</Button>
         <Basket isActive={contentType === 'basket'}/>
       </div>
-      <div className={classNames('burger-menu-btn', {'is-active': burgerActive})} onClick={() => setBurgerActive(!burgerActive)}>
+      <div className={classNames('burger-menu-btn visible-mobile', {'is-active': burgerActive})}
+           onClick={() => setBurgerActive(!burgerActive)}>
         <span/>
       </div>
-      <BurgerMenu isActive={burgerActive} contentType={contentType}  handleClick={handleClick} setBurgerActive={setBurgerActive}/>
+      <BurgerMenu className="burger-menu visible-mobile" isActive={burgerActive} contentType={contentType} handleClick={handleClick}
+                  setBurgerActive={setBurgerActive}/>
     </header>
   )
 }

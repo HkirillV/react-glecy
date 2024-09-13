@@ -1,14 +1,31 @@
 @import "@/styles/abstracts/mixins.scss";
 
-.dropdown-container {
-  position: relative;
-}
-
 .dropdown {
-  position: absolute;
-  top: 40px;
-  z-index: 10;
-  width: 155px;
+  position: relative;
+
+  &-menu {
+    position: absolute;
+    top: 40px;
+    z-index: 10;
+    padding-block: 8px;
+    width: 100%;
+    border-radius: var(--border-radius-xs);
+    box-shadow: var(--shadow);
+    background-color: var(--basic-extra-light);
+
+
+    &__item {
+      padding: 8px 16px;
+
+      @include fonts($size: 1.4rem);
+    }
+
+    &__item:first-child {
+
+      @include fonts($size: 1.4rem, $weight: 700);
+    }
+
+  }
 
 
   &__icon {
@@ -21,39 +38,13 @@
     }
   }
 
-  &-list {
-    padding: 8px 0;
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: var(--shadow);
-    background-color: var(--basic-extra-light);
-
-
-    &__item {
-      padding: 8px 16px;
-
-      @include fonts($size: 1.4rem);
-    }
-
-    &__item:first-child {
-      @include fonts($size: 1.4rem, $weight: 700);
-    }
-
-    &__border {
-      width: 80%;
-      border: 1px solid var(--basic-neutral);
-    }
-  }
-
   &-btn {
     display: flex;
     align-items: center;
     column-gap: 6px;
     padding: 6px 16px;
-    border-radius: 30px;
     height: 32px;
-    border: none;
-    cursor: pointer;
+    border-radius: var(--border-radius-lg);
     background-color: var(--special-light);
 
     @include fonts($size: 1.6rem);
@@ -64,13 +55,7 @@
     }
 
     @include media-mobile-xs {
-
       padding: 6px 8px;
     }
   }
-}
-
-.is-active-btn {
-  background-color: var(--special-bright);
-  color: var(--basic-extra-light);
 }

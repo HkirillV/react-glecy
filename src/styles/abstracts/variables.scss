@@ -5,8 +5,6 @@
   --basic-light: #e7e7e7;
   --basic-extra-light: #fcfcfc;
   --basic-white: #fff;
-  --basic-extra-light-hover: rgba(252, 252, 252, 0.5);
-  --basic-extra-light-icon: rgba(252, 252, 252, 0.3);
   --special-extra-bright: #ff2f64;
   --special-bright: #ff4a78;
   --special-neutral: #f79;
@@ -19,10 +17,34 @@
   --status-error: #ea5454;
   --status-success: #00e484;
   --status-warning: #fd912e;
+
+  --basic-extra-light-hover: rgba(252, 252, 252, 0.5);
+  --basic-extra-light-icon: rgba(252, 252, 252, 0.3);
+
   --shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
-  --basic-border-light: rgba(252, 252, 252, 0.4);
-  --basic-shadow-light:  0 4px 12px 0 rgba(45, 52, 64, 0.1);
-  --shadow-light: rgba(255, 47, 100, 0.3) ;
+  --basic-shadow-light: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
+  --border-light: rgba(255, 47, 100, 0.3);
 
   --swiper-navigation-size-new: 12px;
+
+  --border-neutral-xs: 1px solid var(--basic-neutral);
+  --border-extra-light-sm: 2px solid var(--basic-extra-light);
+  --border-light-md: 4px solid var(--border-light);
+  --border-radius-xs: 4px;
+  --border-radius-sm: 16px;
+  --border-raduis-md: 26px;
+  --border-radius-lg: 30px;
+  --border-radius-xxl: 100%;
+
+  --font-family-base: "Inter", sans-serif;
+
+  --container-width: 1170px;
+
+  --container-padding-x: 20px;
+  --section-padding-y: 20px;
+
+  --input-height: 48px;
+  --button-height: 52px;
+
+  --transition-duration: 0.2s;
 }

@@ -10,11 +10,11 @@
   visibility: hidden;
   padding: 48px;
   max-width: 441px;
-  border-radius: 4px;
+  border-radius: var(--border-radius-xs);
   background-color: var(--basic-extra-light);
   box-shadow: var(--box-shadow);
 
-  @include media-tablet-s {
+  @include media-table {
     top: 40%;
     right: 30%;
   }
