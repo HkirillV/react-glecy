@@ -2,50 +2,21 @@
 
 .search {
   position: absolute;
-  top: 75px;
-  right: 230px;
+  top: 40px;
+  right: 255px;
   z-index: 10;
-  display: none;
-  visibility: hidden;
-  width: 100%;
-  max-width: 356px;
+  width: 80%;
+  padding: 24px 16px;
   border-radius: var(--border-radius-xs);
-
-  box-shadow: var(--shadow);;
   background-color: var(--basic-extra-light);
-
-  @include media-table {
-    top: 40%;
-    right: 30%;
-  }
-
-  @include media-mobile-s {
-    right: 20%;
-  }
-
-  @include media-mobile-xs {
-    right: 10%;
-  }
+  box-shadow: var(--shadow);
 
   &__input {
-    margin: 24px 16px;
-    padding-left: 15px;
-    width: 100%;
+    padding-inline: 15px;
     height: 48px;
+    width: 100%;
     border-radius: var(--border-radius-xs);
     border: var(--border-neutral-xs);
     background-color: var(--basic-white);
-
-    @include fonts($size: 1.6rem);
-
-    @include media-mobile-s {
-
-      @include fonts($size: 1.2rem);
-    }
   }
-}
-
-.is-active {
-  display: flex;
-  visibility: visible;
 }

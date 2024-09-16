@@ -1,14 +1,12 @@
 @import "@/styles/abstracts/mixins.scss";
 
 .dropdown {
-  position: relative;
 
   &-menu {
     position: absolute;
-    top: 40px;
+    top: 78px;
     z-index: 10;
     padding-block: 8px;
-    width: 100%;
     border-radius: var(--border-radius-xs);
     box-shadow: var(--shadow);
     background-color: var(--basic-extra-light);
@@ -16,17 +14,8 @@
 
     &__item {
       padding: 8px 16px;
-
-      @include fonts($size: 1.4rem);
     }
-
-    &__item:first-child {
-
-      @include fonts($size: 1.4rem, $weight: 700);
-    }
-
   }
-
 
   &__icon {
     transition-duration: .05s;
@@ -46,13 +35,6 @@
     height: 32px;
     border-radius: var(--border-radius-lg);
     background-color: var(--special-light);
-
-    @include fonts($size: 1.6rem);
-
-    @include media-mobile-s {
-
-      @include fonts($size: 1.4rem);
-    }
 
     @include media-mobile-xs {
       padding: 6px 8px;

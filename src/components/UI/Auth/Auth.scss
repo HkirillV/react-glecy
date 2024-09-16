@@ -35,12 +35,9 @@
     margin-bottom: 32px;
     color: var(--basic-extra-dark);
 
-    @include fonts($size: 2.4rem, $weight: 700);
-
     @include media-mobile-s {
       margin-bottom: 16px;
 
-      @include fonts($size: 1.6rem, $weight: 700);
     }
   }
 }
@@ -56,12 +53,9 @@
     border-radius: var(--border-radius-xs);
     border: var(--border-neutral-xs);
 
-    @include fonts($size: 1.6rem);
-
     @include media-mobile-s {
       height: 32px;
       row-gap: 10px;
-      @include fonts($size: 1.2rem);
     }
   }
 
@@ -77,13 +71,6 @@
 
     &-link {
       text-decoration: underline;
-
-      @include fonts($size: 1.4rem);
-
-      @include media-mobile-s {
-
-        @include fonts($size: 1rem);
-      }
     }
   }
 }
@@ -96,12 +83,9 @@
   background-color: var(--special-extra-bright);
   border: var(--border-light-md);
 
-  @include fonts($size: 1.6rem, $weight: 700);
-
   @include media-mobile-s {
     height: 26px;
     padding-inline: 16px;
-    @include fonts($size: 1.2rem);
   }
 }
 

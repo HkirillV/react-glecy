@@ -5,9 +5,9 @@ import './Search.scss'
 const Search = ({isActive}) => {
 
     return (
-        <div className={classNames('search', {'is-active': isActive})}>
-            <input className="search__input" type="text" disabled={!isActive} placeholder="Поиск по сайту"/>
-        </div>
+        <form className={classNames('search', {'is-active': isActive})}>
+            <input className="search__input" type="search" disabled={!isActive} placeholder="Поиск по сайту"/>
+        </form>
     )
 }
 

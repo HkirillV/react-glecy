@@ -6,8 +6,8 @@
   right: 0;
   z-index: 10;
   display: none;
-  flex-direction: column;
   visibility: hidden;
+  flex-direction: column;
   padding: 48px;
   max-width: 441px;
   border-radius: var(--border-radius-xs);
@@ -32,13 +32,6 @@
   &__title {
     margin-bottom: 32px;
     color: var(--basic-extra-dark);
-
-    @include fonts($size: 2.4rem, $weight: 700);
-
-    @include media-mobile-s {
-
-      @include fonts($size: 1.8rem, $weight: 700);
-    }
   }
 
   &__list {
@@ -54,13 +47,6 @@
 
     &-sum {
       color: var(--basic-extra-dark);
-
-      @include fonts($size: 1.8rem, $weight: 700);
-
-      @include media-mobile-s {
-
-        @include fonts($size: 1.4rem, $weight: 700);
-      }
     }
   }
 }
@@ -88,23 +74,14 @@
 
   &__text {
     color: var(--basic-neutral);
-
-    @include fonts($size: 1.4rem, $weight: 400);
-
-    @include fonts($size: 1rem, $weight: 700);
   }
 
   &__title, &__price {
     color: var(--basic-extra-dark);
-
-    @include fonts($size: 1.8rem, $weight: 700);
-
-    @include fonts($size: 1.4rem, $weight: 700);
   }
 
   &__btn {
     height: 16px;
-    border: none;
     background-color: var(--basic-extra-light);
   }
 
@@ -112,10 +89,4 @@
     display: flex;
     column-gap: 50px;
   }
-}
-
-
-.is-active {
-  display: flex;
-  visibility: visible;
 }

@@ -14,7 +14,7 @@ const Dropdown = (props) => {
   } = props
 
   return (
-    <div className={classNames(className, {})}>
+    <div className={classNames(className)}>
       <Button className={'dropdown-btn'} onClick={onClick} isActive={isActive}>{children}
         <IoIosArrowDown className={classNames('dropdown__icon', {'dropdown__icon dropdown__icon-selected': isActive})}/>
       </Button>

@@ -3,22 +3,26 @@
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
-      "price": 310
+      "price": 310,
+      "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
-      "price": 340
+      "price": 340,
+      "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
-      "price": 330
+      "price": 330,
+      "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
-      "price": 320
+      "price": 320,
+      "imgSrc": "src/assets/images/cards/bubblegum.svg"
     }
   ]
 }

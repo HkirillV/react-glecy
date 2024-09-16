@@ -1,0 +1,14 @@
+@import '@/styles/abstracts/mixins';
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 57px;
+  margin-top: 80px;
+
+ &__title {
+   text-align: center;
+   max-width: 527px;
+ }
+}

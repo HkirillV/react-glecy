@@ -35,29 +35,14 @@
 
   &__title {
     padding-bottom: 24px;
-
-    @include fonts($size: 3.6rem, $weight: 900);
-
-    @include media-mobile-s {
-
-      @include fonts($size: 2.8rem, $weight: 900);
-    }
-
-    @include media-mobile-xs {
-
-      @include fonts($size: 2rem, $weight: 900);
-    }
   }
 
   &__text {
     padding-bottom: 48px;
 
-    @include fonts($size: 1.8rem, $weight: 400);
-
     @include media-mobile-s {
       padding-bottom: 20px;
 
-      @include fonts($size: 1.4rem, $weight: 400);
     }
   }
 
@@ -67,13 +52,6 @@
     border: var(--border-light-md);
     background-color: var(--basic-extra-light);
     box-shadow: var(--basic-shadow-light);
-
-    @include fonts($size: 1.6rem, $weight: 700);
-
-    @include media-mobile-s {
-
-      @include fonts($size: 1.4rem, $weight: 700);
-    }
 
     @include media-mobile-xs {
       padding-inline: 25px;
