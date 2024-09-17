@@ -16,7 +16,7 @@ const Slide = () => {
   const [secondSwiper, setSecondSwiper] = useState(null);
 
   return (
-    <div className="slide-container">
+    <div className="slide-wrapper container">
       <Swiper
         modules={[Navigation, Pagination, Controller]}
         onSwiper={setFirstSwiper}

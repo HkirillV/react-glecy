@@ -38,7 +38,6 @@
     column-gap: 11px;
     border-radius: var(--border-radius-sm);
     background-color: var(--special-neutral);
-
   }
 
   &__icon {
@@ -53,9 +52,7 @@
     height: 44px;
     max-width: 176px;
     padding-inline: 28px;
-    border: var(--border-light-md);
     background-color: var(--basic-extra-light);
-    box-shadow: var(--basic-shadow-light);
 
     @include media-mobile-s {
       max-width: 136px;

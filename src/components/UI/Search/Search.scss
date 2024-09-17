@@ -1,15 +1,28 @@
 @import "@/styles/abstracts/mixins.scss";
 
 .search {
-  position: absolute;
-  top: 40px;
-  right: 255px;
-  z-index: 10;
-  width: 80%;
-  padding: 24px 16px;
-  border-radius: var(--border-radius-xs);
-  background-color: var(--basic-extra-light);
-  box-shadow: var(--shadow);
+  position: relative;
+
+  &__button {
+    @include flex-center(true);
+
+    padding-inline: 8px;
+    height: 32px;
+    border-radius: var(--border-raduis-md);
+    background-color: var(--basic-extra-light-icon);
+  }
+
+  &__form {
+    position: absolute;
+    top: 100%;
+    display: none;
+    visibility: hidden;
+    width: 80%;
+    padding: 24px 16px;
+    border-radius: var(--border-radius-xs);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--shadow);
+  }
 
   &__input {
     padding-inline: 15px;

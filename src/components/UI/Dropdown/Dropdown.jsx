@@ -26,7 +26,7 @@ const Dropdown = (props) => {
           <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/">Фруктовый лед</a></li>
           <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/">Мелорин</a></li>
         </ul>
-      ) : null}
+      ) : []}
     </div>
 
   )

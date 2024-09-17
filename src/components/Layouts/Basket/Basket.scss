@@ -1,32 +1,27 @@
 @import "@/styles/abstracts/mixins";
 
 .basket {
-  position: absolute;
-  top: 75px;
-  right: 0;
-  z-index: 10;
-  display: none;
-  visibility: hidden;
-  flex-direction: column;
-  padding: 48px;
-  max-width: 441px;
-  border-radius: var(--border-radius-xs);
-  background-color: var(--basic-extra-light);
-  box-shadow: var(--box-shadow);
 
-  @include media-table {
-    top: 40%;
-    right: 30%;
+  &__button {
+    position: relative;
+    @include flex-center(true);
+    column-gap: 6px;
+    padding-inline: 16px;
+    height: 32px;
+    border-radius: var(--border-raduis-md);
+    background-color: var(--basic-extra-light-icon);
   }
 
-  @include media-mobile-s {
-    right: 20%;
-    padding: 20px;
-  }
-
-  @include media-mobile-xs {
-    right: 10%;
-    padding: 30px;
+  &-form {
+    position: absolute;
+    top: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 48px;
+    max-width: 441px;
+    border-radius: var(--border-radius-xs);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--box-shadow);
   }
 
   &__title {

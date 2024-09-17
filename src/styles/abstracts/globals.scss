@@ -1,7 +1,7 @@
 @import "@/styles/abstracts/mixins.scss";
 
 body {
-  @include  fluid-text(18, 16);
+  @include  fluid-text(16, 14);
 
   font-family: var(--font-family-base);
   font-weight: 400;
@@ -20,6 +20,7 @@ svg * {
 }
 
 button {
+  border: none;
   cursor: pointer;
 }
 

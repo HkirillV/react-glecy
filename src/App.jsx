@@ -8,6 +8,7 @@ import Header from '@/components/Layouts/Header';
 import Slide from "@/components/Layouts/Slide";
 import Promo from "@/components/Layouts/Promo";
 import Catalog from "@/components/Layouts/Catalog";
+import BurgerMenu from "@/components/Layouts/BurgerMenu";
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
         <Slide/>
         <Promo/>
         <Catalog/>
+        <BurgerMenu/>
       </BrowserRouter>
     </Provider>
   )

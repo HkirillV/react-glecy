@@ -5,7 +5,7 @@ import button from "@/components/UI/Button/index.js";
 
 const Button = (props) => {
   const {
-    className,
+    className = "button",
     children,
     onClick,
     isActive,

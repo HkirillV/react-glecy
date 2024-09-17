@@ -2,21 +2,17 @@
 @import "@/styles/abstracts/utils.scss";
 
 .header {
+  padding-top: 24px;
+
   &__inner {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-block: 24px;
+    column-gap: 16px;
   }
 
   &__menu {
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
-
-    @include media-mobile-s {
-      column-gap: 0;
-    }
+    margin-right: auto;
 
     &-list {
       display: flex;
@@ -33,12 +29,19 @@
         padding: 5px;
       }
     }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      height: 48px;
+    }
   }
 
   &__overlay-menu {
     position: relative;
     display: flex;
     align-items: center;
+    font-size: 14px;
     column-gap: 16px;
 
     &-phone {
