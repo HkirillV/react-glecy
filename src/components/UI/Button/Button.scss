@@ -3,15 +3,9 @@
 .button {
   @include flex-center(true);
 
-  padding-inline: 16px;
   height: var(--button-height);
   border: var(--border-light-md);
   border-radius: var(--border-radius-lg);
   background-color: var(--basic-extra-light-icon);
   box-shadow: var(--basic-shadow-light);
 }
-
-//.button:active {
-//  background-color: var(--special-bright);
-//  color: var(--basic-extra-light);
-//}

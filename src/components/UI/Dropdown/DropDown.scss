@@ -4,7 +4,7 @@
 
   &-menu {
     position: absolute;
-    top: 78px;
+    top: 108%;
     z-index: 10;
     padding-block: 8px;
     border-radius: var(--border-radius-xs);
@@ -24,7 +24,8 @@
         content: "";
         position: absolute;
         top: 100%;
-        left: 16px;
+        display: flex;
+        justify-content: center;
         width: 103px;
         height: 2px;
         background-color: var(--basic-neutral);
@@ -33,26 +34,22 @@
   }
 
   &__icon {
-    transition-duration: .05s;
+    transition-duration: .02s;
     transition-property: all;
     transition-timing-function: cubic-bezier(.4, 0, .6, 0);
-
-    &-selected {
-      transform: rotate(180deg);
-    }
+    transform: rotate(180deg);
   }
 
-  &-btn {
-    display: flex;
-    align-items: center;
+  &__btn {
+    @include flex-center(true);
     column-gap: 6px;
-    padding: 6px 16px;
     height: 32px;
+    padding-inline: 16px;
     border-radius: var(--border-radius-lg);
     background-color: var(--special-light);
 
     @include media-mobile-xs {
-      padding: 6px 8px;
+      padding-inline: 8px;
     }
   }
 }

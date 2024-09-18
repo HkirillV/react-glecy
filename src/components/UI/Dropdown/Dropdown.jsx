@@ -1,3 +1,5 @@
+import {useState} from "react";
+import {Link} from "react-router-dom";
 import classNames from "classnames";
 import {IoIosArrowDown} from "react-icons/io";
 
@@ -9,22 +11,26 @@ const Dropdown = (props) => {
   const {
     className,
     children,
-    onClick,
-    isActive
   } = props
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
-    <div className={classNames(className)}>
-      <Button className={'dropdown-btn'} onClick={onClick} isActive={isActive}>{children}
-        <IoIosArrowDown className={classNames('dropdown__icon', {'dropdown__icon dropdown__icon-selected': isActive})}/>
+    <div className={classNames(className, "dropdown")}>
+      <Button className={classNames('dropdown__btn', {"is-active": isOpen})} onClick={onClick}>{children}
+        <IoIosArrowDown className={classNames({"dropdown__icon": isOpen})}/>
       </Button>
-      {isActive ? (
+      {isOpen ? (
         <ul className="dropdown-menu">
-          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/">Новинки</a></li>
-          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/">Сливочное</a></li>
-          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/">Щербеты</a></li>
-          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/">Фруктовый лед</a></li>
-          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/">Мелорин</a></li>
+          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/">Новинки</Link></li>
+          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/">Сливочное</Link></li>
+          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/">Щербеты</Link></li>
+          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/">Фруктовый лед</Link></li>
+          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/">Мелорин</Link></li>
         </ul>
       ) : []}
     </div>

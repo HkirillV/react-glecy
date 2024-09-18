@@ -15,10 +15,11 @@
   &-form {
     position: absolute;
     top: 100%;
-    display: inline-flex;
+    z-index: 10;
+    display: none;
+    visibility: hidden;
     flex-direction: column;
     padding: 48px;
-    max-width: 441px;
     border-radius: var(--border-radius-xs);
     background-color: var(--basic-extra-light);
     box-shadow: var(--box-shadow);

@@ -1,8 +1,5 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import classNames from "classnames";
-
-import './Header.scss'
 
 import Logo from '@/components/UI/Logo'
 import Dropdown from "@/components/UI/Dropdown";
@@ -10,12 +7,10 @@ import Button from "@/components/UI/Button";
 import Search from "@/components/UI/Search";
 import Auth from "@/components/Layouts/Auth";
 import Basket from "@/components/Layouts/Basket";
-import BurgerMenu from "@/components/Layouts/BurgerMenu";
+
+import './Header.scss'
 
 const Header = () => {
-  const [contentType, setContentType] = useState(null);
-  const [burgerActive, setBurgerActive] = useState(false);
-
 
   return (
     <header className="header">
@@ -25,8 +20,7 @@ const Header = () => {
         <nav className="header__menu">
           <ul className="header__menu-list">
             <li className="header__menu-item">
-              <Dropdown className="dropdown" onClick={(event) => handleClick('dropdown-btn', event)}
-                        isActive={contentType === 'dropdown-btn'}>Каталог</Dropdown>
+              <Dropdown>Каталог</Dropdown>
             </li>
             <li className="header__menu-item">
               <Link className="header__menu-link" to="/public">Доставка и оплата</Link>
@@ -36,17 +30,13 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className="header__overlay-menu hidden-mobile">
-          <Link to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
+        <div className="header__main-menu hidden-mobile">
+          <Link className="header__main-menu" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
           <Search/>
           <Auth/>
           <Basket/>
         </div>
-        <div className={classNames('burger-menu-btn visible-mobile', {'is-active': burgerActive})}
-             onClick={() => setBurgerActive(!burgerActive)}>
-          <span/>
-        </div>
-        <Button className="header__burger-button burger-menu visible-mobile" type="button">
+        <Button className="header__burger-button burger-menu visible-mobile">
           <span className="visually-hidden">Open navigation menu</span>
         </Button>
       </div>

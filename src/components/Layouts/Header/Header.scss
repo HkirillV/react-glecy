@@ -12,6 +12,7 @@
   }
 
   &__menu {
+    position: relative;
     margin-right: auto;
 
     &-list {
@@ -37,7 +38,7 @@
     }
   }
 
-  &__overlay-menu {
+  &__main-menu {
     position: relative;
     display: flex;
     align-items: center;
