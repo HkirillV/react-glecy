@@ -1,53 +1,60 @@
+import {useState} from "react";
+import {SlBasket} from "react-icons/sl";
 import classNames from "classnames";
+import Button from '@/components/UI/Button';
 
 import './Basket.scss'
+import ProductCard from "@/components/UI/ProductCard/ProductCard.jsx";
 
-import Button from '@/components/UI/Button';
-import {SlBasket} from "react-icons/sl";
+const Basket = () => {
+  const [product, setProduct] = useState([1]);
+  const [info, setInfo] = useState({"info": "Ваша корзина пока пуста"});
+  const [isOpen, setIsOpen] = useState(false);
 
-const Basket = (props) => {
-  const {
-    isActive
-  } = props
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <div className="basket">
-      <Button className="basket__button"><SlBasket/>2 Товара</Button>
-      <form className={classNames('basket-form', {'is-active': isActive})}>
-        <h3 className="basket-form__title">Корзина</h3>
-        <ul className="basket-form__list">
-          <li className="basket-form__item">
-            <img className="basket-form__icons" src="/src/assets/icons/basket/malinka.svg" width="46" height="46"
-                 loading="lazy" alt=""/>
-            <div className="basket-form__description">
-              <p>Малинка</p>
-              <p>1 кг х 310 ₽</p>
-            </div>
-          </li>
-          <li className="basket-form__item">
-            <img className="basket-item__icon" src="/src/assets/icons/basket/bubble-gum.svg" width="46" height="46"
-                 loading="lazy" alt="/"/>
-            <div className="basket-item__description">
-              <h5 className="basket-item__title">Бабл-гам</h5>
-              <p className="basket-item__text">1,5 кг х 320 ₽</p>
-            </div>
-          </li>
-        </ul>
-        <div className="basket-item__footer">
-          <p className="basket-item__price">310₽</p>
-          <button className="basket-item__btn">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd"
-                    d="M9.80303 1.13807C10.0634 0.877722 10.0634 0.455612 9.80303 0.195262C9.54268 -0.0650874 9.12057 -0.0650874 8.86022 0.195262L4.99914 4.05633L1.13807 0.195262C0.877722 -0.0650874 0.455612 -0.0650874 0.195262 0.195262C-0.0650874 0.455612 -0.0650874 0.877722 0.195262 1.13807L4.05633 4.99914L0.195262 8.86022C-0.0650874 9.12057 -0.0650874 9.54268 0.195262 9.80303C0.455612 10.0634 0.877722 10.0634 1.13807 9.80303L4.99914 5.94195L8.86022 9.80303C9.12057 10.0634 9.54268 10.0634 9.80303 9.80303C10.0634 9.54268 10.0634 9.12057 9.80303 8.86022L5.94195 4.99914L9.80303 1.13807Z"
-                    fill="#2D3440"/>
-            </svg>
-          </button>
+      <Button className={classNames("basket__button", {"is-active": isOpen})} onClick={onClick}><SlBasket/>2
+        Товара</Button>
+      {isOpen ? (
+        <div className="basket__inner">
+          {product.length > 0 ? (
+            <>
+              <h3 className="basket__title">Корзина</h3>
+              <ProductCard className=""/>
+              {/*<div className="product-card">*/}
+              {/*  <div className="product-card__item">*/}
+              {/*    <div className="product-card__description">*/}
+              {/*      <img className="product-card__icon" src="/src/assets/icons/basket/malinka.svg" width="46"*/}
+              {/*           height="46"*/}
+              {/*           loading="lazy" alt=""/>*/}
+              {/*      <h4 className="product-card__title">Малинка</h4>*/}
+              {/*      <p className="product-card__price">1 кг х 310 ₽</p>*/}
+              {/*    </div>*/}
+              {/*    <div className="product-card__description">*/}
+              {/*      <p>310 ₽</p>*/}
+              {/*    </div>*/}
+              {/*  </div>*/}
+              {/*  <div className="product-card__item">*/}
+              {/*    <div className="product-card__description">*/}
+              {/*      <img className="product-card__icon" src="/src/assets/icons/basket/bubble-gum.svg" width="46"*/}
+              {/*           height="46"*/}
+              {/*           loading="lazy" alt="/"/>*/}
+              {/*      <h4 className="product-card__title">Бабл-гам</h4>*/}
+              {/*      <p className="product-card__price">1,5 кг х 320 ₽</p>*/}
+              {/*    </div>*/}
+              {/*    <div className="product-card__description">*/}
+              {/*      <p>310 ₽</p>*/}
+              {/*    </div>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
+            </>
+          ) : <h4>{info.info}</h4>}
         </div>
-        <div className="basket__footer">
-          <Button className={'basket-btn button'} isActive={isActive} type="button">Оформить заказ</Button>
-          <p className="basket__footer-sum">{`Итого: ${790} ₽`}</p>
-        </div>
-      </form>
+      ) : null}
     </div>
   )
 }

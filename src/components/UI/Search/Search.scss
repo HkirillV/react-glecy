@@ -6,7 +6,7 @@
   &__button {
     @include flex-center(true);
 
-    padding-inline: 8px;
+    padding-inline: 10px;
     height: 32px;
     border-radius: var(--border-raduis-md);
     background-color: var(--basic-extra-light-icon);
@@ -14,10 +14,10 @@
 
   &__form {
     position: absolute;
-    top: 100%;
-    display: none;
-    visibility: hidden;
-    width: 80%;
+    top: 115%;
+    right: 0;
+    z-index: 10;
+    width: 356px;
     padding: 24px 16px;
     border-radius: var(--border-radius-xs);
     background-color: var(--basic-extra-light);

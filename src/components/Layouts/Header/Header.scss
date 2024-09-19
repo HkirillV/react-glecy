@@ -12,7 +12,6 @@
   }
 
   &__menu {
-    position: relative;
     margin-right: auto;
 
     &-list {
@@ -23,12 +22,16 @@
     &-item {
       display: flex;
       align-items: center;
-      padding: 8px 16px;
+      padding-inline: 16px;
       height: 36px;
 
       @include media-mobile-s {
         padding: 5px;
       }
+    }
+
+    &-item:first-child {
+      padding: 0;
     }
 
     &-link {

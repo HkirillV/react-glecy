@@ -31,7 +31,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header__main-menu hidden-mobile">
-          <Link className="header__main-menu" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
+          <Link className="header__main-menu-phone" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
           <Search/>
           <Auth/>
           <Basket/>

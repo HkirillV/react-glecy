@@ -15,7 +15,7 @@ const ProductCard = (props) => {
       <h3 className="product-card__title">{title}</h3>
       <p className="product-card__description">{description}</p>
       <p className="product-card__price">{`${price} ₽/кг`}</p>
-      <button className="button"></button>
+      <button className="product-card__button button"></button>
     </div>
   )
 }

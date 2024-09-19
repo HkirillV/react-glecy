@@ -1,23 +1,26 @@
 @import "@/styles/abstracts/mixins.scss";
 
 .dropdown {
+  position: relative;
 
   &-menu {
     position: absolute;
-    top: 108%;
+    top: 115%;
+    left: 0;
     z-index: 10;
     padding-block: 8px;
+    width: 140px;
     border-radius: var(--border-radius-xs);
     box-shadow: var(--shadow);
     background-color: var(--basic-extra-light);
 
 
     &__item {
-      position: relative;
       padding: 8px 16px;
     }
 
     &__item:first-child {
+      position: relative;
       font-weight: 700;
 
       &::after {
@@ -27,9 +30,13 @@
         display: flex;
         justify-content: center;
         width: 103px;
-        height: 2px;
+        height: 1px;
         background-color: var(--basic-neutral);
       }
+    }
+
+    &__link {
+      font-size: 14px;
     }
   }
 
