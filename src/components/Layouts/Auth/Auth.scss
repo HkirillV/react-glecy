@@ -1,61 +1,51 @@
 @import "@/styles/abstracts/mixins";
 
 .auth {
+  position: relative;
 
   &__button {
-    position: relative;
     @include flex-center(true);
     column-gap: 6px;
     padding-inline: 16px;
     height: 32px;
     border-radius: var(--border-raduis-md);
-    background-color: var(--basic-extra-light-icon);
-  }
-}
-
-.auth-form {
-  position: absolute;
-  top: 100%;
-  z-index: 10;
-  display: none;
-  visibility: hidden;
-  flex-direction: column;
-  row-gap: 16px;
-  padding: 48px;
-  border-radius: var(--border-radius-xs);
-  background-color: var(--basic-extra-light);
-  box-shadow: var(--box-shadow);
-
-  &__title {
-    margin-bottom: 32px;
-    color: var(--basic-extra-dark);
-
-    @include media-mobile-s {
-      margin-bottom: 16px;
-
-    }
   }
 
-  &__email, &__password {
-    padding-left: 15px;
-    height: 48px;
-    border-radius: var(--border-radius-xs);
-    border: var(--border-neutral-xs);
-
-    @include media-mobile-s {
-      height: 32px;
-      row-gap: 10px;
-    }
-  }
-
-  &__footer {
+  &-form {
+    position: absolute;
+    top: 115%;
+    right: 0;
+    z-index: 10;
     display: flex;
-    column-gap: 23px;
-    margin-top: 16px;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 48px;
+    border-radius: var(--border-radius-xs);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--box-shadow);
 
-    &-list {
+    &__title {
+      margin-bottom: 32px;
+      color: var(--basic-extra-dark);
+    }
+
+    &__input-email, &__input-password {
+      padding-inline: 15px;
+      width: 324px;
+      height: var(--input-height);
+      border: var(--border-neutral-xs);
+      border-radius: var(--border-radius-xs);
+    }
+
+    &__footer {
       display: flex;
-      flex-direction: column;
+      column-gap: 23px;
+      margin-top: 16px;
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
@@ -67,9 +57,4 @@
   border-radius: var(--border-raduis-md);
   background-color: var(--special-extra-bright);
   border: var(--border-light-md);
-
-  @include media-mobile-s {
-    height: 26px;
-    padding-inline: 16px;
-  }
 }

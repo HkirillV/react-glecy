@@ -6,7 +6,7 @@ const ProductCard = (props) => {
     title,
     description,
     price,
-    imgSrc
+    imgSrc,
   } = props
 
   return (

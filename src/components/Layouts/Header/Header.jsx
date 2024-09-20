@@ -1,9 +1,9 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 
+import Button from "@/components/UI/Button";
 import Logo from '@/components/UI/Logo'
 import Dropdown from "@/components/UI/Dropdown";
-import Button from "@/components/UI/Button";
 import Search from "@/components/UI/Search";
 import Auth from "@/components/Layouts/Auth";
 import Basket from "@/components/Layouts/Basket";

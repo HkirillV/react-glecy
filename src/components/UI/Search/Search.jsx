@@ -7,7 +7,7 @@ import './Search.scss'
 
 const Search = (props) => {
   const {
-    className,
+
   } = props
 
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const Search = (props) => {
 
   return (
     <div className="search">
-      <Button className={classNames(className, "search__button", {"is-active": isOpen})} onClick={onClick}><FiSearch/></Button>
+      <Button className={classNames("search__button button", {"is-active": isOpen})} onClick={onClick}><FiSearch/></Button>
       {isOpen ? (
         <form className="search__form">
           <input className="search__input" type="search" disabled={!isOpen} placeholder="Поиск по сайту"/>

@@ -21,7 +21,7 @@ const Dropdown = (props) => {
 
   return (
     <div className={classNames(className, "dropdown")}>
-      <Button className={classNames('dropdown__btn', {"is-active": isOpen})} onClick={onClick}>{children}
+      <Button className={classNames('dropdown__btn button', {"is-active": isOpen})} onClick={onClick}>{children}
         <IoIosArrowDown className={classNames({"dropdown__icon": isOpen})}/>
       </Button>
       {isOpen ? (

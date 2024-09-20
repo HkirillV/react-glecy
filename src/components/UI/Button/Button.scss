@@ -4,8 +4,13 @@
   @include flex-center(true);
 
   height: var(--button-height);
-  border: var(--border-light-md);
   border-radius: var(--border-radius-lg);
   background-color: var(--basic-extra-light-icon);
-  box-shadow: var(--basic-shadow-light);
+
+  @include hover {
+    background-color: var(--basic-extra-light-hover);
+  }
 }
+
+//border: var(--border-light-md);
+//box-shadow: var(--basic-shadow-light);

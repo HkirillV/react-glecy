@@ -48,15 +48,8 @@
   }
 
   &__btn {
-    @include flex-center(true);
     column-gap: 6px;
-    height: 32px;
     padding-inline: 16px;
-    border-radius: var(--border-radius-lg);
     background-color: var(--special-light);
-
-    @include media-mobile-xs {
-      padding-inline: 8px;
-    }
   }
 }
