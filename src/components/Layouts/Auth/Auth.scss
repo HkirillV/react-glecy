@@ -4,10 +4,8 @@
   position: relative;
 
   &__button {
-    @include flex-center(true);
     column-gap: 6px;
     padding-inline: 16px;
-    height: 32px;
     border-radius: var(--border-raduis-md);
   }
 
@@ -46,15 +44,14 @@
         display: flex;
         flex-direction: column;
       }
+
+      &__button {
+        padding-inline: 32px;
+        height: 44px;
+        border: var(--border-light-md);
+        border-radius: var(--border-raduis-md);
+        background-color: var(--special-extra-bright);
+      }
     }
   }
-}
-
-.auth-btn {
-  align-items: center;
-  padding-inline: 32px;
-  height: 44px;
-  border-radius: var(--border-raduis-md);
-  background-color: var(--special-extra-bright);
-  border: var(--border-light-md);
 }

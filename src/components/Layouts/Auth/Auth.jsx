@@ -24,7 +24,7 @@ const Auth = (props) => {
           <input className="auth-form__input-email" type="email" placeholder="email@example.com"/>
           <input className="auth-form__input-password" type="password" placeholder="******"/>
           <div className="auth-form__footer">
-            <Button>Войти</Button>
+            <Button className="auth-form__button">Войти</Button>
             <div className="auth-form__footer-list">
               <a className="auth-form__footer-link" href="/public">Забыли пароль?</a>
               <a className="auth-form__footer-link" href="/public">Регистрация</a>
