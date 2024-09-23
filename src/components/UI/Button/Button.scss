@@ -1,16 +1,13 @@
 @import "@/styles/abstracts/mixins.scss";
 
 .button {
-  @include flex-center(true);
-
-  height: var(--button-height);
+  @include reset-button;
+  @include flex-center;
+  height: var(--button-height-xs);
   border-radius: var(--border-radius-lg);
   background-color: var(--basic-extra-light-icon);
 
-  @include hover {
-    background-color: var(--basic-extra-light-hover);
+  &:hover {
+    background-color: var(--basic-extra-light-rgba);
   }
 }
-
-//border: var(--border-light-md);
-//box-shadow: var(--basic-shadow-light);

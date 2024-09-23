@@ -40,14 +40,6 @@
     background-color: var(--special-neutral);
   }
 
-  &__icon {
-
-    @include media-mobile-s {
-      max-width: 150px;
-      height: 150px;
-    }
-  }
-
   &__button {
     height: 44px;
     max-width: 176px;

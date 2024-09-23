@@ -6,6 +6,7 @@
   &__button {
     padding-inline: 10px;
     border-radius: var(--border-raduis-md);
+    background-color: var(--basic-extra-light-icon);
   }
 
   &__form {
@@ -25,7 +26,7 @@
     height: 48px;
     width: 100%;
     border-radius: var(--border-radius-xs);
-    border: var(--border-neutral-xs);
+    border: var(--border-neutral);
     background-color: var(--basic-white);
   }
 }

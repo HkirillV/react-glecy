@@ -49,7 +49,7 @@
   &__button {
     height: 44px;
     padding-inline: 32px;
-    border: var(--border-light-md);
+    border: var(--border-light);
     background-color: var(--basic-extra-light);
     box-shadow: var(--basic-shadow-light);
 
@@ -175,7 +175,7 @@
   padding: 14px 20px;
   width: calc(var(--swiper-navigation-size-new) / 44 * 27);
   font-size: var(--swiper-navigation-size-new);
-  border: var(--border-extra-light-sm);
+  border: var(--border-light);
   border-radius: var(--border-radius-xxl);
   color: var(--basic-extra-light);
   background-color: var(--basic-extra-light-icon);

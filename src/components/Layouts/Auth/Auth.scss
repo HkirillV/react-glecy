@@ -7,6 +7,7 @@
     column-gap: 6px;
     padding-inline: 16px;
     border-radius: var(--border-raduis-md);
+    background-color: var(--basic-extra-light-icon);
   }
 
   &-form {
@@ -28,10 +29,10 @@
     }
 
     &__input-email, &__input-password {
+      @include square(324px);
       padding-inline: 15px;
-      width: 324px;
       height: var(--input-height);
-      border: var(--border-neutral-xs);
+      border: var(--border-neutral);
       border-radius: var(--border-radius-xs);
     }
 
@@ -45,12 +46,25 @@
         flex-direction: column;
       }
 
-      &__button {
+      &-link {
+        text-decoration: underline;
+      }
+
+      &-button {
+        font-weight: 700;
         padding-inline: 32px;
-        height: 44px;
-        border: var(--border-light-md);
+        height: var(--button-height-sm);
+        border: var(--border-light);
         border-radius: var(--border-raduis-md);
+        color: var(--basic-extra-light);
         background-color: var(--special-extra-bright);
+        box-shadow: var(--basic-shadow-light);
+
+        &:hover {
+          border: var(--border-extra-bright);
+          background-color: var(--basic-extra-light-hover);
+          color: var(--basic-extra-dark);
+        }
       }
     }
   }

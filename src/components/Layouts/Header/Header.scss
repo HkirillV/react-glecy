@@ -23,11 +23,7 @@
       display: flex;
       align-items: center;
       padding-inline: 16px;
-      height: 36px;
-
-      @include media-mobile-s {
-        padding: 5px;
-      }
+      height: var(--height-xs)
     }
 
     &-item:first-child {
@@ -37,7 +33,7 @@
     &-link {
       display: inline-flex;
       align-items: center;
-      height: 48px;
+      height: var(--height-sm);
     }
   }
 
