@@ -20,7 +20,7 @@ const Auth = (props) => {
               onClick={onClick}><FiLogIn/>Вход</Button>
       {isOpen ? (
         <form className="auth-form">
-          <h3 className="auth-form__title">Личный Кабинет</h3>
+          <h4 className="auth-form__title">Личный Кабинет</h4>
           <input className="auth-form__input-email" type="email" placeholder="email@example.com"/>
           <input className="auth-form__input-password" type="password" placeholder="******"/>
           <div className="auth-form__footer">

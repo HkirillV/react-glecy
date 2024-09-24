@@ -1,4 +1,5 @@
 import './Logo.scss'
+import classNames from "classnames";
 
 const Logo = (props) => {
   const {
@@ -6,7 +7,7 @@ const Logo = (props) => {
   } = props
 
   return (
-    <a className={className} href="index.html"><img src="/src/assets/icons/header/logo.svg"
+    <a className={classNames(className, "logo")} href="index.html"><img src="/src/assets/icons/header/logo.svg"
                                                     width="137"
                                                     height="56" loading="lazy" alt=""/></a>
   )

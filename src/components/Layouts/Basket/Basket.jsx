@@ -21,7 +21,7 @@ const Basket = () => {
         <div className="basket-preview">
           {product.length > 0 ? (
             <>
-              <h3 className="basket-preview__title">Корзина</h3>
+              <h4 className="basket-preview__title">Корзина</h4>
               <ul className="basket-preview__list">
                 <li className="basket-preview__item">
                   <img className="basket-preview__icon" src="/src/assets/icons/basket/malinka.svg" width="46"
@@ -54,9 +54,10 @@ const Basket = () => {
               </ul>
               <div className="basket-preview__footer">
                 <Button className="basket-preview__button">Оформить заказ</Button>
+                <p className="basket-preview__total-price">{`Итого: ${790} ₽`}</p>
               </div>
             </>
-          ) : <h3 className="basket__empty">Ваша корзина пока <br/> пуста</h3>}
+          ) : <h4 className="basket__empty">Ваша корзина пока <br/> пуста</h4>}
         </div>
       ) : null}
     </div>

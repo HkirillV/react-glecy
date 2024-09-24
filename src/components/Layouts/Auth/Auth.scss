@@ -8,6 +8,8 @@
     padding-inline: 16px;
     border-radius: var(--border-raduis-md);
     background-color: var(--basic-extra-light-icon);
+
+    @include  fluid-text(14, 12);
   }
 
   &-form {
@@ -48,6 +50,8 @@
 
       &-link {
         text-decoration: underline;
+
+        @include  fluid-text(14, 12);
       }
 
       &-button {

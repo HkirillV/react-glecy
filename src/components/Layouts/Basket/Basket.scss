@@ -1,6 +1,7 @@
 @import "@/styles/abstracts/mixins";
 
 .basket {
+  position: relative;
 
   &__button {
     position: relative;
@@ -8,6 +9,8 @@
     padding-inline: 16px;
     border-radius: var(--border-raduis-md);
     background-color: var(--basic-extra-light-icon);
+
+    @include  fluid-text(14, 12);
   }
 
   &__empty {
@@ -50,6 +53,10 @@
       margin-right: auto;
     }
 
+    &__subtitle {
+      @include  fluid-text(18, 14);
+    }
+
     &__price-container {
       display: flex;
       column-gap: 52px;
@@ -57,10 +64,14 @@
 
     &__price {
       font-weight: 700;
+
+      @include fluid-text(18, 14);
     }
 
     &__weight-price {
       color: var(--basic-neutral);
+
+      @include fluid-text(14, 12);
     }
 
     &__button-delete {
@@ -96,7 +107,10 @@
     }
 
     &__footer {
-      padding-block: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 32px;
       border-top: var(--border-neutral);
     }
 
@@ -112,6 +126,12 @@
         border: var(--border-extra-bright);
         color: var(--basic-extra-dark);
       }
+    }
+
+    &__total-price {
+      font-weight: 700;
+
+      @include fluid-text(18, 16);
     }
   }
 }

@@ -2,7 +2,7 @@
 @import "@/styles/abstracts/utils.scss";
 
 .header {
-  padding-top: 24px;
+  padding-block: 24px;
 
   &__inner {
     display: flex;
@@ -23,7 +23,7 @@
       display: flex;
       align-items: center;
       padding-inline: 16px;
-      height: var(--height-xs)
+      height: var(--height-sm)
     }
 
     &-item:first-child {
@@ -31,17 +31,14 @@
     }
 
     &-link {
-      display: inline-flex;
-      align-items: center;
-      height: var(--height-sm);
+      @include flex-center;
+      height: var(--height-xs);
     }
   }
 
   &__main-menu {
-    position: relative;
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
     column-gap: 16px;
 
     &-phone {

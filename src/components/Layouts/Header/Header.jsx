@@ -10,7 +10,11 @@ import Basket from "@/components/Layouts/Basket";
 
 import './Header.scss'
 
-const Header = () => {
+const Header = (props) => {
+  const {
+    onClick,
+    isOpen
+  } = props
 
   return (
     <header className="header">
@@ -36,7 +40,7 @@ const Header = () => {
           <Auth/>
           <Basket/>
         </div>
-        <Button className="header__burger-button burger-menu visible-mobile">
+        <Button className="button__burger-menu burger-button visible-mobile" onClick={onClick}>
           <span className="visually-hidden">Open navigation menu</span>
         </Button>
       </div>

@@ -1,8 +1,7 @@
 @import "@/styles/abstracts/mixins.scss";
 
 .logo {
-  @include media-mobile-s {
-    display: none;
-    visibility: hidden;
+  @include media-table-above {
+    max-width: 120px;
   }
 }

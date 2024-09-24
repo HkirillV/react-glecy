@@ -7,26 +7,28 @@ import Search from "@/components/UI/Search/index.js";
 import Auth from "@/components/Layouts/Auth/index.js";
 import {SlBasket} from "react-icons/sl";
 import Basket from "@/components/Layouts/Basket/index.js";
+import {useState} from "react";
 
 const BurgerMenu = (props) => {
   const {
-    className
+    onClick,
+    isOpen
   } = props
 
   return (
-    <dialog className={classNames(className, "burger-menu visible-mobile")} open>
-      <form className="mobile-overlay__close-button-wrapper" method="dialog">
-        <Button className="mobile-overlay__close-button cross-button" type="submit">
+    <dialog className="burger-menu mobile-overlay" open={isOpen}>
+      <form>
+        <Button className="mobile-overlay__close-button cross-button" type="submit" onClick={onClick}>
           <span className="visually-hidden">Close navigation menu</span>
         </Button>
       </form>
       <div className="mobile-overlay__body">
         <Link className="mobile-overlay__link" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
-        <Button className="button"><FiSearch/></Button>
+        <Button><FiSearch/></Button>
         <Search/>
-        <Button className="button"><FiLogIn/>Вход</Button>
+        <Button><FiLogIn/>Вход</Button>
         <Auth/>
-        <Button className="button"><SlBasket/>2 Товара</Button>
+        <Button><SlBasket/>2 Товара</Button>
         <Basket/>
       </div>
     </dialog>
