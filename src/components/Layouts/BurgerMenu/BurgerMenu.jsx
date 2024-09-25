@@ -17,19 +17,26 @@ const BurgerMenu = (props) => {
 
   return (
     <dialog className="burger-menu mobile-overlay" open={isOpen}>
-      <form>
+      <form className="mobile-overlay__close-button-wrapper">
         <Button className="mobile-overlay__close-button cross-button" type="submit" onClick={onClick}>
           <span className="visually-hidden">Close navigation menu</span>
         </Button>
       </form>
       <div className="mobile-overlay__body">
-        <Link className="mobile-overlay__link" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
-        <Button><FiSearch/></Button>
-        <Search/>
-        <Button><FiLogIn/>Вход</Button>
-        <Auth/>
-        <Button><SlBasket/>2 Товара</Button>
-        <Basket/>
+        <ul className="mobile-overlay__list">
+          <li className="mobile-overlay__link">
+            <Link to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
+          </li>
+          <li className="mobile-overlay__link">
+            <Search/>
+          </li>
+          <li className="mobile-overlay__link">
+            <Auth/>
+          </li>
+          <li className="mobile-overlay__link">
+            <Basket/>
+          </li>
+        </ul>
       </div>
     </dialog>
   )

@@ -57,7 +57,7 @@ const Basket = () => {
                 <p className="basket-preview__total-price">{`Итого: ${790} ₽`}</p>
               </div>
             </>
-          ) : <h4 className="basket__empty">Ваша корзина пока <br/> пуста</h4>}
+          ) : <p className="basket__empty">Ваша корзина пока <br/> пуста</p>}
         </div>
       ) : null}
     </div>

@@ -23,8 +23,8 @@ const App = () => {
       <BrowserRouter>
         <Header onClick={onClick} isOpen={isOpen}/>
         <Slide/>
-        <Promo/>
-        <Catalog/>
+        {/*<Promo/>*/}
+        {/*<Catalog/>*/}
         <BurgerMenu onClick={onClick} isOpen={isOpen}/>
       </BrowserRouter>
     </Provider>

@@ -14,13 +14,13 @@
 }
 
 .hidden-mobile {
-  @include media-table-above  {
+  @include media-tablet-xs {
     display: none !important;
   }
 }
 
 .visible-mobile {
-  @include media-table {
+  @include media-tablet-xs-above  {
     display: none !important;
   }
 }

@@ -1,9 +1,5 @@
 @import "@/styles/abstracts/mixins.scss";
 
-.slide-wrapper{
-  display: flex;
-}
-
 .slide {
   display: flex;
   align-items: center;
@@ -21,28 +17,15 @@
   }
 
   &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 30px;
     max-width: 450px;
     margin-left: 70px;
 
     @include media-tablet-xs {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       margin-left: 0;
-    }
-  }
-
-  &__title {
-    padding-bottom: 24px;
-  }
-
-  &__text {
-    padding-bottom: 48px;
-
-    @include media-mobile-s {
-      padding-bottom: 20px;
-
     }
   }
 
@@ -56,12 +39,6 @@
     @include media-mobile-xs {
       padding-inline: 25px;
     }
-  }
-
-  &__container {
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
   }
 
   &__social {

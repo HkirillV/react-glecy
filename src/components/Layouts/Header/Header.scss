@@ -4,11 +4,23 @@
 .header {
   padding-block: 24px;
 
+  @include media-mobile-s {
+    padding-block: 15px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 16px;
+
+    @include media-table {
+      column-gap: 10px;
+    }
+
+    @include media-mobile-s {
+      column-gap: 5px;
+    }
   }
 
   &__menu {
@@ -17,13 +29,17 @@
     &-list {
       display: flex;
       align-items: center;
+      column-gap: 16px;
+
+      @include media-table {
+        column-gap: 10px;
+      }
     }
 
     &-item {
       display: flex;
       align-items: center;
-      padding-inline: 16px;
-      height: var(--height-sm)
+      height: var(--height-sm);
     }
 
     &-item:first-child {
@@ -40,6 +56,10 @@
     display: flex;
     align-items: center;
     column-gap: 16px;
+
+    @include media-table {
+      column-gap: 10px;
+    }
 
     &-phone {
       display: flex;

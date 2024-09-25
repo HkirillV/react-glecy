@@ -7,7 +7,12 @@
   border-radius: var(--border-radius-lg);
   background-color: var(--basic-extra-light-icon);
 
-  &:hover {
+  @include hover {
     background-color: var(--basic-extra-light-rgba);
+    color: var(--basic-extra-dark);
+  }
+
+  @include media-table {
+    height: var(--button-height-xs);
   }
 }
