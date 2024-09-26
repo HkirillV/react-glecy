@@ -2,21 +2,25 @@
 
 .slide {
   display: flex;
-  align-items: center;
-  column-gap: 26px;
 
-  @include media-tablet-xs {
-    text-align: center;
-    flex-direction: column-reverse;
-    row-gap: 26px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+
+    @include media-tablet-xs {
+      text-align: center;
+      flex-direction: column-reverse;
+      row-gap: 26px;
+    }
+
+    @include media-tablet-xs {
+      padding-bottom: 30px;
+      margin-inline: 10px;
+    }
   }
 
-  @include media-tablet-xs {
-    padding-bottom: 30px;
-    margin-inline: 10px;
-  }
-
-  &__description {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -29,29 +33,37 @@
     }
   }
 
-  &__button {
-    height: 44px;
-    padding-inline: 32px;
-    border: var(--border-light);
-    background-color: var(--basic-extra-light);
-    box-shadow: var(--basic-shadow-light);
+  &__image-wrapper {
+    position: relative;
 
-    @include media-mobile-xs {
-      padding-inline: 25px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100px;
+      z-index: -1;
+      height: 310px;
+      width: 100%;
+      border-radius: var(--border-radius-xxl);
+      background-color: var(--special-exta-light);
+
+      @include media-tablet-xs {
+        top: 13%;
+      }
+
+      @include media-mobile-s {
+        max-width: 200px;
+        height: 200px;
+      }
+
+      @include media-mobile-xs {
+        top: 11%;
+        max-width: 150px;
+        height: 150px;
+      }
     }
   }
 
-  &__social {
-    position: absolute;
-    top: 95%;
-    right: 0;
-    z-index: 10;
-    display: flex;
-    column-gap: 16px;
-  }
-
   &__image {
-
     @include media-mobile-s {
       max-width: 200px;
       height: 350px;
@@ -63,35 +75,62 @@
     }
   }
 
-  &__image_background {
-    position: absolute;
-    top: 23%;
-    z-index: -1;
-    max-width: 310px;
-    width: 100%;
-    height: 310px;
-    border-radius: var(--border-radius-xxl);
-    background-color: var(--special-exta-light);
-
-    @include media-tablet-xs {
-      top: 13%;
-    }
-
-    @include media-mobile-s {
-      max-width: 200px;
-      width: 100%;
-      height: 200px;
-    }
+  &__button {
+    font-weight: 700;
+    padding-inline: 32px;
+    height: var(--button-height-sm);
+    border: var(--border-light);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--basic-shadow-light);
 
     @include media-mobile-xs {
-      top: 11%;
-      max-width: 150px;
-      width: 100%;
-      height: 150px;
+      padding-inline: 25px;
     }
   }
 }
 
+.sub-slide {
+  width: 750px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      z-index: -1;
+      height: 100px;
+      width: 100px;
+      border-radius: var(--border-radius-xxl);
+      background-color: var(--special-exta-light);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon-background {
+    position: absolute;
+    z-index: -10;
+    border-radius: var(--border-radius-xxl);
+    fill: var(--special-exta-light);
+  }
+
+  &__social {
+    position: absolute;
+    top: 95%;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    column-gap: 16px;
+  }
+}
 
 .swiper {
   height: 554px;
@@ -104,113 +143,53 @@
   @include media-mobile-xs {
     width: 360px;
   }
-}
 
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  margin-right: 0;
-}
-
-.sub-slide {
-  width: 750px;
-
-  @include media-desktop {
-    display: none;
-    visibility: hidden;
-  }
-
-  &__item {
-    position: relative;
+  &-slide {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
   }
 
-  &__icon-background {
+  &-pagination-fraction,
+  &-pagination-custom,
+  &-horizontal > &-pagination-bullets,
+  &-pagination-bullets &-pagination-horizontal {
+    width: 10%;
+
+    @include media-mobile-xs {
+      width: 15%;
+    }
+  }
+
+  &-button-next::after,
+  &-button-prev::after {
     position: absolute;
-    z-index: -10;
+    padding: 14px 20px;
+    width: calc(var(--swiper-navigation-size-new) / 44 * 27);
+    font-size: var(--swiper-navigation-size-new);
+    border: var(--border-light);
     border-radius: var(--border-radius-xxl);
-    fill: var(--special-exta-light);
-  }
-}
+    color: var(--basic-extra-light);
+    background-color: var(--basic-extra-light-icon);
 
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets .swiper-pagination-horizontal {
-  width: 10%;
-
-  @include media-mobile-xs {
-    width: 15%;
-  }
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  position: absolute;
-  padding: 14px 20px;
-  width: calc(var(--swiper-navigation-size-new) / 44 * 27);
-  font-size: var(--swiper-navigation-size-new);
-  border: var(--border-light);
-  border-radius: var(--border-radius-xxl);
-  color: var(--basic-extra-light);
-  background-color: var(--basic-extra-light-icon);
-
-  @include media-mobile-xs {
-    padding: 9px 15px;
-  }
-}
-
-.swiper-button-prev, .swiper-button-next {
-  top: 50%;
-
-  @include media-tablet-xs {
-    top: 30%;
+    @include media-mobile-xs {
+      padding: 9px 15px;
+    }
   }
 
-  @include media-mobile-s {
-    top: 28%;
+  &-button-prev, &-button-next {
+    top: 50%;
   }
 
-  @include media-mobile-xs {
-    top: 25%;
-  }
-}
-
-.swiper-button-prev {
-  left: 531px;
-
-  @include media-tablet-xs {
-    left: 65px;
+  &-button-prev {
+    left: 531px;
   }
 
-  @include media-mobile-s {
-    left: 118px;
+
+  &-button-next {
+    left: 841px;
   }
 
-  @include media-mobile-xs {
-    left: 88px;
+  &-pagination-bullet {
+    background-color: var(--basic-extra-light);
   }
-}
-
-
-.swiper-button-next {
-  left: 841px;
-
-  @include media-tablet-xs {
-    left: 373px;
-  }
-
-  @include media-mobile-s {
-    left: 318px;
-  }
-
-  @include media-mobile-xs {
-    left: 238px;
-  }
-}
-
-.swiper-pagination-bullet {
-  background-color: var(--basic-extra-light);
 }
