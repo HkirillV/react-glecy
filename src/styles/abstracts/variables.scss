@@ -9,7 +9,7 @@
   --special-bright: #ff4a78;
   --special-neutral: #f79;
   --special-light: #feafc3;
-  --special-exta-light: #ffcbd8;
+  --special-extra-light: #ffcbd8;
   --special-blue: #69a9ff;
   --special-light-blue: #9fc8ff;
   --special-yellow: #fcc850;
@@ -27,7 +27,9 @@
   --swiper-navigation-size-new: 12px;
 
   --border-neutral: 1px solid var(--basic-neutral);
-  --border-light: 4px solid var(--basic-extra-light-rgba);
+  --border-light-sm: 2px solid var(--special-extra-light);
+  --border-light-md: 4px solid var(--special-extra-light);
+  --border-extra-light: 2px solid var(--basic-extra-light);
   --border-extra-bright: 4px solid var(--special-extra-bright);
 
   --border-radius-xs: 4px;
