@@ -6,9 +6,15 @@
   align-items: center;
   row-gap: 57px;
   margin-top: 80px;
+  padding-bottom: 80px;
 
  &__title {
    text-align: center;
    max-width: 527px;
  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
 }

@@ -13,6 +13,12 @@
   overflow: hidden !important;
 }
 
+.hidden-desktop {
+  @include media-desktop {
+    display: none !important;
+  }
+}
+
 .hidden-table {
   @include media-table {
     display: none !important;

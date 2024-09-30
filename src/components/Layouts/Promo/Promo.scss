@@ -1,16 +1,5 @@
 @import '@/styles/abstracts/mixins';
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 28px;
-  padding: 36px 0 36px 36px;
-
-  @include media-mobile-s {
-    row-gap: 14px;
-  }
-}
-
 .promo {
   display: flex;
   align-items: center;
@@ -20,35 +9,61 @@
 
   &__title {
     text-align: center;
-    max-width: 434px;
+    max-width: 480px;
   }
 
-  &__items {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 28px;
+    padding: 36px 0 36px 36px;
+
+    @include media-mobile-s {
+      padding: 20px 0 20px 20px;
+      row-gap: 14px;
+    }
+  }
+
+  &__list {
     display: grid;
     gap: 30px;
 
-    @include media-table {
+    @include media-table-above  {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   &__item {
     display: flex;
+    justify-content: space-between;
     align-items: end;
-    column-gap: 11px;
     border-radius: var(--border-radius-sm);
     background-color: var(--special-neutral);
   }
 
-  &__button {
-    height: 44px;
-    max-width: 176px;
-    padding-inline: 28px;
-    background-color: var(--basic-extra-light);
-
+  &__icon {
     @include media-mobile-s {
-      max-width: 136px;
-      padding-inline: 14px;
+      height: 200px;
+      width: 200px;
+    }
+
+    @include media-mobile-xs {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  &__button {
+    font-weight: 700;
+    padding-inline: 32px;
+    height: var(--button-height-sm);
+    border: var(--border-light-md);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--basic-shadow-light);
+
+    @include media-mobile-xs {
+      padding-inline: 25px;
     }
   }
 }

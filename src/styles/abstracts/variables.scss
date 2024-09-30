@@ -24,7 +24,8 @@
   --shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
   --basic-shadow-light: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
 
-  --swiper-navigation-size-new: 12px;
+  --swiper-size-btn-sm: 14px;
+  --swiper-size-btn-md: 10px;
 
   --border-neutral: 1px solid var(--basic-neutral);
   --border-light-sm: 2px solid var(--special-extra-light);
@@ -32,7 +33,7 @@
   --border-extra-light: 2px solid var(--basic-extra-light);
   --border-extra-bright: 4px solid var(--special-extra-bright);
 
-  --border-radius-xs: 4px;
+  --border-radius-xs: 8px;
   --border-radius-sm: 16px;
   --border-raduis-md: 27px;
   --border-radius-lg: 30px;

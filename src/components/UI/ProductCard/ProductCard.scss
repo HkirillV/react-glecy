@@ -2,5 +2,9 @@
 
 .product-card {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  height: 281px;
+  border-radius: var(--border-radius-xs);
+  background-image: linear-gradient(var(--special-light) 20%, var(--basic-extra-light) 20% 70%);
 }
