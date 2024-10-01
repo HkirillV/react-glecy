@@ -28,6 +28,7 @@
   &__list {
     display: grid;
     gap: 30px;
+    width: 100%;
 
     @include media-table-above  {
       grid-template-columns: 1fr 1fr;

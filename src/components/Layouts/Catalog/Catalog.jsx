@@ -13,7 +13,7 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
-      <h2 className="catalog__title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+      <h3 className="catalog__title">Попробуйте самые популярные вкусы нашего мороженого</h3>
       {products.length > 0 && (
         <ul className="catalog__list">
           {products.map(product => (

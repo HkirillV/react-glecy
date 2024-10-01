@@ -9,7 +9,9 @@ import Header from '@/components/Layouts/Header';
 import Swiper from "@/components/Layouts/Slide";
 import Promo from "@/components/Layouts/Promo";
 import Catalog from "@/components/Layouts/Catalog";
-import BurgerMenu from "@/components/Layouts/BurgerMenu/index.js";
+import BurgerMenu from "@/components/Layouts/BurgerMenu";
+import Description from "@/components/Layouts/Description";
+import News from "@/components/Layouts/News"
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -26,6 +28,8 @@ const App = () => {
         <Promo/>
         <Catalog/>
         <BurgerMenu onClick={onClick} isOpen={isOpen}/>
+        <Description/>
+        <News/>
       </BrowserRouter>
     </Provider>
   )

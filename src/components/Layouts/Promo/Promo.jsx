@@ -5,7 +5,7 @@ import Button from '@/components/UI/Button'
 const Promo = () => {
   return (
     <div className="promo">
-      <h2 className="promo__title">Заказывайте мороженое и получайте подарки!</h2>
+      <h3 className="promo__title">Заказывайте мороженое и получайте подарки!</h3>
       <ul className="promo__list">
         <li className="promo__item">
           <div className="promo__wrapper">

@@ -1,10 +1,52 @@
 @import '@/styles/abstracts/mixins';
 
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: end;
   align-items: center;
+  row-gap: 12px;
+  padding: 24px 40px;
   height: 281px;
+  width: 100%;
   border-radius: var(--border-radius-xs);
-  background-image: linear-gradient(var(--special-light) 20%, var(--basic-extra-light) 20% 70%);
+  background-color: var(--basic-extra-light);
+
+  @include media-mobile-s {
+    padding: 20px;
+  }
+
+  &__image {
+    position: absolute;
+    top: -18%;
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__price {
+    @include fluid-text(20, 14);
+    font-weight: 700;
+  }
+
+  &__button {
+    width: 32px;
+    border: 2px solid transparent;
+    border-radius: var(--border-raduis-md);
+    color: var(--basic-extra-light);
+    background-color: var(--special-extra-bright) ;
+
+    @include hover {
+      border: var(--border-extra-bright-sm);
+    }
+  }
 }

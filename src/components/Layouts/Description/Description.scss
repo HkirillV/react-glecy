@@ -1,0 +1,40 @@
+@import '@/styles/abstracts/mixins';
+
+.description {
+  padding: 24px;
+  margin-top: 80px;
+  border-radius: var(--border-radius-sm);
+  background-image: url("/src/assets/images/description/cео.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    padding: 56px 40px;
+    border-radius: var(--border-radius-sm);
+    background-color: var(--basic-white);
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 56px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: 1fr;
+
+    @include media-table-above  {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 16px;
+  }
+}
