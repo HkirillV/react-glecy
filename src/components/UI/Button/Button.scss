@@ -3,16 +3,9 @@
 .button {
   @include reset-button;
   @include flex-center;
-  height: var(--button-height-xs);
-  border-radius: var(--border-radius-lg);
-  background-color: var(--basic-extra-light-icon);
-
-  @include hover {
-    background-color: var(--basic-extra-light-rgba);
-    color: var(--basic-extra-dark);
-  }
-
-  @include media-table {
-    height: var(--button-height-xs);
-  }
+  font-weight: 700;
+  height: var(--button-height-sm);
+  border-radius: var(--border-raduis-md);
+  color: var(--basic-extra-light);
+  background-color: var(--special-extra-bright);
 }

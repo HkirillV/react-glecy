@@ -6,7 +6,15 @@
   &__button {
     column-gap: 6px;
     padding-inline: 16px;
+    font-weight: 400;
+    height: var(--height-xs);
+    color: var(--basic-extra-dark);
     background-color: var(--special-light);
+
+    @include hover {
+      background-color: var(--basic-extra-light-rgba);
+      color: var(--basic-extra-dark);
+    }
 
     @include media-mobile-s {
       padding-inline: 10px;

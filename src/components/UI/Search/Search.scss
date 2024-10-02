@@ -4,11 +4,16 @@
   position: relative;
 
   &__button {
+    @include  fluid-text(14, 12);
     padding-inline: 10px;
+    height: var(--button-height-xs);
     border-radius: var(--border-raduis-md);
+    color: var(--basic-extra-dark);
     background-color: var(--basic-extra-light-icon);
 
-    @include  fluid-text(14, 12);
+    @include hover {
+      background-color: var(--basic-extra-light-rgba);
+    }
   }
 
   &__form {

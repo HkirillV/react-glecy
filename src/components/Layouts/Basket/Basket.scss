@@ -4,18 +4,22 @@
   position: relative;
 
   &__button {
-    position: relative;
+    @include  fluid-text(14, 12);
     column-gap: 6px;
     padding-inline: 16px;
+    font-weight: 400;
+    height: var(--button-height-xs);
     border-radius: var(--border-raduis-md);
+    color: var(--basic-extra-dark);
     background-color: var(--basic-extra-light-icon);
 
-    @include  fluid-text(14, 12);
+    @include hover {
+      background-color: var(--basic-extra-light-rgba);
+    }
   }
 
   &__empty {
     @include fluid-text(24, 16);
-    font-weight: 700;
     text-align: center;
   }
 
@@ -65,9 +69,8 @@
     }
 
     &__price {
-      font-weight: 700;
-
       @include fluid-text(18, 14);
+      font-weight: 700;
     }
 
     &__weight-price {
@@ -117,23 +120,21 @@
     }
 
     &__button {
-      font-weight: 700;
       padding-inline: 32px;
-      height: var(--button-height-sm);
       border: var(--border-light-md);
       color: var(--basic-extra-light);
       background-color: var(--special-extra-bright);
 
-      &:hover {
+      @include hover {
         border: var(--border-extra-bright);
         color: var(--basic-extra-dark);
+        background-color: var(--basic-white);
       }
     }
 
     &__total-price {
-      font-weight: 700;
-
       @include fluid-text(18, 16);
+      font-weight: 700;
     }
   }
 }

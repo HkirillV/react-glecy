@@ -22,6 +22,7 @@
   --basic-extra-light-rgba: rgba(252, 252, 252, 0.5);
 
   --shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+  --shadow-light: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
   --basic-shadow-light: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
 
   --swiper-size-btn-sm: 14px;
@@ -30,13 +31,15 @@
   --border-neutral: 1px solid var(--basic-neutral);
   --border-light-sm: 2px solid var(--special-extra-light);
   --border-light-md: 4px solid var(--special-extra-light);
+  --border-white: 4px solid var(--basic-white);
   --border-extra-light: 2px solid var(--basic-extra-light);
   --border-extra-bright-sm: 2px solid var(--special-extra-bright);
   --border-extra-bright: 4px solid var(--special-extra-bright);
 
-  --border-radius-xs: 8px;
+  --border-radius: 8px;
+  --border-radius-xs: 4px;
   --border-radius-sm: 16px;
-  --border-raduis-md: 27px;
+  --border-raduis-md: 26px;
   --border-radius-lg: 30px;
   --border-radius-xxl: 100%;
 
@@ -48,9 +51,10 @@
   --container-padding-x-mobile: 10px;
   --section-padding-y: 20px;
 
-  --input-height: 48px;
   --button-height-xs: 32px;
   --button-height-sm: 44px;
+  --button-height-md: 52px;
+  --input-height: 48px;
   --height-xs: 36px;
   --height-sm: 48px;
 

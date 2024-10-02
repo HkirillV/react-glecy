@@ -8,10 +8,18 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include media-mobile-s {
+    padding: 15px;
+  }
+
   &__inner {
     padding: 56px 40px;
     border-radius: var(--border-radius-sm);
     background-color: var(--basic-white);
+
+    @include media-mobile-s {
+      padding: 30px 20px;
+    }
   }
 
   &__title {

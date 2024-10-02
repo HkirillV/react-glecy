@@ -39,7 +39,8 @@
   }
 
   &__button {
-    width: 32px;
+    padding-inline: 7px;
+    height: var(--button-height-xs);
     border: 2px solid transparent;
     border-radius: var(--border-raduis-md);
     color: var(--basic-extra-light);
@@ -47,6 +48,8 @@
 
     @include hover {
       border: var(--border-extra-bright-sm);
+      color: var(--basic-extra-dark);
+      background-color: var(--basic-extra-light-rgba);;
     }
   }
 }

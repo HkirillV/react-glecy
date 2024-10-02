@@ -1,0 +1,32 @@
+@import '@/styles/abstracts/mixins';
+
+.delivery {
+  display: flex;
+  align-items: center;
+  padding: 64px;
+  margin-top: 80px;
+  border-radius: var(--border-radius-sm);
+  background-image: url("/src/assets/images/delivery/доставка.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--shadow-light);
+
+    &-label:first-child {
+      display: flex;
+    }
+  }
+}

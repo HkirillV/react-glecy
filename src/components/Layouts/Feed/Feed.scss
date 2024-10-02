@@ -1,0 +1,90 @@
+@import '@/styles/abstracts/mixins';
+
+.feed {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 80px;
+
+  @include media-table-above {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__news,
+  &__subscription {
+    border-radius: var(--border-radius-sm);
+  }
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 12px;
+  height: 224px;
+  padding: 32px 235px 67px 32px;
+  background-image: url("/src/assets/images/feed/новости.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-mobile-xs {
+    padding: 32px 100px 67px 32px;
+  }
+}
+
+.subscription {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  background-image: url("/src/assets/images/feed/подписка.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__info {
+    padding-bottom: 42px;
+  }
+
+  &__inner {
+    padding: 26px;
+    border-radius: var(--border-radius-sm);
+    background-color: var(--basic-white);
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include media-mobile-xs {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    padding-inline: 16px;
+    height: var(--input-height);
+    width: 100%;
+    border: var(--border-neutral);
+    border-radius: var(--border-radius-xs);
+  }
+
+  &__button {
+    padding-inline: 32px;
+    height: var(--button-height-md);
+    border: var(--border-light-md);
+    color: var(--basic-extra-light);
+    background-color: var(--special-extra-bright);
+
+    @include hover {
+      border: var(--border-extra-bright);
+      color: var(--basic-extra-dark);
+      background-color: var(--basic-white);
+    }
+
+    @include media-mobile-xs {
+      padding-inline: 26px;
+      height: var(--button-height-sm);
+    }
+  }
+}

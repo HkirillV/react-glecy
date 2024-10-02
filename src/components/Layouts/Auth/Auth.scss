@@ -4,12 +4,18 @@
   position: relative;
 
   &__button {
+    @include  fluid-text(14, 12);
     column-gap: 6px;
     padding-inline: 16px;
+    font-weight: 400;
+    height: var(--button-height-xs);
     border-radius: var(--border-raduis-md);
+    color: var(--basic-extra-dark);
     background-color: var(--basic-extra-light-icon);
 
-    @include  fluid-text(14, 12);
+    @include hover {
+      background-color: var(--basic-extra-light-rgba);
+    }
   }
 
   &-form {
@@ -55,7 +61,6 @@
       }
 
       &-button {
-        font-weight: 700;
         padding-inline: 32px;
         height: var(--button-height-sm);
         border: var(--border-light-md);
@@ -64,8 +69,10 @@
         background-color: var(--special-extra-bright);
         box-shadow: var(--basic-shadow-light);
 
-        &:hover {
+        @include hover {
           border: var(--border-extra-bright);
+          color: var(--basic-extra-dark);
+          background-color: var(--basic-white);
         }
       }
     }

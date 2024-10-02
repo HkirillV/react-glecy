@@ -11,7 +11,8 @@ import Promo from "@/components/Layouts/Promo";
 import Catalog from "@/components/Layouts/Catalog";
 import BurgerMenu from "@/components/Layouts/BurgerMenu";
 import Description from "@/components/Layouts/Description";
-import News from "@/components/Layouts/News"
+import Feed from "@/components/Layouts/Feed"
+import Delivery from "@/components/Layouts/Delivery"
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -29,7 +30,8 @@ const App = () => {
         <Catalog/>
         <BurgerMenu onClick={onClick} isOpen={isOpen}/>
         <Description/>
-        <News/>
+        <Feed/>
+        <Delivery/>
       </BrowserRouter>
     </Provider>
   )

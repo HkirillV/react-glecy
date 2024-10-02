@@ -78,12 +78,17 @@
   }
 
   &__button {
-    font-weight: 700;
     padding-inline: 32px;
     height: var(--button-height-sm);
     border: var(--border-light-md);
+    color: var(--basic-extra-dark);
     background-color: var(--basic-extra-light);
     box-shadow: var(--basic-shadow-light);
+
+    @include hover {
+      border: var(--border-white);
+      background-color: var(--basic-extra-light-rgba);
+    }
 
     @include media-mobile-xs {
       padding-inline: 25px;
@@ -169,7 +174,6 @@
 
   &-button-next::after,
   &-button-prev::after {
-    font-weight: 900;
     font-size: var(--swiper-size-btn-sm);
 
     @include media-mobile-s {
