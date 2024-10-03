@@ -2,6 +2,7 @@ import classNames from "classnames";
 import {useState} from "react";
 import {FiLogIn} from "react-icons/fi";
 import Button from "@/components/UI/Button";
+import Input from "@/components/UI/Input";
 
 import './Auth.scss'
 
@@ -21,8 +22,8 @@ const Auth = (props) => {
       {isOpen ? (
         <form className="auth-form">
           <h4 className="auth-form__title">Личный Кабинет</h4>
-          <input className="auth-form__input-email" type="email" placeholder="email@example.com"/>
-          <input className="auth-form__input-password" type="password" placeholder="******"/>
+          <Input className="auth-form__input-email" type="email" placeholder="email@example.com"/>
+          <Input className="auth-form__input-password" type="password" placeholder="******"/>
           <div className="auth-form__footer">
             <Button className="auth-form__footer-button">Войти</Button>
             <ul className="auth-form__footer-list">

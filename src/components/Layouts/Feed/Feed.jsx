@@ -1,4 +1,6 @@
 import Button from "@/components/UI/Button"
+import Input from "@/components/UI/Input"
+
 import "./Feed.scss"
 
 const Feed = () => {
@@ -14,7 +16,7 @@ const Feed = () => {
             в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды.
             Честно =)</p>
           <form className="subscription__form">
-            <input className="subscription__input" type="email" placeholder="email@example.com"/>
+            <Input className="subscription__input" type="email" placeholder="email@example.com"/>
             <Button className="subscription__button" type="submit">Отправить</Button>
           </form>
         </div>

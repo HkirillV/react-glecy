@@ -13,6 +13,7 @@ import BurgerMenu from "@/components/Layouts/BurgerMenu";
 import Description from "@/components/Layouts/Description";
 import Feed from "@/components/Layouts/Feed"
 import Delivery from "@/components/Layouts/Delivery"
+import Feedback from "@/components/Layouts/Feedback";
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -32,6 +33,7 @@ const App = () => {
         <Description/>
         <Feed/>
         <Delivery/>
+        <Feedback/>
       </BrowserRouter>
     </Provider>
   )

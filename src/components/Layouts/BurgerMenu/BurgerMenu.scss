@@ -7,7 +7,7 @@
   position: relative;
 
   @include hover {
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius);
   }
 
   @include media-mobile-s {
@@ -19,7 +19,7 @@
     position: absolute;
     width: 50%;
     height: 2px;
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius);
     background-color: var(--basic-extra-dark);
     box-shadow: 0 -8px, 0 8px;
   }
@@ -69,7 +69,7 @@
   position: relative;
 
   @include hover {
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius);
   }
 
   &::before,
@@ -78,7 +78,7 @@
     position: absolute;
     width: 55%;
     height: 2px;
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius);
     background-color: var(--basic-extra-dark);
   }
 

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import Button from "@/components/UI/Button";
 import Logo from '@/components/UI/Logo'
 import Dropdown from "@/components/UI/Dropdown";
-import Search from "@/components/UI/Search";
+import Search from "@/components/Layouts/Search";
 import Auth from "@/components/Layouts/Auth";
 import Basket from "@/components/Layouts/Basket";
 

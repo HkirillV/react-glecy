@@ -1,0 +1,109 @@
+@import '@/styles/abstracts/mixins';
+
+.feedback {
+  display: flex;
+  align-items: start;
+  padding: 64px;
+  margin-top: 80px;
+  border-radius: var(--border-radius-sm);
+  background-image: url("/src/assets/images/feedback/обратная связь.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-mobile-xs {
+    padding: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 40px;
+    border-radius: var(--border-radius-xs);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--shadow-light);
+  }
+
+  &__address {
+    &-text {
+      padding-bottom: 12px;
+      max-width: 179px;
+      color: var(--basic-dark);
+    }
+
+    &-link {
+      @include fluid-text(20, 16);
+      font-weight: 700;
+    }
+  }
+
+  &__contacts {
+    &-phone {
+      @include fluid-text(20, 16);
+      font-weight: 700;
+    }
+
+    &-text {
+      padding-bottom: 12px;
+      color: var(--basic-dark);
+    }
+
+    &-hours {
+      color: var(--basic-dark);
+    }
+  }
+
+  &__button {
+    height: var(--button-height-md);
+    border: var(--border-light-md);
+    color: var(--basic-extra-light);
+    background-color: var(--special-extra-bright);
+
+    @include hover {
+      border: var(--border-extra-bright);
+      color: var(--basic-extra-dark);
+      background-color: var(--basic-white);
+    }
+  }
+
+  &__dialog {
+    top: 10px;
+    bottom: 0;
+    padding: 64px;
+    border: none;
+    border-radius: var(--border-radius-xs);
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--shadow-light);
+
+    &-button {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    &-input {
+      width: 100%;
+    }
+
+    &-button {
+      height: var(--button-height-md);
+      border: var(--border-light-md);
+      color: var(--basic-extra-light);
+      background-color: var(--special-extra-bright);
+
+      @include hover {
+        border: var(--border-extra-bright);
+        color: var(--basic-extra-dark);
+        background-color: var(--basic-white);
+      }
+    }
+  }
+}

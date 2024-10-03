@@ -27,7 +27,7 @@
     flex-direction: column;
     row-gap: 16px;
     padding: 48px;
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius);
     background-color: var(--basic-extra-light);
     box-shadow: var(--box-shadow);
 
@@ -41,7 +41,7 @@
       padding-inline: 15px;
       height: var(--input-height);
       border: var(--border-neutral);
-      border-radius: var(--border-radius-xs);
+      border-radius: var(--border-radius);
     }
 
     &__footer {

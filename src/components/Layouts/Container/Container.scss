@@ -1,4 +1,4 @@
-@import "@/styles/abstracts/mixins.scss";
+@import "@/styles/abstracts/mixins";
 
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);

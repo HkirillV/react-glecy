@@ -1,4 +1,4 @@
-@import "@/styles/abstracts/mixins.scss";
+@import "@/styles/abstracts/mixins";
 
 .search {
   position: relative;
@@ -23,7 +23,7 @@
     z-index: 10;
     width: 356px;
     padding: 24px 16px;
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius);
     background-color: var(--basic-extra-light);
     box-shadow: var(--shadow);
   }
@@ -32,7 +32,7 @@
     padding-inline: 15px;
     height: 48px;
     width: 100%;
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius);
     border: var(--border-neutral);
     background-color: var(--basic-white);
   }
