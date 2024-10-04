@@ -67,13 +67,20 @@
   }
 
   &__dialog {
-    top: 10px;
-    bottom: 0;
+    position: fixed;
+    bottom: 355px;
+    left: 23%;
+    z-index: 16;
+    transform: translateX(-50%);
     padding: 64px;
     border: none;
     border-radius: var(--border-radius-xs);
     background-color: var(--basic-extra-light);
     box-shadow: var(--shadow-light);
+
+    &-title {
+      padding-bottom: 32px;
+    }
 
     &-button {
       position: absolute;
@@ -87,13 +94,22 @@
   &__form {
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
+    align-items: end;
+    row-gap: 16px;
 
-    &-input {
+    &-input,
+    &-label {
       width: 100%;
+
+      &_modifier {
+        padding: 15px;
+        border: var(--border-neutral);
+        border-radius: var(--border-radius);
+      }
     }
 
     &-button {
+      padding-inline: 32px;
       height: var(--button-height-md);
       border: var(--border-light-md);
       color: var(--basic-extra-light);

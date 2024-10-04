@@ -4,10 +4,11 @@ import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 
 import "./Feedback.scss"
+import classNames from "classnames";
 
 const Feedback = () => {
 
-  const [feedbackForm, setFeedbackForm] = useState(true);
+  const [feedbackForm, setFeedbackForm] = useState(false);
 
   const onClick = () => {
     setFeedbackForm(!feedbackForm);
@@ -31,12 +32,13 @@ const Feedback = () => {
         </div>
         <Button className="feedback__button" onClick={onClick}>Форма обратной связи</Button>
       </div>
+      <div className={classNames(feedbackForm ? "overlay" : null)}></div>
       <dialog className="feedback__dialog" open={feedbackForm}>
         <Button className="feedback__dialog-button mobile-overlay__close-button cross-button" onClick={onClick}>
           <span className="visually-hidden">Close feedback form</span>
         </Button>
+        <h4 className="feedback__dialog-title">Мы обязательно ответим вам!</h4>
         <form className="feedback__form">
-          <h4 className="feedback__form-title">Мы обязательно ответим вам!</h4>
           <label className="feedback__form-label">
             <Input className="feedback__form-input" type="text" placeholder="Имя и фамилия"/>
           </label>
@@ -44,7 +46,7 @@ const Feedback = () => {
             <Input className="feedback__form-input" type="email" placeholder="email@example.com"/>
           </label>
           <label className="feedback__form-label">
-            <Input className="feedback__form-input" type="text" placeholder="В свободной форме"/>
+            <textarea className="feedback__form-input feedback__form-input_modifier" rows="10" cols="45" placeholder="В свободной форме"></textarea>
           </label>
           <Button className="feedback__form-button" type="submit" onClick={onClick}>Отправить</Button>
         </form>

@@ -14,6 +14,7 @@ import Description from "@/components/Layouts/Description";
 import Feed from "@/components/Layouts/Feed"
 import Delivery from "@/components/Layouts/Delivery"
 import Feedback from "@/components/Layouts/Feedback";
+import Footer from "@/components/Layouts/Footer"
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -34,6 +35,7 @@ const App = () => {
         <Feed/>
         <Delivery/>
         <Feedback/>
+        <Footer/>
       </BrowserRouter>
     </Provider>
   )
