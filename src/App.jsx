@@ -1,10 +1,6 @@
+import React from 'react';
 import {useState} from "react";
-import {Provider} from 'react-redux'
-import store from './store/store'
-import {Routes, Route, Link, BrowserRouter} from "react-router-dom";
 
-import './styles/index.js'
-import './App.scss'
 import Header from '@/components/Layouts/Header';
 import Swiper from "@/components/Layouts/Slide";
 import Promo from "@/components/Layouts/Promo";
@@ -15,6 +11,13 @@ import Feed from "@/components/Layouts/Feed"
 import Delivery from "@/components/Layouts/Delivery"
 import Feedback from "@/components/Layouts/Feedback";
 import Footer from "@/components/Layouts/Footer"
+import Container from "@/components/Layouts/Container";
+import store from "@/store/store.js";
+import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
+
+import './styles/index'
+import './App.scss'
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -26,16 +29,18 @@ const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Header onClick={onClick} isOpen={isOpen}/>
-        <Swiper/>
-        <Promo/>
-        <Catalog/>
-        <BurgerMenu onClick={onClick} isOpen={isOpen}/>
-        <Description/>
-        <Feed/>
-        <Delivery/>
-        <Feedback/>
-        <Footer/>
+        <Container>
+          <Header onClick={onClick} isOpen={isOpen}/>
+          <Swiper/>
+          <Promo/>
+          <Catalog/>
+          <BurgerMenu onClick={onClick} isOpen={isOpen}/>
+          <Description/>
+          <Feed/>
+          <Delivery/>
+          <Feedback/>
+          <Footer/>
+        </Container>
       </BrowserRouter>
     </Provider>
   )
