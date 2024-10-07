@@ -1,3 +1,39 @@
+@import "@/styles/abstracts/mixins.scss";
+
 .footer {
-  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 48px;
+
+  &__social-list {
+    display: flex;
+    column-gap: 16px;
+  }
+
+  &__social-icon {
+    border: var(--border-light-sm);
+    border-radius: 24px;
+    fill: var(--basic-extra-light);
+
+
+    @include hover {
+      background-color: var(--basic-extra-dark);
+    }
+  }
+
+  &__main-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  &__main-item:first-child {
+    position: relative;
+  }
+
+  &__main-item-icon {
+    position: absolute;
+    top: 1px;
+    left: -25px;
+  }
 }
