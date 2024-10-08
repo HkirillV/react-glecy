@@ -1,22 +1,27 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import catalogAPI from "@/api/catalogAPI";
+import {setProduct} from "@/slices/productSlice.js";
+import createProductCardWithID from "@/utils/createProductCardWithID";
 import ProductCard from '@/components/UI/ProductCard'
-import catalogAPI from "@/api/catalogAPI.js";
 import './Catalog.scss'
 
 const Catalog = () => {
-  const [products, setProducts] = useState([])
+
+  const dispatch = useDispatch()
+  const product = useSelector((state) => state.product);
 
   useEffect(() => {
     catalogAPI.getProducts()
-      .then(data => setProducts(data))
+      .then(data => dispatch(setProduct(createProductCardWithID(data))))
   }, []);
 
   return (
     <div className="catalog">
       <h3 className="catalog__title">Попробуйте самые популярные вкусы нашего мороженого</h3>
-      {products.length > 0 && (
+      {product.length > 0 && (
         <ul className="catalog__list">
-          {products.map(product => (
+          {product.map(product => (
             <li className="catalog__item" key={product.id}>
               <ProductCard {...product} />
             </li>
