@@ -8,8 +8,10 @@ const Logo = (props) => {
 
   return (
     <a className={classNames(className, "logo")} href="index.html"><img src="/src/assets/icons/header/logo.svg"
-                                                    width="137"
-                                                    height="56" loading="lazy" alt=""/></a>
+                                                                        width="137"
+                                                                        height="56"
+                                                                        loading="lazy"
+                                                                        alt=""/></a>
   )
 }
 

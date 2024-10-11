@@ -1,3 +1,3 @@
-import Basket from "./Basket.jsx";
+import Basket from "./Basket";
 
 export default Basket;

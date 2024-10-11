@@ -30,7 +30,7 @@
     gap: 30px;
     width: 100%;
 
-    @include media-table-above  {
+    @include media-table-above {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -45,13 +45,11 @@
 
   &__icon {
     @include media-mobile-s {
-      height: 200px;
-      width: 200px;
+      @include square(200)
     }
 
     @include media-mobile-xs {
-      height: 150px;
-      width: 150px;
+      @include square(150)
     }
   }
 

@@ -1,6 +1,4 @@
-import {useState} from "react";
 import {Link} from "react-router-dom";
-
 import Button from "@/components/UI/Button";
 import Logo from '@/components/UI/Logo'
 import Dropdown from "@/components/UI/Dropdown";
@@ -12,7 +10,7 @@ import './Header.scss'
 
 const Header = (props) => {
   const {
-    onClick
+    onBurgerButtonClick
   } = props
 
   return (
@@ -34,12 +32,12 @@ const Header = (props) => {
           </ul>
         </nav>
         <div className="header__main-menu hidden-mobile">
-          <Link className="header__main-menu-phone" to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
+          <a className="header__main-menu-phone" href="tel:+7 800 555-86-28">+7 800 555-86-28</a>
           <Search/>
           <Auth/>
           <Basket/>
         </div>
-        <Button className="button__burger-menu burger-button visible-mobile" onClick={onClick}>
+        <Button className="button__burger-menu burger-button visible-mobile" onClick={onBurgerButtonClick}>
           <span className="visually-hidden">Open navigation menu</span>
         </Button>
       </div>

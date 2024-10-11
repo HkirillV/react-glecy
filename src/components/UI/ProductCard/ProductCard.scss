@@ -34,8 +34,12 @@
   }
 
   &__price {
-    @include fluid-text(20, 14);
+    @include rem-font-size(20);
     font-weight: 700;
+
+    @include media-table {
+      @include rem-font-size(16)
+    }
   }
 
   &__button {

@@ -50,27 +50,19 @@
         top: 20%;
       }
 
-      @include media-mobile-s  {
-        max-width: 150px;
-        height: 150px;
+      @include media-mobile-s {
+        @include square(150)
       }
     }
   }
 
   &__image {
-
-    @include media-mobile-s  {
-      max-width: 150px;
-      height: 250px;
+    @include media-mobile-s {
+      @include square(150)
     }
   }
 
-  &__title {
-    @include media-tablet-xs {
-      text-align: center;
-    }
-  }
-
+  &__title,
   &__description {
     @include media-tablet-xs {
       text-align: center;
@@ -85,13 +77,13 @@
     background-color: var(--basic-extra-light);
     box-shadow: var(--basic-shadow-light);
 
+    @include media-mobile-xs {
+      padding-inline: 25px;
+    }
+
     @include hover {
       border: var(--border-white);
       background-color: var(--basic-extra-light-rgba);
-    }
-
-    @include media-mobile-xs {
-      padding-inline: 25px;
     }
   }
 }
@@ -105,12 +97,11 @@
     justify-content: center;
 
     &::before {
+      @include square(100);
       content: "";
       position: absolute;
       top: 20%;
       z-index: -1;
-      height: 100px;
-      width: 100px;
       opacity: 0.4;
       border-radius: var(--border-radius-xxl);
       background-color: var(--special-extra-light);
@@ -136,7 +127,6 @@
     border: var(--border-light-sm);
     border-radius: 24px;
     fill: var(--basic-extra-light);
-
 
     @include hover {
       background-color: var(--basic-extra-dark);
@@ -191,11 +181,6 @@
     color: var(--basic-extra-light);
     background-color: var(--basic-extra-light-icon);
 
-    @include hover {
-      color: var(--basic-extra-dark);
-      background-color: var(--basic-extra-light);
-    }
-
     @include media-tablet-xs {
       top: 33%;
     }
@@ -204,6 +189,11 @@
       top: 25%;
       width: 36px;
       height: var(--height-xs);
+    }
+
+    @include hover {
+      color: var(--basic-extra-dark);
+      background-color: var(--basic-extra-light);
     }
   }
 

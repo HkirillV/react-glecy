@@ -4,7 +4,8 @@
   position: relative;
 
   &__button {
-    @include  fluid-text(14, 12);
+    @include rem-font-size(14);
+
     column-gap: 6px;
     padding-inline: 16px;
     font-weight: 400;
@@ -13,14 +14,22 @@
     color: var(--basic-extra-dark);
     background-color: var(--basic-extra-light-icon);
 
+    @include media-table {
+      @include rem-font-size(12)
+    }
+
     @include hover {
       background-color: var(--basic-extra-light-rgba);
     }
   }
 
   &__empty {
-    @include fluid-text(24, 16);
+    @include rem-font-size(24);
     text-align: center;
+
+    @include media-table {
+      @include rem-font-size(18)
+    }
   }
 
   &-preview {
@@ -60,7 +69,11 @@
     }
 
     &__subtitle {
-      @include  fluid-text(18, 14);
+      @include rem-font-size(18);
+
+      @include media-table {
+        @include rem-font-size(14)
+      }
     }
 
     &__price-container {
@@ -69,14 +82,17 @@
     }
 
     &__price {
-      @include fluid-text(18, 14);
+
       font-weight: 700;
     }
 
     &__weight-price {
+      @include rem-font-size(14);
       color: var(--basic-neutral);
 
-      @include fluid-text(14, 12);
+      @include media-table {
+        @include rem-font-size(12)
+      }
     }
 
     &__button-delete {
@@ -120,21 +136,25 @@
     }
 
     &__button {
-      padding-inline: 32px;
-      border: var(--border-light-md);
-      color: var(--basic-extra-light);
-      background-color: var(--special-extra-bright);
-
       @include hover {
         border: var(--border-extra-bright);
         color: var(--basic-extra-dark);
         background-color: var(--basic-white);
       }
+
+      padding-inline: 32px;
+      border: var(--border-light-md);
+      color: var(--basic-extra-light);
+      background-color: var(--special-extra-bright);
     }
 
     &__total-price {
-      @include fluid-text(18, 16);
+      @include rem-font-size(18);
       font-weight: 700;
+
+      @include media-table {
+        @include rem-font-size(14)
+      }
     }
   }
 }

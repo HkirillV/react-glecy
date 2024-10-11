@@ -1,9 +1,7 @@
 @import "@/styles/abstracts/mixins.scss";
 
 .burger-button {
-  @include reset-button;
   @include square(48px);
-
   position: relative;
 
   @include hover {
@@ -50,7 +48,6 @@
 
   &__list {
     @include flex-center;
-
     flex-direction: column;
     row-gap: 40px;
     min-height: 50vh;

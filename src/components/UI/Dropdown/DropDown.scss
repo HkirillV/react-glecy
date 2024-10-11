@@ -11,13 +11,13 @@
     color: var(--basic-extra-dark);
     background-color: var(--special-light);
 
+    @include media-mobile-s {
+      padding-inline: 10px;
+    }
+
     @include hover {
       background-color: var(--basic-extra-light-rgba);
       color: var(--basic-extra-dark);
-    }
-
-    @include media-mobile-s {
-      padding-inline: 10px;
     }
   }
 
@@ -59,7 +59,7 @@
   }
 
   &__icon {
-    transition-duration: .02s;
+    transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: cubic-bezier(.4, 0, .6, 0);
     transform: rotate(180deg);

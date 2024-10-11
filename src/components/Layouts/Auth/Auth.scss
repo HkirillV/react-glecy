@@ -4,7 +4,7 @@
   position: relative;
 
   &__button {
-    @include  fluid-text(14, 12);
+    @include rem-font-size(14);
     column-gap: 6px;
     padding-inline: 16px;
     font-weight: 400;
@@ -12,6 +12,10 @@
     border-radius: var(--border-raduis-md);
     color: var(--basic-extra-dark);
     background-color: var(--basic-extra-light-icon);
+
+    @include media-table {
+      @include rem-font-size(12)
+    }
 
     @include hover {
       background-color: var(--basic-extra-light-rgba);
@@ -55,9 +59,12 @@
       }
 
       &-link {
+        @include rem-font-size(14);
         text-decoration: underline;
 
-        @include  fluid-text(14, 12);
+        @include media-table {
+          @include rem-font-size(12)
+        }
       }
 
       &-button {

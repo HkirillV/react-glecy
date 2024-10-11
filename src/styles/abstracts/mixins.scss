@@ -2,6 +2,14 @@
   font-size: clamp(#{$min}px, #{$max / 1366 * 100}vw, #{$max}px);
 }
 
+@mixin fluid-padding-block($max: 24, $min: 10) {
+  padding-block: clamp(#{$min}px, #{$max / 1366 * 100}vw, #{$max}px);
+}
+
+@mixin rem-font-size($size, $base: 16) {
+  font-size: #{$size / $base}rem;
+}
+
 @mixin reset-link {
   color: inherit;
 

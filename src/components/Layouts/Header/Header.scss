@@ -2,15 +2,7 @@
 @import "@/styles/abstracts/utils.scss";
 
 .header {
-  padding-block: 24px;
-
-  @include media-mobile-s {
-    padding-block: 15px;
-  }
-
-  @include media-mobile-xs {
-    padding-block: 10px;
-  }
+  @include fluid-padding-block(24, 10);
 
   &__inner {
     display: flex;

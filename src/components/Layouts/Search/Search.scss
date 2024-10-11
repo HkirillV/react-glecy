@@ -3,13 +3,17 @@
 .search {
   position: relative;
 
-  &__button {
-    @include  fluid-text(14, 12);
+  &__toggle-visibility-button {
+    @include rem-font-size(14);
     padding-inline: 10px;
     height: var(--button-height-xs);
     border-radius: var(--border-raduis-md);
     color: var(--basic-extra-dark);
     background-color: var(--basic-extra-light-icon);
+
+    @include media-table {
+      @include rem-font-size(12)
+    }
 
     @include hover {
       background-color: var(--basic-extra-light-rgba);

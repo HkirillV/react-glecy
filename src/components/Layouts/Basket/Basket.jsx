@@ -34,7 +34,9 @@ const Basket = () => {
               <ul className="basket-preview__list">
                 {basket.map(({title, price, imgSrc, id}) => (
                   <li className="basket-preview__item" key={id}>
-                    <img className="basket-preview__icon" src={imgSrc} width="46"
+                    <img className="basket-preview__icon"
+                         src={imgSrc}
+                         width="46"
                          height="46"
                          loading="lazy" alt=""/>
                     <div className="basket-preview__description">

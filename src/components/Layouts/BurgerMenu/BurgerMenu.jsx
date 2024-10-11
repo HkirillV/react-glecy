@@ -1,13 +1,9 @@
-import './BurgerMenu.scss'
-import classNames from "classnames";
+import "./BurgerMenu.scss"
 import {Link} from "react-router-dom";
 import Button from "@/components/UI/Button/index.js";
-import {FiLogIn, FiSearch} from "react-icons/fi";
 import Search from "@/components/Layouts/Search/index.js";
 import Auth from "@/components/Layouts/Auth/index.js";
-import {SlBasket} from "react-icons/sl";
 import Basket from "@/components/Layouts/Basket/index.js";
-import {useState} from "react";
 
 const BurgerMenu = (props) => {
   const {

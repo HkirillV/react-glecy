@@ -1,7 +1,6 @@
 @import "@/styles/abstracts/mixins.scss";
 
 .logo {
-
   @include media-table {
     max-width: 120px;
   }

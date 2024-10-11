@@ -32,15 +32,23 @@
     }
 
     &-link {
-      @include fluid-text(20, 16);
+      @include rem-font-size(20);
       font-weight: 700;
+
+      @include media-table {
+        @include rem-font-size(16)
+      }
     }
   }
 
   &__contacts {
     &-phone {
-      @include fluid-text(20, 16);
+      @include rem-font-size(14);
       font-weight: 700;
+
+      @include media-table {
+        @include rem-font-size(12)
+      }
     }
 
     &-text {

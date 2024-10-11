@@ -25,7 +25,7 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
-      <h3 className="catalog__title">Попробуйте самые популярные вкусы нашего мороженого</h3>
+      <h2 className="catalog__title">Попробуйте самые популярные вкусы нашего мороженого</h2>
       {catalog.length > 0 && (
         <ul className="catalog__list">
           {catalog.map((product, index) => (
