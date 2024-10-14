@@ -1,8 +1,6 @@
 import {useState} from "react";
-import {Link} from "react-router-dom";
 import classNames from "classnames";
 import {IoIosArrowDown} from "react-icons/io";
-
 import Button from '@/components/UI/Button';
 
 import './DropDown.scss'
@@ -26,11 +24,11 @@ const Dropdown = (props) => {
       </Button>
       {isOpen ? (
         <ul className="dropdown-menu">
-          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/index.html">Новинки</Link></li>
-          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/index.html">Сливочное</Link></li>
-          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/index.html">Щербеты</Link></li>
-          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/index.html">Фруктовый лед</Link></li>
-          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/index.html">Мелорин</Link></li>
+          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Новинки</a></li>
+          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Сливочное</a></li>
+          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Щербеты</a></li>
+          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Фруктовый лед</a></li>
+          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Мелорин</a></li>
         </ul>
       ) : []}
     </div>

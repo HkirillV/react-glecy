@@ -1,6 +1,5 @@
 import React from 'react';
 import {useState} from "react";
-import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "@/store/store";
 import Header from '@/components/Layouts/Header';
@@ -27,7 +26,6 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <BrowserRouter>
         <Container>
           <Header onClick={onClick} isOpen={isOpen}/>
           <Swiper/>
@@ -40,7 +38,6 @@ const App = () => {
           <Feedback/>
           <Footer/>
         </Container>
-      </BrowserRouter>
     </Provider>
   )
 }

@@ -1,5 +1,6 @@
-import './Logo.scss'
 import classNames from "classnames";
+
+import './Logo.scss'
 
 const Logo = (props) => {
   const {

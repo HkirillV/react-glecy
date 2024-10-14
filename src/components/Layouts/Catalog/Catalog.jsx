@@ -1,11 +1,11 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {setCatalog} from "@/slices/catalogSlice.js";
-import {MAX_NUMBER_CATALOG_CARDS} from "@/utils/constants.js";
+import {MAX_NUMBER_CATALOG_CARDS} from "@/utils/constants";
 import {setBasketToCache, getBasketToCache} from "@/utils/toCache";
 import catalogAPI from "@/api/catalogAPI";
 import createProductCardWithID from "@/utils/createProductCardWithID";
 import ProductCard from '@/components/UI/ProductCard'
+
 import './Catalog.scss'
 
 const Catalog = () => {

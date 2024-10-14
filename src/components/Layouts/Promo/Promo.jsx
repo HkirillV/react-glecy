@@ -1,6 +1,6 @@
-import './Promo.scss'
-
 import Button from '@/components/UI/Button'
+
+import './Promo.scss'
 
 const Promo = () => {
   return (

@@ -45,11 +45,11 @@
 
   &__icon {
     @include media-mobile-s {
-      @include square(200)
+      @include square(200px)
     }
 
     @include media-mobile-xs {
-      @include square(150)
+      @include square(150px)
     }
   }
 

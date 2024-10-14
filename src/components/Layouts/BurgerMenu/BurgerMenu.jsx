@@ -1,9 +1,9 @@
+import Button from "@/components/UI/Button";
+import Search from "@/components/Layouts/Search";
+import Auth from "@/components/Layouts/Auth";
+import Basket from "@/components/Layouts/Basket";
+
 import "./BurgerMenu.scss"
-import {Link} from "react-router-dom";
-import Button from "@/components/UI/Button/index.js";
-import Search from "@/components/Layouts/Search/index.js";
-import Auth from "@/components/Layouts/Auth/index.js";
-import Basket from "@/components/Layouts/Basket/index.js";
 
 const BurgerMenu = (props) => {
   const {
@@ -21,7 +21,7 @@ const BurgerMenu = (props) => {
       <div className="mobile-overlay__body">
         <ul className="mobile-overlay__list">
           <li className="mobile-overlay__link">
-            <Link to="tel:+7 800 555-86-28">+7 800 555-86-28</Link>
+            <a href="tel:+7 800 555-86-28">+7 800 555-86-28</a>
           </li>
           <li className="mobile-overlay__link">
             <Search/>

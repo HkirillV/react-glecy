@@ -3,14 +3,9 @@
 .burger-button {
   @include square(48px);
   position: relative;
-
-  @include hover {
-    border-radius: var(--border-radius);
-  }
-
-  @include media-mobile-s {
-    @include square(44px);
-  }
+  border-radius: var(--border-radius);
+  color: var(--basic-extra-dark);
+  background-color: transparent;
 
   &::after {
     content: "";
@@ -20,6 +15,14 @@
     border-radius: var(--border-radius);
     background-color: var(--basic-extra-dark);
     box-shadow: 0 -8px, 0 8px;
+  }
+
+  @include hover {
+    background-color: var(--basic-extra-light-rgba);
+  }
+
+  @include media-mobile-s {
+    @include square(44px);
   }
 }
 

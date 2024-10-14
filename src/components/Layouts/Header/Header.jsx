@@ -1,4 +1,3 @@
-import {Link} from "react-router-dom";
 import Button from "@/components/UI/Button";
 import Logo from '@/components/UI/Logo'
 import Dropdown from "@/components/UI/Dropdown";
@@ -24,10 +23,10 @@ const Header = (props) => {
               <Dropdown>Каталог</Dropdown>
             </li>
             <li className="header__menu-item">
-              <Link className="header__menu-link" to="/public">Доставка и оплата</Link>
+              <a className="header__menu-link" href="/public">Доставка и оплата</a>
             </li>
             <li className="header__menu-item">
-              <Link className="header__menu-link" to="/public">О компании</Link>
+              <a className="header__menu-link" href="/public">О компании</a>
             </li>
           </ul>
         </nav>
