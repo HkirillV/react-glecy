@@ -30,14 +30,17 @@ const Slide = () => {
       >
         <SwiperSlide>
           <div className="slide__inner">
-            <div className="slide__wrapper">
-              <h2 className="slide__title">Нежный пломбир <br/> с клубничным джемом</h2>
-              <p className="slide__description">Натуральное мороженое из свежих сливок
-                и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-              <Button className="slide__button">Заказать</Button>
+            <div className="slide__inner-wrapper">
+              <h2 className="slide__inner-title">Нежный пломбир <br/> с клубничным джемом</h2>
+              <p className="slide__inner-description">
+                Натуральное мороженое из свежих сливок
+                и молока с вкуснейшим клубничным джемом –
+                это идеальный десерт для всей семьи.
+              </p>
+              <Button className="slide__inner-button">Заказать</Button>
             </div>
-            <div className="slide__image-wrapper">
-              <img className="slide__image"
+            <div className="slide__inner-image-wrapper">
+              <img className="slide__inner-image"
                    src="/src/assets/images/slide/мороженое_1.png"
                    width="312"
                    height="507"
@@ -48,14 +51,14 @@ const Slide = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide__inner">
-            <div className="slide__wrapper">
-              <h2 className="slide__title">Сливочное мороженое <br/> со вкусом банана</h2>
-              <p className="slide__description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
+            <div className="slide__inner-wrapper">
+              <h2 className="slide__inner-title">Сливочное мороженое <br/> со вкусом банана</h2>
+              <p className="slide__inner-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
                 наслаждение даже в самый жаркий летний день.</p>
-              <Button className="slide__button">Заказать</Button>
+              <Button className="slide__inner-button">Заказать</Button>
             </div>
-            <div className="slide__image-wrapper">
-              <img className="slide__image"
+            <div className="slide__inner-image-wrapper">
+              <img className="slide__inner-image"
                    src="/src/assets/images/slide/мороженое_2.png"
                    width="312"
                    height="507"
@@ -66,15 +69,15 @@ const Slide = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide__inner">
-            <div className="slide__wrapper">
-              <h2 className="slide__title">Карамельный плобир <br/> с маршмеллоу</h2>
-              <p className="slide__description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира
+            <div className="slide__inner-wrapper">
+              <h2 className="slide__inner-title">Карамельный плобир <br/> с маршмеллоу</h2>
+              <p className="slide__inner-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира
                 завоюет
                 сердца сладкоежек всех возрастов.</p>
-              <Button className="slide__button">Заказать</Button>
+              <Button className="slide__inner-button">Заказать</Button>
             </div>
-            <div className="slide__image-wrapper">
-              <img className="slide__image"
+            <div className="slide__inner-image-wrapper">
+              <img className="slide__inner-image"
                    src="/src/assets/images/slide/мороженое_3.png"
                    width="312"
                    height="507"

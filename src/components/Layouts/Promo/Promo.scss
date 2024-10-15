@@ -44,11 +44,9 @@
   }
 
   &__icon {
-    @include media-mobile-s {
-      @include square(200px)
-    }
+    @include square(270px);
 
-    @include media-mobile-xs {
+    @include media-mobile-s {
       @include square(150px)
     }
   }
