@@ -10,8 +10,8 @@ const Basket = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const dispatch = useDispatch();
   const basket = useSelector(state => state.basket);
+  const dispatch = useDispatch();
 
   const onClick = () => {
     setIsOpen(!isOpen);
@@ -31,8 +31,8 @@ const Basket = () => {
           {basket.length > 0 ? (
             <>
               <h4 className="basket-preview__title">Корзина</h4>
-              <ul className="basket-preview__list">
-                {basket.map(({title, price, imgSrc, id}) => (
+              {basket.map(({title, price, imgSrc, id}) => (
+                <ul className="basket-preview__list">
                   <li className="basket-preview__item" key={id}>
                     <img className="basket-preview__icon"
                          src={imgSrc}
@@ -49,15 +49,15 @@ const Basket = () => {
                               onClick={() => onDeleteProduct(id)}></button>
                     </div>
                   </li>
-                ))}
-              </ul>
+                </ul>
+              ))}
               <div className="basket-preview__footer">
                 <Button className="basket-preview__button">Оформить заказ</Button>
                 <p
                   className="basket-preview__total-price">{`Итого: ${basket.reduce((acc, product) => acc + product.price, 0)} ₽`}</p>
               </div>
             </>
-          ) : <p className="basket__empty"><strong>Ваша корзина пока <br/> пуста</strong></p>}
+          ) : <p className="basket__empty">Ваша корзина пока <br/> пуста</p>}
         </div>
       )}
     </div>

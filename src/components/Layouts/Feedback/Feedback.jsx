@@ -16,7 +16,7 @@ const Feedback = () => {
   return (
     <div className="feedback">
       <div className="feedback__inner">
-        <div className="feedback__address">
+        <address className="feedback__address">
           <p className="feedback__address-text">Адрес главного офиса и офлайн-магазина:</p>
           <a className="feedback__address-link"
              target="_blank"
@@ -24,7 +24,7 @@ const Feedback = () => {
             наб. реки Карповки, <br/>
             5 лит П, Санкт-Петербург
           </a>
-        </div>
+        </address>
         <div className="feedback__contacts">
           <p className="feedback__contacts-text">Для заказов по телефону:</p>
           <a className="feedback__contacts-phone" href="tel:+7 (812) 812-12-12">+7 (812) 812-12-12</a>
@@ -40,13 +40,13 @@ const Feedback = () => {
         <h4 className="feedback__dialog-title">Мы обязательно ответим вам!</h4>
         <form className="feedback__form">
           <label className="feedback__form-label">
-            <Input className="feedback__form-input" placeholder="Имя и фамилия"/>
+            <Input className="feedback__form-input" name="name" placeholder="Имя и фамилия"/>
           </label>
           <label className="feedback__form-label">
             <Input className="feedback__form-input" type="email" placeholder="email@example.com"/>
           </label>
           <label className="feedback__form-label">
-            <textarea className="feedback__form-input feedback__form-input_modifier" rows="10" cols="45"
+            <textarea className="feedback__form-input feedback__form-input_modifier" name="message" rows="10" cols="45"
                       placeholder="В свободной форме"></textarea>
           </label>
           <Button className="feedback__form-button" type="submit" onClick={onClick}>Отправить</Button>

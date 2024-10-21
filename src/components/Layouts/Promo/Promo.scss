@@ -44,8 +44,6 @@
   }
 
   &__icon {
-    @include square(270px);
-
     @include media-mobile-s {
       @include square(150px)
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from "react";
 import {Provider} from "react-redux";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import store from "@/store/store";
 import Header from '@/components/Layouts/Header';
 import Swiper from "@/components/Layouts/Slide";
@@ -13,6 +14,7 @@ import Delivery from "@/components/Layouts/Delivery"
 import Feedback from "@/components/Layouts/Feedback";
 import Footer from "@/components/Layouts/Footer"
 import Container from "@/components/Layouts/Container";
+import Filter from "@/components/Layouts/Filter"
 
 import './styles'
 import './App.scss'
@@ -26,18 +28,37 @@ const App = () => {
 
   return (
     <Provider store={store}>
-        <Container>
-          <Header onClick={onClick} isOpen={isOpen}/>
-          <Swiper/>
-          <Promo/>
-          <Catalog/>
-          <BurgerMenu onClick={onClick} isOpen={isOpen}/>
-          <Description/>
-          <Feed/>
-          <Delivery/>
-          <Feedback/>
-          <Footer/>
-        </Container>
+      <BrowserRouter>
+        <div className="app">
+          <Container>
+            <Header onClick={onClick} isOpen={isOpen}/>
+            <main>
+              <Routes>
+                <Route path="/" element={
+                  <>
+
+                  </>
+                }/>
+                <Route path="/catalog" element={
+                  <>
+                    <Swiper/>
+                    <Promo/>
+                    <Catalog/>
+                    <BurgerMenu onClick={onClick} isOpen={isOpen}/>
+                    <Description/>
+                    <Feed/>
+                    <Delivery/>
+                    <Feedback/>
+                    <Filter/>
+                    <Catalog/>
+                  </>
+                }/>
+              </Routes>
+            </main>
+            <Footer/>
+          </Container>
+        </div>
+      </BrowserRouter>
     </Provider>
   )
 }

@@ -22,8 +22,12 @@ const Auth = (props) => {
       {isOpen ? (
         <form className="auth-form">
           <h4 className="auth-form__title">Личный Кабинет</h4>
-          <Input className="auth-form__input-email" type="email" placeholder="email@example.com"/>
-          <Input className="auth-form__input-password" type="password" placeholder="******"/>
+          <label className="auth-form__label">
+            <Input className="auth-form__input-email" type="email" name="email" placeholder="email@example.com"/>
+          </label>
+          <label className="auth-form__label">
+            <Input className="auth-form__input-password" type="password" name="password" placeholder="******"/>
+          </label>
           <div className="auth-form__footer">
             <Button className="auth-form__footer-button">Войти</Button>
             <ul className="auth-form__footer-list">

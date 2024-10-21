@@ -1,5 +1,6 @@
 import {useState} from "react";
 import classNames from "classnames";
+import {Link} from "react-router-dom";
 import {IoIosArrowDown} from "react-icons/io";
 import Button from '@/components/UI/Button';
 
@@ -24,7 +25,7 @@ const Dropdown = (props) => {
       </Button>
       {isOpen ? (
         <ul className="dropdown-menu">
-          <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Новинки</a></li>
+          <li className="dropdown-menu__item"><Link className="dropdown-menu__link" to="/filter">Новинки</Link></li>
           <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Сливочное</a></li>
           <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Щербеты</a></li>
           <li className="dropdown-menu__item"><a className="dropdown-menu__link" href="/index.html">Фруктовый лед</a></li>

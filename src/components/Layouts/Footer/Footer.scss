@@ -20,6 +20,10 @@
     }
   }
 
+  &__copyright {
+    font-weight: 700;
+  }
+
   &__main-list {
     display: grid;
     grid-template-columns: 1fr 1fr;

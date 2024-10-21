@@ -7,9 +7,7 @@ import Input from "@/components/UI/Input";
 import './Search.scss'
 
 const Search = (props) => {
-  const {
-
-  } = props
+  const {} = props
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,10 +17,13 @@ const Search = (props) => {
 
   return (
     <div className="search">
-      <Button className={classNames("search__toggle-visibility-button button", {"is-active": isOpen})} onClick={onClick}><FiSearch/></Button>
+      <Button className={classNames("search__toggle-visibility-button button", {"is-active": isOpen})}
+              onClick={onClick}><FiSearch/></Button>
       {isOpen && (
         <form className="search__form">
-          <Input className="search__input" type="search" disabled={!isOpen} placeholder="Поиск по сайту"/>
+          <label className="search__form-label">
+            <Input className="search__input" type="search" disabled={!isOpen} placeholder="Поиск по сайту"/>
+          </label>
         </form>
       )}
     </div>

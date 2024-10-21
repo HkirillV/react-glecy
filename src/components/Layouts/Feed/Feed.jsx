@@ -16,7 +16,9 @@ const Feed = () => {
             в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды.
             Честно =)</p>
           <form className="subscription__form">
-            <Input className="subscription__input" type="email" placeholder="email@example.com"/>
+            <label className="subscription__form-label">
+              <Input className="subscription__input" type="email" name="email" placeholder="email@example.com"/>
+            </label>
             <Button className="subscription__button" type="submit">Отправить</Button>
           </form>
         </div>

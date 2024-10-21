@@ -1,5 +1,5 @@
 import classNames from "classnames";
-
+import {Link} from "react-router-dom";
 import './Button.scss'
 
 const Button = (props) => {
@@ -7,14 +7,34 @@ const Button = (props) => {
     className,
     children,
     onClick,
-    type,
+    type = "button",
+    href,
+    target,
   } = props;
 
+  const linkProps = {target}
+  const buttonProps = {type, onClick}
+
+  const isLink = Boolean(href);
+  const isRegularLink = href?.startsWith("http") || href?.startsWith("www.")
+
+  if (isLink) {
+    if (isRegularLink) {
+      linkProps.href = href
+    } else {
+      linkProps.to = href
+    }
+  }
+
+  const Component = isLink ? (isRegularLink ? "a" : Link) : "button"
+  const specificProps = isLink ? linkProps : buttonProps
   return (
-    <button
+    <Component
       className={classNames(className, "button")}
-      type={type}
-      onClick={onClick}>{children}</button>
+      {...specificProps}
+    >
+      {children}
+    </Component>
   )
 }
 

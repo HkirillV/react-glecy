@@ -6,6 +6,7 @@ const Input = (props) => {
   const {
     className,
     type = "text",
+    name,
     value,
     onChange,
     placeholder
@@ -15,6 +16,7 @@ const Input = (props) => {
     <input
       className={classNames(className, "input")}
       type={type}
+      name={name}
       value={value}
       onChange={onChange}
       placeholder={placeholder}
