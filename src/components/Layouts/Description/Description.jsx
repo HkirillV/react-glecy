@@ -1,4 +1,4 @@
-import {descriptions} from '@/components/Layouts/Description/descriptions';
+import {data} from '@/components/Layouts/Description/data';
 import "./Description.scss";
 
 
@@ -9,7 +9,7 @@ const Description = () => {
         <h3 className="description__title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого
           собственного производства на развес</h3>
         <ul className="description__list">
-          {descriptions.map(({iconName, description}, index) => (
+          {data.map(({iconName, description}, index) => (
             <li className="description__item" key={index}>
               <img className="description__icon"
                    src={`/src/assets/icons/description/${iconName}.svg`}

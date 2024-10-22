@@ -1,4 +1,4 @@
-export const descriptions = [
+export const data = [
   {
     iconName: "мороженое",
     description: "Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования" +

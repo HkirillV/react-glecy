@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import {Link} from "react-router-dom";
-import './Button.scss'
+import "./Button.scss"
 
 const Button = (props) => {
   const {
@@ -30,7 +30,7 @@ const Button = (props) => {
   const specificProps = isLink ? linkProps : buttonProps
   return (
     <Component
-      className={classNames(className, "button")}
+      className={classNames(className)}
       {...specificProps}
     >
       {children}

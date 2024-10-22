@@ -1,11 +1,11 @@
 import Button from "@/components/UI/Button";
-import Logo from '@/components/UI/Logo'
+import Logo from "@/components/UI/Logo";
 import Dropdown from "@/components/UI/Dropdown";
 import Search from "@/components/Layouts/Search";
 import Auth from "@/components/Layouts/Auth";
 import Basket from "@/components/Layouts/Basket";
 
-import './Header.scss'
+import "./Header.scss"
 
 const Header = (props) => {
   const {
@@ -23,10 +23,10 @@ const Header = (props) => {
               <Dropdown>Каталог</Dropdown>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-link" href="/public">Доставка и оплата</a>
+              <Button className="header__menu-link" href="/">Доставка и оплата</Button>
             </li>
             <li className="header__menu-item">
-              <a className="header__menu-link" href="/public">О компании</a>
+              <Button className="header__menu-link" href="/">О компании</Button>
             </li>
           </ul>
         </nav>

@@ -14,7 +14,7 @@ const BurgerMenu = (props) => {
   return (
     <dialog className="burger-menu mobile-overlay" open={isOpen}>
       <form className="mobile-overlay__close-button-wrapper">
-        <Button className="mobile-overlay__close-button cross-button" type="submit" onClick={onClick}>
+        <Button className="mobile-overlay__close-button cross-button button" type="submit" onClick={onClick}>
           <span className="visually-hidden">Close navigation menu</span>
         </Button>
       </form>

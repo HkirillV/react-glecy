@@ -29,7 +29,7 @@ const Delivery = () => {
           <Input className="delivery__form-input" name="address"
                  placeholder="ул. Большая Конюшенная, 19/8"/>
         </label>
-        <Button className="delivery__button">Отправить</Button>
+        <Button className="delivery__button button">Отправить</Button>
       </form>
     </div>
 

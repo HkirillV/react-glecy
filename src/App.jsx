@@ -1,23 +1,16 @@
-import React from 'react';
+import React from "react";
 import {useState} from "react";
 import {Provider} from "react-redux";
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import store from "@/store/store";
-import Header from '@/components/Layouts/Header';
-import Swiper from "@/components/Layouts/Slide";
-import Promo from "@/components/Layouts/Promo";
-import Catalog from "@/components/Layouts/Catalog";
-import BurgerMenu from "@/components/Layouts/BurgerMenu";
-import Description from "@/components/Layouts/Description";
-import Feed from "@/components/Layouts/Feed"
-import Delivery from "@/components/Layouts/Delivery"
-import Feedback from "@/components/Layouts/Feedback";
-import Footer from "@/components/Layouts/Footer"
 import Container from "@/components/Layouts/Container";
-import Filter from "@/components/Layouts/Filter"
+import LayoutPage from "@/components/Layouts/LayoutPage";
+import HomePage from "@/components/Layouts/HomePage";
+import CatalogPage from "@/components/Layouts/CatalogPage";
+import NotFound from "@/components/Layouts/NotFound";
 
-import './styles'
-import './App.scss'
+import "./styles"
+import "./App.scss"
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -31,31 +24,13 @@ const App = () => {
       <BrowserRouter>
         <div className="app">
           <Container>
-            <Header onClick={onClick} isOpen={isOpen}/>
-            <main>
-              <Routes>
-                <Route path="/" element={
-                  <>
-
-                  </>
-                }/>
-                <Route path="/catalog" element={
-                  <>
-                    <Swiper/>
-                    <Promo/>
-                    <Catalog/>
-                    <BurgerMenu onClick={onClick} isOpen={isOpen}/>
-                    <Description/>
-                    <Feed/>
-                    <Delivery/>
-                    <Feedback/>
-                    <Filter/>
-                    <Catalog/>
-                  </>
-                }/>
-              </Routes>
-            </main>
-            <Footer/>
+            <Routes>
+              <Route path="/" element={<LayoutPage onClick={onClick} isOpen={isOpen}/>}>
+                <Route index element={<HomePage onClick={onClick} isOpen={isOpen}/>}/>
+                <Route path="catalog" element={<CatalogPage/>}/>
+              </Route>
+              <Route path="*" element={<NotFound/>}/>
+            </Routes>
           </Container>
         </div>
       </BrowserRouter>

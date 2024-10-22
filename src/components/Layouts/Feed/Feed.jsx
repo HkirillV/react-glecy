@@ -19,7 +19,7 @@ const Feed = () => {
             <label className="subscription__form-label">
               <Input className="subscription__input" type="email" name="email" placeholder="email@example.com"/>
             </label>
-            <Button className="subscription__button" type="submit">Отправить</Button>
+            <Button className="subscription__button button" type="submit">Отправить</Button>
           </form>
         </div>
       </div>

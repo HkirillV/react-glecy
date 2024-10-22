@@ -4,7 +4,7 @@ import {FiSearch} from "react-icons/fi";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 
-import './Search.scss'
+import "./Search.scss"
 
 const Search = (props) => {
   const {} = props

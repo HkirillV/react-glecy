@@ -1,4 +1,4 @@
-export const promos = [
+export const data = [
   {
     iconName: "malina",
     title: "Малинка даром!",

@@ -1,15 +1,15 @@
-import {useState} from 'react'
+import {useState} from "react";
 import {Navigation, Pagination} from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Controller} from 'swiper/modules';
-import Button from '@/components/UI/Button';
+import {Controller} from "swiper/modules";
+import Button from "@/components/UI/Button";
 
-import 'swiper/scss';
-import 'swiper/css/bundle'
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import "swiper/scss";
+import "swiper/css/bundle";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
-import './Slide.scss'
+import "./Slide.scss"
 
 const socials = [
   {
@@ -52,7 +52,7 @@ const Slide = () => {
                 и молока с вкуснейшим клубничным джемом –
                 это идеальный десерт для всей семьи.
               </p>
-              <Button className="slide__inner-button">Заказать</Button>
+              <Button className="slide__inner-button button">Заказать</Button>
             </div>
             <div className="slide__inner-image-wrapper">
               <img className="slide__inner-image"
@@ -71,7 +71,7 @@ const Slide = () => {
               <p className="slide__inner-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть
                 и
                 наслаждение даже в самый жаркий летний день.</p>
-              <Button className="slide__inner-button">Заказать</Button>
+              <Button className="slide__inner-button button">Заказать</Button>
             </div>
             <div className="slide__inner-image-wrapper">
               <img className="slide__inner-image"
@@ -91,7 +91,7 @@ const Slide = () => {
                 зефира
                 завоюет
                 сердца сладкоежек всех возрастов.</p>
-              <Button className="slide__inner-button">Заказать</Button>
+              <Button className="slide__inner-button button">Заказать</Button>
             </div>
             <div className="slide__inner-image-wrapper">
               <img className="slide__inner-image"
@@ -149,11 +149,11 @@ const Slide = () => {
         <ul className="sub-slide__social-list">
           {socials.map(({iconName, href}, index) => (
             <li className="sub-slide__social-item" key={index}>
-              <a className="sub-slide__social-link" href={href} target="_blank">
+              <Button className="sub-slide__social-link" href={href} target="_blank">
                 <img className="sub-slide__social-icon"
                   src={`/src/assets/icons/footer/${iconName}.svg`}
                   alt=""/>
-              </a>
+              </Button>
             </li>
           ))}
         </ul>

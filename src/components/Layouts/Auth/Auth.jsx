@@ -4,7 +4,7 @@ import {FiLogIn} from "react-icons/fi";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 
-import './Auth.scss'
+import "./Auth.scss"
 
 const Auth = (props) => {
   const {} = props
@@ -29,13 +29,13 @@ const Auth = (props) => {
             <Input className="auth-form__input-password" type="password" name="password" placeholder="******"/>
           </label>
           <div className="auth-form__footer">
-            <Button className="auth-form__footer-button">Войти</Button>
+            <Button className="auth-form__footer-button button">Войти</Button>
             <ul className="auth-form__footer-list">
               <li className="auth-form__footer-item">
-                <a className="auth-form__footer-link" href="/public">Забыли пароль?</a>
+                <Button className="auth-form__footer-link" href="/">Забыли пароль?</Button>
               </li>
               <li className="auth-form__footer-item">
-                <a className="auth-form__footer-link" href="/public">Регистрация</a>
+                <Button className="auth-form__footer-link" href="/">Регистрация</Button>
               </li>
             </ul>
           </div>

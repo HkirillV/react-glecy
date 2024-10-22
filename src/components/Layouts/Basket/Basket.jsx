@@ -3,8 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {SlBasket} from "react-icons/sl";
 import classNames from "classnames";
 import {deleteProduct} from "@/slices/basketSlice";
-import Button from '@/components/UI/Button';
-import './Basket.scss'
+import Button from "@/components/UI/Button";
+import "./Basket.scss"
 
 const Basket = () => {
 
@@ -52,7 +52,7 @@ const Basket = () => {
                 </ul>
               ))}
               <div className="basket-preview__footer">
-                <Button className="basket-preview__button">Оформить заказ</Button>
+                <Button className="basket-preview__button button">Оформить заказ</Button>
                 <p
                   className="basket-preview__total-price">{`Итого: ${basket.reduce((acc, product) => acc + product.price, 0)} ₽`}</p>
               </div>

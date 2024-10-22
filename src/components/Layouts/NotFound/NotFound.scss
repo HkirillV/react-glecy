@@ -1,0 +1,21 @@
+@import "@/styles/abstracts/mixins.scss";
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &__title {
+    @include fluid-text(30, 16);
+    padding-top: 80px;
+    font-weight: 700;
+  }
+
+  &__list {
+    list-style: square;
+  }
+
+  &__link {
+    color: var(--special-extra-blue)
+  }
+}
