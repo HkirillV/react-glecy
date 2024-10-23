@@ -1,10 +1,10 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {setCatalog} from '@/slices/catalogSlice';
+import {setCatalog} from "@/slices/catalogSlice";
 import {MAX_NUMBER_CATALOG_CARDS} from "@/utils/constants";
 import catalogAPI from "@/api/catalogAPI";
-import getProductsCardWithID from "@/utils/getProductsCardWithID.js";
-import ProductCard from '@/components/UI/ProductCard'
+import getProductsCardWithID from "@/utils/getProductsCardWithID";
+import ProductCard from "@/components/UI/ProductCard"
 
 import './Catalog.scss'
 
@@ -19,7 +19,7 @@ const Catalog = () => {
         dispatch(setCatalog(products));
       })
       .catch(error => {
-        console.error('Ошибка при получении продуктов:', error);
+        console.error("Ошибка при получении продуктов:", error);
       });
   }, []);
 

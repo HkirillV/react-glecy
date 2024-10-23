@@ -59,6 +59,13 @@
     @include media-mobile-xs {
       flex-direction: column;
     }
+
+    &-label {
+      @include media-table {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
   }
 
   &__input {

@@ -4,7 +4,8 @@ import {Provider} from "react-redux";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import store from "@/store/store";
 import Container from "@/components/Layouts/Container";
-import LayoutPage from "@/components/Layouts/LayoutPage";
+import Header from "@/components/Layouts/Header";
+import Footer from "@/components/Layouts/Footer";
 import HomePage from "@/components/Layouts/HomePage";
 import CatalogPage from "@/components/Layouts/CatalogPage";
 import NotFound from "@/components/Layouts/NotFound";
@@ -24,13 +25,13 @@ const App = () => {
       <BrowserRouter>
         <div className="app">
           <Container>
+            <Header/>
             <Routes>
-              <Route path="/" element={<LayoutPage onClick={onClick} isOpen={isOpen}/>}>
-                <Route index element={<HomePage onClick={onClick} isOpen={isOpen}/>}/>
-                <Route path="catalog" element={<CatalogPage/>}/>
-              </Route>
+              <Route path="/" element={<HomePage onClick={onClick} isOpen={isOpen}/>}/>
+              <Route path="catalog" element={<CatalogPage/>}/>
               <Route path="*" element={<NotFound/>}/>
             </Routes>
+            <Footer/>
           </Container>
         </div>
       </BrowserRouter>

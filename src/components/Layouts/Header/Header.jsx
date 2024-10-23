@@ -1,16 +1,20 @@
+import {useState} from "react";
 import Button from "@/components/UI/Button";
 import Logo from "@/components/UI/Logo";
 import Dropdown from "@/components/UI/Dropdown";
 import Search from "@/components/Layouts/Search";
 import Auth from "@/components/Layouts/Auth";
 import Basket from "@/components/Layouts/Basket";
+import BurgerMenu from "@/components/Layouts/BurgerMenu";
 
 import "./Header.scss"
 
-const Header = (props) => {
-  const {
-    onBurgerButtonClick
-  } = props
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onBurgerButtonClick = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <header className="header">
@@ -36,9 +40,10 @@ const Header = (props) => {
           <Auth/>
           <Basket/>
         </div>
-        <Button className="button__burger-menu burger-button visible-mobile" onClick={onBurgerButtonClick}>
+        <Button className="button__burger-menu burger-button visible-mobile button" onClick={onBurgerButtonClick}>
           <span className="visually-hidden">Open navigation menu</span>
         </Button>
+        <BurgerMenu isOpen={isOpen} onClick={onBurgerButtonClick}/>
       </div>
     </header>
   )
