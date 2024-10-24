@@ -24,5 +24,17 @@
       "price": 320,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     }
+  ],
+  "Catalog": [
+    {
+      "title": "Попробуйте самые популярные вкусы нашего мороженого",
+      "maxNumberCards": 4
+    }
+  ],
+  "catalogPage": [
+    {
+      "title": "",
+      "maxNumberCards": 8
+    }
   ]
 }

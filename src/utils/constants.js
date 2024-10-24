@@ -1,2 +1,0 @@
-export const MAX_NUMBER_CATALOG_CARDS = 4
-export const MAX_NUMBER_PAGE_CATALOG_CARDS = 4
