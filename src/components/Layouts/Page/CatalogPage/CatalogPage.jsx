@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Filter from "@/components/Layouts/Filter"
 import Catalog from "@/components/Layouts/Catalog"
 
@@ -26,7 +26,7 @@ const CatalogPage = () => {
       <ul className="catalog-page__list">
         {crumbs.map(({title, href}, i) => (
           <li className="catalog-page__item" key={i}>
-            <NavLink  to=".">{title}</NavLink>
+            <Link className="catalog-page__link" to={href}>{title}</Link>
           </li>
         ))}
       </ul>

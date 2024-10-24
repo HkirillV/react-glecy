@@ -8,7 +8,11 @@ import ProductCard from "@/components/UI/ProductCard"
 
 import './Catalog.scss'
 
-const Catalog = () => {
+const Catalog = (props) => {
+  const {
+    title,
+  } = props
+
   const catalog = useSelector((state) => state.catalog);
   const dispatch = useDispatch()
 
@@ -26,7 +30,7 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
-      <h2 className="catalog__title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+      <h2 className="catalog__title">{title}</h2>
       {catalog.length > 0 && (
         <ul className="catalog__list">
           {catalog.slice(0, MAX_NUMBER_CATALOG_CARDS).map((product) => (

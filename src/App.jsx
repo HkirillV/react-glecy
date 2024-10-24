@@ -6,8 +6,8 @@ import store from "@/store/store";
 import Container from "@/components/Layouts/Container";
 import Header from "@/components/Layouts/Header";
 import Footer from "@/components/Layouts/Footer";
-import HomePage from "@/components/Layouts/HomePage";
-import CatalogPage from "@/components/Layouts/CatalogPage";
+import HomePage from "@/components/Layouts/Page/HomePage";
+import CatalogPage from "@/components/Layouts/Page/CatalogPage";
 import NotFound from "@/components/Layouts/NotFound";
 
 import "./styles"
