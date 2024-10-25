@@ -1,0 +1,22 @@
+.crumbs {
+
+  &__list {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+    font-weight: 700;
+
+    &_active {
+      border-bottom: var(--border-basic-extra-dark);
+    }
+  }
+
+  &__icon {
+    font-weight: 700;
+  }
+}

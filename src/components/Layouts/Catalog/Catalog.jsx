@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {setCatalog} from "@/slices/catalogSlice";
 import catalogAPI from "@/api/catalogAPI";
@@ -10,16 +10,16 @@ import './Catalog.scss'
 const Catalog = (props) => {
   const {
     title,
-    maxNumberCards,
+    maxNumberCards
   } = props
 
   const catalog = useSelector((state) => state.catalog);
   const dispatch = useDispatch()
 
+
   useEffect(() => {
     catalogAPI.getProducts()
       .then(data => {
-        console.log(data)
         const products = getProductsCardWithID(data)
         dispatch(setCatalog(products));
       })
@@ -28,7 +28,6 @@ const Catalog = (props) => {
       });
   }, []);
 
-  console.log(data)
   return (
     <div className="catalog">
       <h2 className="catalog__title">{title}</h2>

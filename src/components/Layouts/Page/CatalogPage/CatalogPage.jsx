@@ -1,37 +1,29 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import catalogAPI from "@/api/catalogAPI";
 import Filter from "@/components/Layouts/Filter"
 import Catalog from "@/components/Layouts/Catalog"
-
+import Crumbs from "@/components/Layouts/Crumbs";
 import "./CatalogPage.scss"
 
-const crumbs = [
-  {
-    title: "Главная",
-    href: "/"
-  },
-  {
-    title: "Каталог",
-    href: "catalog"
-  },
-  {
-    title: "Мороженное",
-    href: "catalog"
-  },
-]
-
 const CatalogPage = () => {
+  const [catalogPage, setCatalogPage] = useState({});
+
+  useEffect(() => {
+    catalogAPI.getCatalogPage()
+      .then(data => {
+        setCatalogPage(data)
+      })
+      .catch(error => {
+        console.error("Ошибка при получении страницы catalogTitle:", error);
+      })
+  }, []);
+
+
   return (
     <div className="catalog-page">
-      <ul className="catalog-page__list">
-        {crumbs.map(({title, href}, i) => (
-          <li className="catalog-page__item" key={i}>
-            <Link className="catalog-page__link" to={href}>{title}</Link>
-          </li>
-        ))}
-      </ul>
+      <Crumbs/>
       <Filter/>
-      <Catalog/>
+      <Catalog title={catalogPage.title} maxNumberCards={catalogPage.maxNumberCards}/>
     </div>
   )
 }
