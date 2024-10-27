@@ -1,13 +1,17 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-const initialState = []
+const initialState = {}
 
 const crumbsSlice = createSlice({
-  name: 'CrumbsSlice',
+  name: 'crumbsSlice',
   initialState,
   reducers: {
     addCrumbsSlice: (state, action) => {
-
+      return state = action.payload
     }
   }
 })
+
+export  const {addCrumbsSlice} = crumbsSlice.actions
+
+export default crumbsSlice.reducer;

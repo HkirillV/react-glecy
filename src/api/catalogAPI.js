@@ -12,6 +12,9 @@ const catalogAPI = {
   },
   getCatalogCrumbs: async () => {
     return axiosClient.get("/crumbs").then(({data}) => data);
+  },
+  getDropDown: async () => {
+    return axiosClient.get("/dropdown").then(({data}) => data);
   }
 }
 

@@ -1,16 +1,20 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import addWithIdElement from "@/utils/addWithIdElement";
 import catalogAPI from "@/api/catalogAPI";
 
 import "./Crumbs.scss"
+import {useSelector} from "react-redux";
 
 const Crumbs = () => {
   const [crumbs, setCrumbs] = useState([]);
 
+  const {title} = useSelector(state => state.crumbs)
+
   useEffect(() => {
     catalogAPI.getCatalogCrumbs()
       .then(data => {
-        setCrumbs(data)
+        setCrumbs(addWithIdElement(data))
       })
       .catch(error => console.log("Ошибка получения данных crumbs", error));
   }, []);
@@ -18,8 +22,8 @@ const Crumbs = () => {
   return (
     <div className="crumbs">
       <ul className="crumbs__list">
-        {crumbs.map(({title, href}, index) => (
-            <li className="crumbs__item" key={index}>
+        {crumbs.map(({title, href, id}) => (
+            <li className="crumbs__item" key={id}>
               <Link className="crumbs__link" to={href}>{title}</Link>
               <svg className="crumbs__icon" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd"
@@ -30,10 +34,10 @@ const Crumbs = () => {
           )
         )}
         <li className="crumbs__item crumbs__item_active">
-          <Link className="crumbs__link" to="/catalog">Сливочное Мороженное</Link>
+          <Link className="crumbs__link" to="/catalog">{title}</Link>
         </li>
       </ul>
-      <h3 className="crumbs__title">{}</h3>
+      <h3 className="crumbs__title">{title}</h3>
     </div>
   )
 }

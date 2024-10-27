@@ -24,7 +24,7 @@ const Header = () => {
         <nav className="header__menu">
           <ul className="header__menu-list">
             <li className="header__menu-item">
-              <Dropdown>Каталог</Dropdown>
+              <Dropdown/>
             </li>
             <li className="header__menu-item">
               <Button className="header__menu-link" href="/">Доставка и оплата</Button>

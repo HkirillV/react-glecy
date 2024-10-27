@@ -1,8 +1,8 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {setCatalog} from "@/slices/catalogSlice";
 import catalogAPI from "@/api/catalogAPI";
-import getProductsCardWithID from "@/utils/getProductsCardWithID";
+import addWithIdElement from "@/utils/addWithIdElement";
 import ProductCard from "@/components/UI/ProductCard"
 
 import './Catalog.scss'
@@ -20,7 +20,7 @@ const Catalog = (props) => {
   useEffect(() => {
     catalogAPI.getProducts()
       .then(data => {
-        const products = getProductsCardWithID(data)
+        const products = addWithIdElement(data)
         dispatch(setCatalog(products));
       })
       .catch(error => {

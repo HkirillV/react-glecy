@@ -186,5 +186,27 @@
       "title": "Каталог",
       "href": "/catalog"
     }
+  ],
+  "dropdown": [
+    {
+      "title": "Новинки",
+      "href": "catalog"
+    },
+    {
+      "title": "Сливочное",
+      "href": "catalog"
+    },
+    {
+      "title": "Щербеты",
+      "href": "catalog"
+    },
+    {
+      "title": "Фруктовый лед",
+      "href": "catalog"
+    },
+    {
+      "title": "Мелорин",
+      "href": "catalog"
+    }
   ]
 }
