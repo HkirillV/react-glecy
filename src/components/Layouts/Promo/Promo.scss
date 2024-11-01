@@ -51,9 +51,9 @@
 
   &__button {
     padding-inline: 32px;
-    height: var(--button-height-sm);
-    border: var(--border-light-md);
+    border: var(--border-transparent-md);
     color: var(--basic-extra-dark);
+    background-clip: padding-box;
     background-color: var(--basic-extra-light);
     box-shadow: var(--basic-shadow-light);
 

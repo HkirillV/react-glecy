@@ -9,7 +9,7 @@
     font-weight: 400;
     height: var(--height-xs);
     color: var(--basic-extra-dark);
-    background-color: var(--special-light);
+    background-color: transparent;
 
     @include media-mobile-s {
       padding-inline: 10px;

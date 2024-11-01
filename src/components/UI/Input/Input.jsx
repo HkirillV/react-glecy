@@ -9,7 +9,9 @@ const Input = (props) => {
     name,
     value,
     onChange,
-    placeholder
+    placeholder,
+    min,
+    max,
   } = props
 
   return (
@@ -18,6 +20,8 @@ const Input = (props) => {
       type={type}
       name={name}
       value={value}
+      min={min}
+      max={max}
       onChange={onChange}
       placeholder={placeholder}
     />

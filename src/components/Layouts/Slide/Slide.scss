@@ -29,12 +29,12 @@
 
       &::before {
         @include square(310px);
-        content: "";
         position: absolute;
+        content: "";
         top: 100px;
         z-index: -1;
         border-radius: var(--border-radius-xxl);
-        background-color: var(--special-extra-light);
+        background-color: var(--basic-extra-light-icon);
 
         @include media-tablet-xs {
           top: 20%;
@@ -80,9 +80,9 @@
 
     &-button {
       padding-inline: 32px;
-      height: var(--button-height-sm);
-      border: var(--border-light-md);
+      border: var(--border-transparent-md);
       color: var(--basic-extra-dark);
+      background-clip: padding-box;
       background-color: var(--basic-extra-light);
       box-shadow: var(--basic-shadow-light);
 
@@ -114,7 +114,7 @@
       z-index: -1;
       opacity: 0.4;
       border-radius: var(--border-radius-xxl);
-      background-color: var(--special-extra-light);
+      background-color: var(--basic-extra-light-icon);
     }
   }
 
@@ -134,9 +134,10 @@
   }
 
   &__social-icon {
-    border: var(--border-light-sm);
+    border: var(--border-transparent-sm);
     border-radius: 24px;
     fill: var(--basic-extra-light);
+    background-clip: padding-box;
 
     @include hover {
       background-color: var(--basic-extra-dark);

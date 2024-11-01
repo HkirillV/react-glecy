@@ -21,6 +21,7 @@
 
   --basic-extra-light-icon: rgba(252, 252, 252, 0.3);
   --basic-extra-light-rgba: rgba(252, 252, 252, 0.5);
+  --border: rgba(252, 252, 252, 0.4);
 
   --shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
   --shadow-light: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
@@ -30,6 +31,8 @@
   --swiper-size-btn-md: 10px;
 
   --border-neutral: 1px solid var(--basic-neutral);
+  --border-transparent-sm: 2px solid var(--border);
+  --border-transparent-md: 4px solid var(--border);
   --border-basic-extra-dark: 1px solid var(--basic-extra-dark);
   --border-light-sm: 2px solid var(--special-extra-light);
   --border-light-md: 4px solid var(--special-extra-light);

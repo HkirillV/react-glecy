@@ -1,0 +1,17 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  max-width: 823px;
+
+  &__sort {
+    display: flex;
+    justify-content: space-between;
+
+    &-label {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+  }
+}

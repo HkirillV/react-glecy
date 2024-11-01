@@ -1,4 +1,7 @@
 .catalog-page {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
   margin-top: 30px;
 
   &__list {
