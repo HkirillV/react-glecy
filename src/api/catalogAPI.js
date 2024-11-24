@@ -15,6 +15,9 @@ const catalogAPI = {
   },
   getDropDown: async () => {
     return axiosClient.get("/dropdown").then(({data}) => data);
+  },
+  getFilter: async () => {
+    return axiosClient.get("/filterFat").then(({data}) => data);
   }
 }
 

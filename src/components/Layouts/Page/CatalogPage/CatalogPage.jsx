@@ -15,7 +15,7 @@ const CatalogPage = () => {
         setCatalogPage(data)
       })
       .catch(error => {
-        console.error("Ошибка при получении страницы catalogTitle:", error);
+        console.error("Ошибка при получении страницы catalogTitle:", error.message);
       })
   }, []);
 

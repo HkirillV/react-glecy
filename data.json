@@ -208,5 +208,23 @@
       "title": "Мелорин",
       "href": "catalog"
     }
+  ],
+  "filterFat": [
+    {
+      "name": "0%",
+      "type": "radio"
+    },
+    {
+      "name": "до 10%",
+      "type": "radio"
+    },
+    {
+      "name": "до 30%",
+      "type": "radio"
+    },
+    {
+      "name": "выше 30%",
+      "type": "radio"
+    }
   ]
 }
