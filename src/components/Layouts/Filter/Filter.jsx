@@ -43,7 +43,8 @@ const Filter = () => {
               {filter.length > 0 && (
                 filter.map(({name, type}, index) => (
                   <label key={index} className="fat__label">
-                    <Input className="fat__input" type={type}/>
+                    <Input className="fat__input" type={type} name="fat"/>
+                    <span className="fat__input-custom"></span>
                     <p className="fat__text">{name}</p>
                   </label>
                 ))
@@ -58,7 +59,7 @@ const Filter = () => {
               {fillers.length > 0 && (
                 fillers.map((filler, index) => (
                   <label className="fillers__label" key={index}>
-                    <Input className="filters__input" type="checkbox"/>
+                    <Input className="filters__input" type="checkbox" value={filter}/>
                     {filler}
                   </label>
                 ))
