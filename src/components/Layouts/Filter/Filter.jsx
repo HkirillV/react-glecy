@@ -24,7 +24,7 @@ const Filter = () => {
         <div className="form__inner">
           <div className="form__filter">
             <label className="form__filter-label sort">
-              Сортировка:
+              <p className="form__subtitle">Сортировка:</p>
               <select className="form__filter-select" name="select-category">
                 <option value="">по популярности</option>
                 <option value="">по стоимости</option>
@@ -32,13 +32,13 @@ const Filter = () => {
             </label>
           </div>
           <div className="form__filter">
-            Цена: 100 ₽ – 500 ₽
+            <p className="form__subtitle">Цена: 100 ₽ – 500 ₽</p>
             <label className="form__filter-label form__filter-price">
               <Input className="form__filter-input" type="range" name="price" min="100" max="500"/>
             </label>
           </div>
           <div className="form__filter fat">
-            <p className="fat__subtitle">Жирность:</p>
+            <p className="form__subtitle">Жирность:</p>
             <div className="fat__inner">
               {filter.length > 0 && (
                 filter.map(({name, type}, index) => (
@@ -54,7 +54,7 @@ const Filter = () => {
         </div>
         <div className="form__inner">
           <div className="form__filter fillers">
-            Наполнители:
+            <p className="form__subtitle">Наполнители:</p>
             <div className="fillers__inner">
               {fillers.length > 0 && (
                 fillers.map((filler, index) => (

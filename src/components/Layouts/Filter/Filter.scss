@@ -26,6 +26,11 @@
     align-items: end;
   }
 
+  &__subtitle {
+    @include rem-font-size(14);
+    padding-left: 16px;
+  }
+
   &__filter-price {
     text-align: center;
     height: var(--height-xs);
@@ -72,11 +77,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 8px;
-
-  &__subtitle {
-    font-size: 14px;
-    padding-left: 16px;
-  }
 
   &__inner {
     display: flex;
