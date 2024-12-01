@@ -34,7 +34,10 @@ const Filter = () => {
           <div className="form__filter">
             <p className="form__subtitle">Цена: 100 ₽ – 500 ₽</p>
             <label className="form__filter-label form__filter-price">
-              <Input className="form__filter-input" type="range" name="price" min="100" max="500"/>
+              <Input className="form__filter-input" type="range" name="price" min="100" max="500" step="1"/>
+            </label>
+            <label className="form__filter-label form__filter-price">
+              <Input className="form__filter-input" type="range" name="price" min="100" max="500" step="1"/>
             </label>
           </div>
           <div className="form__filter fat">
