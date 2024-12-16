@@ -12,6 +12,7 @@ const Input = (props) => {
     placeholder,
     min,
     max,
+    step,
   } = props
 
   return (
@@ -22,6 +23,7 @@ const Input = (props) => {
       value={value}
       min={min}
       max={max}
+      step={step}
       onChange={onChange}
       placeholder={placeholder}
     />
