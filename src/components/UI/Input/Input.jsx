@@ -8,7 +8,9 @@ const Input = (props) => {
     type = "text",
     name,
     value,
+    defaultValue,
     onChange,
+    onClick,
     placeholder,
     min,
     max,
@@ -21,10 +23,12 @@ const Input = (props) => {
       type={type}
       name={name}
       value={value}
+      defaultValue={defaultValue}
       min={min}
       max={max}
       step={step}
       onChange={onChange}
+      onClick={onClick}
       placeholder={placeholder}
     />
   )

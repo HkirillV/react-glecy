@@ -16,6 +16,7 @@
   }
 
   &__button {
+    @include rem-font-size(14);
     height: var(--height-xs);
     padding-inline: 52px;
     border: var(--border-extra-light);
@@ -25,6 +26,9 @@
 }
 
 .filter-sort {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 
   &__title {
     @include rem-font-size(14);
@@ -55,6 +59,10 @@
     @include hover {
       background-color: var(--basic-extra-light-rgba);
     }
+  }
+
+  &__option {
+    @include rem-font-size(14);
   }
 }
 
@@ -113,7 +121,7 @@
     @include rem-font-size(14);
   }
 
-  &__wrapper {
+  &__slider-wrapper {
     height: var(--height-xs);
     padding-inline: 16px;
     border-radius: var(--border-raduis-md);
@@ -123,8 +131,8 @@
   &__slider {
     width: 100%;
     height: 2px;
-    margin-top: 15px;
-    background-color: var(--basic-extra-dark);
+    margin-top: 17px;
+    background-color: var(--basic-dark);
   }
 
   &__slider .thumb {
@@ -132,10 +140,16 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    cursor: grab;
+    cursor: pointer;
     background-color: var(--basic-extra-dark);
   }
+
+  &__slider .track-0, .track-2 {
+    height: 2px;
+    background-color: var(--basic-neutral);
+  }
 }
+
 
 .filter-fat {
   display: flex;
@@ -198,6 +212,10 @@
       display: inline-block;
     }
   }
+
+  &__text {
+    @include rem-font-size(14);
+  }
 }
 
 .filter-fillers {
@@ -210,7 +228,7 @@
     align-items: center;
     column-gap: 16px;
     height: var(--height-xs);
-    padding-inline: 16px;
+    padding-inline: 24px;
     border-radius: var(--border-raduis-md);
     background-color: var(--basic-extra-light-icon);
 
@@ -225,12 +243,14 @@
   }
 
   &__input {
+    width: 16px;
     height: 16px;
   }
 
   &__label {
+    @include rem-font-size(14);
     display: flex;
     align-items: center;
-    column-gap: 2px;
+    column-gap: 8px;
   }
 }

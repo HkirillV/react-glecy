@@ -10,17 +10,18 @@ const MIN_PRICE_SLIDE = 100
 const MAX_PRICE_SLIDE = 500
 
 const fillers = ["шоколадные", "сахарные посыпки", "фрукты", "сиропы", "джемы"]
+const categoriesSort = ["по популярности", "цене", "жирности"]
 
 const Filter = () => {
   const [filter, setFilter] = useState([]);
   const [values, setValues] = useState([MIN_PRICE_SLIDE, MAX_PRICE_SLIDE]);
 
   useEffect(() => {
-    catalogAPI.getFilter()
+    catalogAPI.getFilterFat()
       .then(data => {
         setFilter(data);
       })
-      .catch(err => console.log("Ошибка получения данных Filter", err.message));
+      .catch(err => console.log("Ошибка получения данных FilterFat", err.message));
   }, [])
 
   return (
@@ -28,20 +29,23 @@ const Filter = () => {
       <form className="form">
         <div className="form__inner">
           <div className="filter-sort">
-            <label className="filter-sort__label">
-              <p className="filter-sort__title">Сортировка:</p>
-              <select className="filter-sort__select" name="category">
-                <option className="filter-sort__option" value="">по популярности</option>
-                <option className="filter-sort__option" value="">по стоимости</option>
-              </select>
-            </label>
+            <p className="filter-sort__title">Сортировка:</p>
+            <select className="filter-sort__select">
+              {categoriesSort.length > 0 && (
+                categoriesSort.map((category, index) => (
+                  <option className="filter-sort__option" key={index}>
+                    {category}
+                  </option>
+                ))
+              )}
+            </select>
           </div>
           <div className="filter-price">
             <div className="filter-price__parameters">
               <p className="filter-price__title">Цена:</p>
               <div className="filter-price__text">{values[0]} ₽ - {values[1]} ₽</div>
             </div>
-            <div className="filter-price__wrapper">
+            <div className="filter-price__slider-wrapper">
               <Slider
                 className="filter-price__slider"
                 onChange={setValues}
