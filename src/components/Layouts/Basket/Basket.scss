@@ -137,16 +137,16 @@
     }
 
     &__button {
+      padding-inline: 32px;
+      border: var(--border-light-md);
+      color: var(--basic-extra-light);
+      background-color: var(--special-extra-bright);
+
       @include hover {
         border: var(--border-extra-bright);
         color: var(--basic-extra-dark);
         background-color: var(--basic-white);
       }
-
-      padding-inline: 32px;
-      border: var(--border-light-md);
-      color: var(--basic-extra-light);
-      background-color: var(--special-extra-bright);
     }
 
     &__total-price {

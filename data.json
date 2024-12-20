@@ -211,20 +211,16 @@
   ],
   "filterFat": [
     {
-      "name": "0%",
-      "type": "radio"
+      "name": "0%"
     },
     {
-      "name": "до 10%",
-      "type": "radio"
+      "name": "до 10%"
     },
     {
-      "name": "до 30%",
-      "type": "radio"
+      "name": "до 30%"
     },
     {
-      "name": "выше 30%",
-      "type": "radio"
+      "name": "выше 30%"
     }
   ]
 }

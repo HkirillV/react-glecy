@@ -1,6 +1,6 @@
 @import "@/styles/abstracts/mixins";
 
-.filters {
+.filter {
   max-width: 823px;
 }
 
@@ -9,26 +9,23 @@
   flex-direction: column;
   row-gap: 16px;
 
-  &__inner {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: end;
   }
 
-  &__button {
-    @include rem-font-size(14);
-    height: var(--height-xs);
-    padding-inline: 52px;
-    border: var(--border-extra-light);
-    color: var(--basic-extra-dark);
-    background-color: var(--basic-extra-light-icon);
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
   }
-}
 
-.filter-sort {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
 
   &__title {
     @include rem-font-size(14);
@@ -37,9 +34,7 @@
 
   &__label {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 8px;
+    column-gap: 8px;
   }
 
   &__select {
@@ -64,14 +59,68 @@
   &__option {
     @include rem-font-size(14);
   }
+
+
+  &__button {
+    @include rem-font-size(14);
+    height: var(--height-xs);
+    padding-inline: 52px;
+    border: var(--border-extra-light);
+    color: var(--basic-extra-dark);
+    background-color: var(--basic-extra-light-icon);
+
+    @include hover {
+      background-color: var(--basic-extra-light-rgba);
+    }
+  }
 }
 
-.filter-price {
+.filter-sort,
+.filter-price,
+.filter-fat {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-fat__input {
+  display: none;
+
+  &-custom {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: var(--border-basic-extra-dark);
+    border-radius: var(--border-radius-сircle);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: none;
+      height: 6px;
+      width: 6px;
+      border-radius: var(--border-radius-сircle);
+      background-color: var(--basic-extra-dark);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &:checked + &-custom::before {
+    display: inline-block;
+  }
+}
+
+.filter-sort {
   display: flex;
   flex-direction: column;
   row-gap: 8px;
-  max-width: 196px;
-  width: 100%;
+
+}
+
+.filter-price {
+
 
   &__title {
     @include rem-font-size(14);
@@ -136,12 +185,24 @@
   }
 
   &__slider .thumb {
+    position: relative;
     top: -6px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     cursor: pointer;
     background-color: var(--basic-extra-dark);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 4px;
+      height: 4px;
+      border-radius: var(--border-radius-сircle);
+      background-color: var(--basic-white);
+    }
   }
 
   &__slider .track-0, .track-2 {
@@ -182,37 +243,6 @@
   }
 
 
-  &__input {
-    display: none;
-
-    &-custom {
-      position: relative;
-      display: inline-block;
-      height: 16px;
-      width: 16px;
-      margin-right: 5px;
-      border: var(--border-basic-extra-dark);
-      border-radius: var(--border-radius-сircle);
-    }
-
-    &-custom::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: none;
-      height: 6px;
-      width: 6px;
-      border-radius: var(--border-radius-сircle);
-      background-color: var(--basic-extra-dark);
-      transform: translate(-50%, -50%);
-    }
-
-    &:checked + &-custom::before {
-      display: inline-block;
-    }
-  }
-
   &__text {
     @include rem-font-size(14);
   }
@@ -243,8 +273,50 @@
   }
 
   &__input {
-    width: 16px;
-    height: 16px;
+    display: none;
+
+    &-custom {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      border-radius: 15%;
+      border: var(--border-basic-extra-dark-md);
+      background-color: transparent;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        left: 2px;
+        display: none;
+        width: 11px;
+        height: 2px;
+        border-radius: var(--border-radius-xs);
+        background-color: var(--basic-extra-dark);
+        transform: rotate(-55deg);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: none;
+        width: 6px;
+        height: 2px;
+        border-radius: var(--border-radius-xs);
+        background-color: var(--basic-extra-dark);
+        transform: rotate(55deg);
+      }
+    }
+
+    &:checked + &-custom::after {
+      display: inline-block;
+    }
+
+    &:checked + &-custom::before {
+      display: inline-block;
+    }
   }
 
   &__label {
