@@ -32,45 +32,48 @@ const Filter = () => {
 
   return (
     <div className="filter">
-      <form onSubmit={onFormSubmit} className="form">
-        <div className="form__wrapper">
-          <label className="form__label filter-sort">
-            <p className="form__title">Сортировка:</p>
-            <select className="form__select">
-              {categoriesSort.length > 0 && (
-                categoriesSort.map((category) => (
-                  <option
-                    className="form__option"
-                    key={uuidv4()}>
-                    {category}
-                  </option>
-                ))
-              )}
-            </select>
-          </label>
-          <label className="form__label filter-price">
-            <p className="form__title">Цена:</p>
-            <div className="form__text">{values[0]} ₽ - {values[1]} ₽</div>
-            <Slider
-              className="form__slider"
-              onChange={setValues}
-              value={values}
-              min={MIN_PRICE_SLIDE}
-              max={MAX_PRICE_SLIDE}/>
-          </label>
-          <div className="filter-fat">
-            <p className="form__title">Жирность:</p>
-            <ul className="filter-fat__list">
+      <form onSubmit={onFormSubmit} className="filter__form">
+        <div className="filter__wrapper">
+          <div className="filter__inner">
+            <p className="filter__title">Сортировка:</p>
+            <label className="filter__label">
+              <select className="filter__select">
+                {categoriesSort.length > 0 && (
+                  categoriesSort.map((category) => (
+                    <option
+                      className="filter__option"
+                      key={uuidv4()}>
+                      {category}
+                    </option>
+                  ))
+                )}
+              </select>
+            </label>
+          </div>
+          <div className="filter__inner">
+            <span className="filter__title">Цена: {values[0]} ₽ - {values[1]} ₽</span>
+            <div className="filter-price">
+              <Slider
+                className="filter-price__slider"
+                onChange={setValues}
+                value={values}
+                min={MIN_PRICE_SLIDE}
+                max={MAX_PRICE_SLIDE}/>
+            </div>
+          </div>
+          <div className="filter__inner">
+            <p className="filter__title">Жирность:</p>
+            <ul className="filter__list">
               {filter.length > 0 && (
                 filter.map(({name}) => (
-                  <li className="filter-fat__item">
-                    <label className="form__label filter-fat__label">
+                  <li className="filter__item">
+                    <label className="filter__label">
                       <Input
-                        className="form__input filter-fat__input"
+                        className="filter__input"
                         type="radio"
                         name="name"/>
-                      <span className="filter-fat__input-custom"></span>
-                      <p className="form__text">{name}</p>
+                      <span className="filter__input-custom"></span>
+                      <p className="filter__text">{name}</p>
                     </label>
                   </li>
                 ))
@@ -78,21 +81,24 @@ const Filter = () => {
             </ul>
           </div>
         </div>
-        <div className="form__wrapper">
-          <label className="form__label">
-            <p className="form__title">Наполнители:</p>
-            <ul className="form__list">
+        <div className="filter__wrapper">
+          <div className="filter__inner">
+            <p className="filter__title">Наполнители:</p>
+            <ul className="filter__list">
               {fillers.length > 0 && (
                 fillers.map((name, index) => (
-                  <li className="form__item">
-                    <Input className="form__input" type="checkbox" value={filter}/>
-                    {name}
+                  <li className="filter__item">
+                    <label className="filter__label">
+                      <Input className="filter__input filter-fillers__input" type="checkbox" value={filter}/>
+                      <span className="filter-fillers__input-custom"></span>
+                      {name}
+                    </label>
                   </li>
                 ))
               )}
             </ul>
-          </label>
-          <Button className="form__button" type="submit" children="Применить"/>
+          </div>
+          <Button className="filter__button" type="submit" children="Применить"/>
         </div>
       </form>
     </div>
