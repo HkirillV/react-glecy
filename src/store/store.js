@@ -1,13 +1,15 @@
 import {configureStore} from "@reduxjs/toolkit";
-import productSlice from "@/slices/catalogSlice";
 import basketSlice from "@/slices/basketSlice";
-import crumbsSlice from "@/slices/crumbsSlice"
+import crumbsSlice from "@/slices/crumbsSlice";
+import catalogSlice from "@/slices/catalogSlice";
+import filterSlice from "@/slices/filterSlice";
 
 const store = configureStore({
   reducer: {
-    catalog: productSlice,
     basket: basketSlice,
     crumbs: crumbsSlice,
+    catalog: catalogSlice,
+    filter: filterSlice,
   }
 })
 

@@ -1,22 +1,22 @@
 import React, {useEffect, useState} from "react";
-import {Link, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 import addWithIdElement from "@/utils/addWithIdElement";
 import catalogAPI from "@/api/catalogAPI";
 
 import "./Crumbs.scss"
-import {useSelector} from "react-redux";
 
 const Crumbs = () => {
   const [crumbs, setCrumbs] = useState([]);
 
-  const {title} = useSelector(state => state.crumbs)
+  const {title} = useSelector(state => state.crumbs);
 
   useEffect(() => {
     catalogAPI.getCatalogCrumbs()
       .then(data => {
         setCrumbs(addWithIdElement(data))
       })
-      .catch(error => console.log("Ошибка получения данных crumbs", error));
+      .catch(error => console.log("Error receiving crumbs", error.message));
   }, []);
 
   return (

@@ -1,24 +1,30 @@
 import classNames from "classnames";
-import {useState} from "react";
+import {useRef, useState} from "react";
+import useOutsideClick from "@/hooks/useOutsideClick";
 import {FiSearch} from "react-icons/fi";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 
 import "./Search.scss"
 
-const Search = (props) => {
-  const {} = props
-
+const Search = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const searchRef = useRef(null);
 
-  const onClick = () => {
-    setIsOpen(!isOpen);
+  const onSearchClick = () => {
+    setIsOpen(prevState => !prevState);
   }
 
+  const closeSearch = () => {
+    setIsOpen(false)
+  }
+
+  useOutsideClick(searchRef, closeSearch, isOpen)
+
   return (
-    <div className="search">
+    <div className="search" ref={searchRef}>
       <Button className={classNames("search__toggle-visibility-button button", {"is-active": isOpen})}
-              onClick={onClick}><FiSearch/></Button>
+              onClick={onSearchClick}><FiSearch/></Button>
       {isOpen && (
         <form className="search__form">
           <label className="search__form-label">

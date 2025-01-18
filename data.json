@@ -3,169 +3,253 @@
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
-      "price": 310,
+      "price": 110,
+      "fat": 29,
+      "fillers": "джемы",
+      "popularity": 1,
       "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
-      "price": 340,
+      "price": 500,
+      "fat": 29,
+      "fillers": "сиропы",
+      "popularity": 10,
       "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
       "price": 330,
+      "fat": 31,
+      "fillers": "сиропы",
+      "popularity": 5,
       "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
-      "price": 320,
+      "price": 420,
+      "fat": 31,
+      "fillers": "джемы",
+      "popularity": 7,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     },
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
       "price": 310,
+      "fat": 30,
+      "fillers": "фрукты",
+      "popularity": 21,
       "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
-      "price": 340,
+      "price": 500,
+      "fat": 10,
+      "fillers": "шоколадные",
+      "popularity": 0,
       "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
       "price": 330,
+      "fat": 28,
+      "fillers": "фрукты",
+      "popularity": 7,
       "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
-      "price": 320,
+      "price": 220,
+      "fat": 33,
+      "fillers": "сиропы",
+      "popularity": 3,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     },
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
       "price": 310,
+      "fat": 50,
+      "fillers": "джемы",
+      "popularity": 11,
       "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
       "price": 340,
+      "fat": 5,
+      "fillers": "сахарные посыпки",
+      "popularity": 2,
       "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
-      "price": 330,
+      "price": 230,
+      "fat": 20,
+      "fillers": "сахарные посыпки",
+      "popularity": 15,
       "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
       "price": 320,
+      "fat": 25,
+      "fillers": "фрукты",
+      "popularity": 8,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     },
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
-      "price": 310,
+      "price": 110,
+      "fat": 33,
+      "fillers": "джемы",
+      "popularity": 19,
       "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
       "price": 340,
+      "fat": 33,
+      "fillers": "фрукты",
+      "popularity": 14,
       "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
       "price": 330,
+      "fat": 33,
+      "fillers": "джемы",
+      "popularity": 5,
       "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
-      "price": 320,
+      "price": 500,
+      "fat": 33,
+      "fillers": "сиропы",
+      "popularity": 0,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     },
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
-      "price": 310,
+      "price": 490,
+      "fat": 5,
+      "fillers": "сиропы",
+      "popularity": 18,
       "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
       "price": 340,
+      "fat": 1,
+      "fillers": "джемы",
+      "popularity": 11,
       "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
-      "price": 330,
+      "price": 256,
+      "fat": 0,
+      "fillers": "джемы",
+      "popularity": 22,
       "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
-      "price": 320,
+      "price": 400,
+      "fat": 0,
+      "fillers": "джемы",
+      "popularity": 13,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     },
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
-      "price": 310,
+      "price": 150,
+      "fat": 10,
+      "fillers": "сахарные посыпки",
+      "popularity": 11,
       "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
-      "price": 340,
+      "price": 300,
+      "fat": 11,
+      "fillers": "джемы",
+      "popularity": 1,
       "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
-      "price": 330,
+      "price": 370,
+      "fat": 25,
+      "fillers": "сахарные посыпки",
+      "popularity": 4,
       "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
       "price": 320,
+      "fat": 1,
+      "fillers": "джемы",
+      "popularity": 10,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     },
     {
       "title": "Малинка",
       "description": "Сливочное мороженое с малиновым джемом",
-      "price": 310,
+      "price": 430,
+      "fat": 14,
+      "fillers": "джемы",
+      "popularity": 17,
       "imgSrc": "src/assets/images/cards/malinka.svg"
     },
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
       "price": 340,
+      "fat": 35,
+      "fillers": "шоколадные",
+      "popularity": 19,
       "imgSrc": "src/assets/images/cards/pistachio.svg"
     },
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
       "price": 330,
+      "fat": 12,
+      "fillers": "шоколадные",
+      "popularity": 10,
       "imgSrc": "src/assets/images/cards/blueberries.svg"
     },
     {
       "title": "Бабл-гам",
       "description": "Ванильный пломбир\nсо сладкой посыпкой",
       "price": 320,
+      "fat": 7,
+      "fillers": "джемы",
+      "popularity": 13,
       "imgSrc": "src/assets/images/cards/bubblegum.svg"
     }
   ],
@@ -209,18 +293,58 @@
       "href": "catalog"
     }
   ],
-  "filterFat": [
+  "fats": [
     {
-      "name": "0%"
+      "id": 1,
+      "name": "0%",
+      "value": 0
     },
     {
-      "name": "до 10%"
+      "id": 2,
+      "name": "до 10%",
+      "value": 10
     },
     {
-      "name": "до 30%"
+      "id": 3,
+      "name": "до 30%",
+      "value": 30
     },
     {
-      "name": "выше 30%"
+      "id": 4,
+      "name": "выше 30%",
+      "value": 31
+    }
+  ],
+  "fillers": [
+    {
+      "id": 1,
+      "name": "шоколадные"
+    },
+    {
+      "id": 2,
+      "name": "сахарные посыпки"
+    },
+    {
+      "id": 3,
+      "name": "фрукты"
+    },
+    {
+      "id": 4,
+      "name": "сиропы"
+    },
+    {
+      "id": 5,
+      "name": "джемы"
+    }
+  ],
+  "sorts": [
+    {
+      "id": 1,
+      "categorySort": "по популярности"
+    },
+    {
+      "id": 2,
+      "categorySort": "цене"
     }
   ]
 }

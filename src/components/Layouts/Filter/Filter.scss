@@ -19,6 +19,11 @@
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+
+    &_responsive-box {
+      width: 100%;
+      max-width: 196px;
+    }
   }
 
   &__title {

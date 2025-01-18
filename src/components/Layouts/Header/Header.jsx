@@ -13,7 +13,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onBurgerButtonClick = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prevState => !prevState);
   }
 
   return (

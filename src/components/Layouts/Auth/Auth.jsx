@@ -1,24 +1,30 @@
 import classNames from "classnames";
-import {useState} from "react";
+import {useRef, useState} from "react";
+import useOutsideClick from "@/hooks/useOutsideClick";
 import {FiLogIn} from "react-icons/fi";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 
 import "./Auth.scss"
 
-const Auth = (props) => {
-  const {} = props
-
+const Auth = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const authRef = useRef(null);
 
-  const onClick = () => {
-    setIsOpen(!isOpen);
+  const onAuthClick = () => {
+    setIsOpen(prevState => !prevState);
   }
 
+  const closeAuth = () => {
+    setIsOpen(false);
+  }
+
+  useOutsideClick(authRef, closeAuth, isOpen);
+
   return (
-    <div className="auth">
+    <div className="auth" ref={authRef}>
       <Button className={classNames("auth__button button", {"is-active": isOpen})}
-              onClick={onClick}><FiLogIn/>Вход</Button>
+              onClick={onAuthClick}><FiLogIn/>Вход</Button>
       {isOpen ? (
         <form className="auth-form">
           <h4 className="auth-form__title">Личный Кабинет</h4>

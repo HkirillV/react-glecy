@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {setCatalog} from "@/slices/catalogSlice";
 import catalogAPI from "@/api/catalogAPI";
+import {setCatalog} from "@/slices/catalogSlice";
 import addWithIdElement from "@/utils/addWithIdElement";
 import ProductCard from "@/components/UI/ProductCard"
 
@@ -13,20 +13,22 @@ const Catalog = (props) => {
     maxNumberCards
   } = props
 
+  const filter = useSelector(state => state.filter)
   const catalog = useSelector((state) => state.catalog);
   const dispatch = useDispatch()
 
 
+
   useEffect(() => {
-    catalogAPI.getProducts()
+    catalogAPI.getProducts(filter)
       .then(data => {
         const products = addWithIdElement(data)
         dispatch(setCatalog(products));
       })
       .catch(error => {
-        console.error("Ошибка при получении продуктов:", error);
+        console.error("Error receiving cards:", error.message);
       });
-  }, []);
+  }, [filter]);
 
   return (
     <div className="catalog">

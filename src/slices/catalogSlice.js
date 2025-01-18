@@ -1,8 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-const initialState = {
-  catalog: []
-}
+const initialState = []
 
 const catalogSlice = createSlice(
   {

@@ -1,30 +1,37 @@
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import useOutsideClick from "@/hooks/useOutsideClick";
 import {SlBasket} from "react-icons/sl";
 import classNames from "classnames";
 import {deleteProduct} from "@/slices/basketSlice";
 import Button from "@/components/UI/Button";
+
 import "./Basket.scss"
 
 const Basket = () => {
-
   const [isOpen, setIsOpen] = useState(false);
-
+  const basketRef = useRef(null);
   const basket = useSelector(state => state.basket);
   const dispatch = useDispatch();
 
-  const onClick = () => {
+  const onBasketClick = () => {
     setIsOpen(!isOpen);
   }
+
+  const closeBasket = () => {
+    setIsOpen(false);
+  }
+
+  useOutsideClick(basketRef, closeBasket, isOpen);
 
   const onDeleteProduct = (id) => {
     dispatch(deleteProduct(id));
   }
 
   return (
-    <div className="basket">
+    <div className="basket" ref={basketRef}>
       <Button className={classNames("basket__button button", {"is-active": isOpen})}
-              onClick={onClick}><SlBasket/>{basket.length > 0 ? `${basket.length} товара` : "Нет товаров"}</Button>
+              onClick={onBasketClick}><SlBasket/>{basket.length > 0 ? `${basket.length} товара` : "Нет товаров"}</Button>
       {isOpen && (
         <div className="basket-preview">
 
