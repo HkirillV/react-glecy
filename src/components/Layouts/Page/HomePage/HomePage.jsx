@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from "react";
 import catalogAPI from "@/api/catalogAPI";
 import Swiper from "@/components/Layouts/Slide";
 import Promo from "@/components/Layouts/Promo";

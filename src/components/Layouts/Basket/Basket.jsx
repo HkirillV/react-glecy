@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import useOutsideClick from "@/hooks/useOutsideClick";
 import {SlBasket} from "react-icons/sl";
@@ -15,7 +15,7 @@ const Basket = () => {
   const dispatch = useDispatch();
 
   const onBasketClick = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prevState => !prevState);
   }
 
   const closeBasket = () => {
@@ -31,15 +31,15 @@ const Basket = () => {
   return (
     <div className="basket" ref={basketRef}>
       <Button className={classNames("basket__button button", {"is-active": isOpen})}
-              onClick={onBasketClick}><SlBasket/>{basket.length > 0 ? `${basket.length} товара` : "Нет товаров"}</Button>
+              onClick={onBasketClick}><SlBasket/>{basket.length > 0 ? `${basket.length} товара` : "Нет товаров"}
+      </Button>
       {isOpen && (
         <div className="basket-preview">
-
           {basket.length > 0 ? (
             <>
               <h4 className="basket-preview__title">Корзина</h4>
-              {basket.map(({title, price, imgSrc, id}) => (
-                <ul className="basket-preview__list">
+              <ul className="basket-preview__list">
+                {basket.map(({title, price, imgSrc, id}) => (
                   <li className="basket-preview__item" key={id}>
                     <img className="basket-preview__icon"
                          src={imgSrc}
@@ -52,12 +52,12 @@ const Basket = () => {
                     </div>
                     <div className="basket-preview__price-container">
                       <p className="basket-preview__price">{price} ₽</p>
-                      <button className="basket-preview__button-delete" type="button"
-                              onClick={() => onDeleteProduct(id)}></button>
+                      <Button className="basket-preview__button-delete"
+                              onClick={() => onDeleteProduct(id)}></Button>
                     </div>
                   </li>
-                </ul>
-              ))}
+                ))}
+              </ul>
               <div className="basket-preview__footer">
                 <Button className="basket-preview__button button">Оформить заказ</Button>
                 <p

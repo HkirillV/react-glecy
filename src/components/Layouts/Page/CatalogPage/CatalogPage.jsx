@@ -7,24 +7,12 @@ import Crumbs from "@/components/Layouts/Crumbs";
 import "./CatalogPage.scss"
 
 const CatalogPage = () => {
-  const [catalogPage, setCatalogPage] = useState({});
-
-  useEffect(() => {
-    catalogAPI.getCatalogPage()
-      .then(data => {
-        setCatalogPage(data)
-      })
-      .catch(error => {
-        console.error("Ошибка при получении страницы catalogTitle:", error.message);
-      })
-  }, []);
-
 
   return (
     <div className="catalog-page">
       <Crumbs/>
       <Filter/>
-      <Catalog title={catalogPage.title} maxNumberCards={catalogPage.maxNumberCards}/>
+      <Catalog/>
     </div>
   )
 }

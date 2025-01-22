@@ -5,7 +5,7 @@ const initialState = {
 }
 
 const crumbsSlice = createSlice({
-  name: 'crumbsSlice',
+  name: "crumbsSlice",
   initialState,
   reducers: {
     addCrumbsSlice: (state, action) => {

@@ -1,4 +1,6 @@
 import {SlBasket} from "react-icons/sl";
+import {useDispatch} from "react-redux";
+import {addProduct} from "@/slices/basketSlice";
 import Button from "@/components/UI/Button";
 
 import './ProductCard.scss'
@@ -12,6 +14,23 @@ const ProductCard = (props) => {
     imgSrc,
   } = props
 
+  const dispatch = useDispatch();
+
+  const addProductToCart = (e) => {
+    e.preventDefault();
+
+    const product = {
+      id,
+      title,
+      description,
+      price,
+      imgSrc,
+    };
+
+    dispatch(addProduct(product));
+  }
+
+
   return (
     <div className="product-card" key={id}>
       <img className="product-card__image"
@@ -24,7 +43,7 @@ const ProductCard = (props) => {
       <p className="product-card__description">{description}</p>
       <div className="product-card__footer">
         <p className="product-card__price">{`${price} ₽/кг`}</p>
-        <Button className="product-card__button button"><SlBasket/></Button>
+        <Button className="product-card__button button" onClick={addProductToCart}><SlBasket/></Button>
       </div>
     </div>
   )

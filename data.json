@@ -257,10 +257,6 @@
     "title": "Попробуйте самые популярные вкусы нашего мороженого",
     "maxNumberCards": 4
   },
-  "catalogPage": {
-    "title": "",
-    "maxNumberCards": 8
-  },
   "crumbs": [
     {
       "title": "Главная",
