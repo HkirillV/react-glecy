@@ -16,7 +16,7 @@ const ProductCard = (props) => {
 
   const dispatch = useDispatch();
 
-  const addProductToCart = (e) => {
+  const onAddProductToCart = (e) => {
     e.preventDefault();
 
     const product = {
@@ -43,7 +43,7 @@ const ProductCard = (props) => {
       <p className="product-card__description">{description}</p>
       <div className="product-card__footer">
         <p className="product-card__price">{`${price} ₽/кг`}</p>
-        <Button className="product-card__button button" onClick={addProductToCart}><SlBasket/></Button>
+        <Button className="product-card__button button" onClick={onAddProductToCart}><SlBasket/></Button>
       </div>
     </div>
   )

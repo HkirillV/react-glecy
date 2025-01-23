@@ -11,21 +11,24 @@ import "./Basket.scss"
 const Basket = () => {
   const [isOpen, setIsOpen] = useState(false);
   const basketRef = useRef(null);
+  const [recentlyDeleted, setRecentlyDeleted] = useState(false);
   const basket = useSelector(state => state.basket);
   const dispatch = useDispatch();
+
+  useOutsideClick(basketRef, () => {
+    if (!recentlyDeleted) {
+      setIsOpen(false);
+    }
+    setRecentlyDeleted(false);
+  }, isOpen);
 
   const onBasketClick = () => {
     setIsOpen(prevState => !prevState);
   }
 
-  const closeBasket = () => {
-    setIsOpen(false);
-  }
-
-  useOutsideClick(basketRef, closeBasket, isOpen);
-
   const onDeleteProduct = (id) => {
     dispatch(deleteProduct(id));
+    setRecentlyDeleted(true);
   }
 
   return (
