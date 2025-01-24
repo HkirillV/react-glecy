@@ -1,6 +1,6 @@
 export const getBasketToCache = () => {
   const basket = localStorage.getItem("basket")
-  basket ? JSON.parse(basket) : []
+  return basket ? JSON.parse(basket) : []
 }
 
 export const setBasketToCache = (value) => {

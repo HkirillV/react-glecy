@@ -1,6 +1,5 @@
 import {SlBasket} from "react-icons/sl";
-import {useDispatch} from "react-redux";
-import {addProduct} from "@/slices/basketSlice";
+import {setBasketToCache, getBasketToCache} from "@/utils/toCache";
 import Button from "@/components/UI/Button";
 
 import './ProductCard.scss'
@@ -14,20 +13,8 @@ const ProductCard = (props) => {
     imgSrc,
   } = props
 
-  const dispatch = useDispatch();
-
-  const onAddProductToCart = (e) => {
-    e.preventDefault();
-
-    const product = {
-      id,
-      title,
-      description,
-      price,
-      imgSrc,
-    };
-
-    dispatch(addProduct(product));
+  const onAddProductToCart = (product) => {
+    setBasketToCache([product])
   }
 
 
@@ -43,7 +30,7 @@ const ProductCard = (props) => {
       <p className="product-card__description">{description}</p>
       <div className="product-card__footer">
         <p className="product-card__price">{`${price} ₽/кг`}</p>
-        <Button className="product-card__button button" onClick={onAddProductToCart}><SlBasket/></Button>
+        <Button className="product-card__button button" onClick={() => onAddProductToCart({id, title, description, price, imgSrc})}><SlBasket/></Button>
       </div>
     </div>
   )

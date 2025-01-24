@@ -48,7 +48,7 @@
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
-      "price": 500,
+      "price": 440,
       "fat": 10,
       "fillers": "шоколадные",
       "popularity": 0,
@@ -57,7 +57,7 @@
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
-      "price": 330,
+      "price": 130,
       "fat": 28,
       "fillers": "фрукты",
       "popularity": 7,
@@ -120,7 +120,7 @@
     {
       "title": "Фисташка",
       "description": "Фисташковый пломбир с кусочками шоколада",
-      "price": 340,
+      "price": 310,
       "fat": 33,
       "fillers": "фрукты",
       "popularity": 14,
@@ -129,7 +129,7 @@
     {
       "title": "Черника",
       "description": "Крем-брюле с черничным джемом",
-      "price": 330,
+      "price": 380,
       "fat": 33,
       "fillers": "джемы",
       "popularity": 5,

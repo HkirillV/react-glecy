@@ -1,8 +1,9 @@
-import {useRef, useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useEffect, useRef, useState} from "react";
+import {useDispatch} from "react-redux";
 import useOutsideClick from "@/hooks/useOutsideClick";
 import {SlBasket} from "react-icons/sl";
 import classNames from "classnames";
+import {getBasketToCache, setBasketToCache} from "@/utils/toCache";
 import {deleteProduct} from "@/slices/basketSlice";
 import Button from "@/components/UI/Button";
 
@@ -10,9 +11,9 @@ import "./Basket.scss"
 
 const Basket = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [basket, setBasket] = useState([]);
   const basketRef = useRef(null);
   const [recentlyDeleted, setRecentlyDeleted] = useState(false);
-  const basket = useSelector(state => state.basket);
   const dispatch = useDispatch();
 
   useOutsideClick(basketRef, () => {
@@ -21,6 +22,10 @@ const Basket = () => {
     }
     setRecentlyDeleted(false);
   }, isOpen);
+
+  useEffect(() => {
+
+  }, [basket])
 
   const onBasketClick = () => {
     setIsOpen(prevState => !prevState);
