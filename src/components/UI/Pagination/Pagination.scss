@@ -1,0 +1,27 @@
+@import "@/styles/abstracts/mixins.scss";
+
+.pagination {
+  position: absolute;
+  right: 0;
+  bottom: 13px;
+
+  &__list {
+    display: flex;
+    column-gap: 2px;
+  }
+
+  &__item {
+    @include rem-font-size(16);
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding-inline: 8px;
+    border-radius: var(--border-radius-сircle);
+  }
+
+  &__item:hover,
+  &__item:active {
+    cursor: pointer;
+    background-color: var(--basic-extra-light);
+  }
+}

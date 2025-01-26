@@ -1,6 +1,7 @@
 @import '@/styles/abstracts/mixins';
 
 .catalog {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
