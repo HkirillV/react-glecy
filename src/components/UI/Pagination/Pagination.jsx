@@ -6,7 +6,15 @@ import Button from "@/components/UI/Button/index";
 
 import "./Pagination.scss"
 
-const Pagination = ({maxNumberCards, catalog, paginate, onButtonClickLast, onButtonClickNext}) => {
+const Pagination = (props) => {
+  const {
+    maxNumberCards,
+    catalog,
+    paginate,
+    onClickButtonLast,
+    onClickButtonNext
+  } = props
+
   const [activeBtn, setActiveBtn] = useState(1);
   const pageNumbers = []
 
@@ -14,12 +22,23 @@ const Pagination = ({maxNumberCards, catalog, paginate, onButtonClickLast, onBut
     pageNumbers.push(i)
   }
 
+  const onClickPaginationButtonLast = () => {
+    if (activeBtn > 1) {
+      setActiveBtn(prevState => prevState - 1);
+      onClickButtonLast();
+    }
+  }
+
+  const onClickPaginationButtonNext = () => {
+    if (activeBtn < pageNumbers.length) {
+      setActiveBtn(prevState => prevState + 1);
+      onClickButtonNext();
+    }
+  }
+
   return (
     <div className="pagination">
-      <Button className="pagination__button" onClick={() => {
-        onButtonClickLast
-        setActiveBtn((prevState) => prevState - 1)
-      }}><FiChevronLeft/></Button>
+      <Button className="pagination__button" onClick={onClickPaginationButtonLast}><FiChevronLeft/></Button>
       <ul className="pagination__list">
         {
           pageNumbers.map((number) => (
@@ -34,10 +53,7 @@ const Pagination = ({maxNumberCards, catalog, paginate, onButtonClickLast, onBut
           ))
         }
       </ul>
-      <Button className="pagination__button" onClick={() => {
-        onButtonClickNext
-        setActiveBtn((prevState) => prevState + 1)
-      }}><FiChevronRight/></Button>
+      <Button className="pagination__button" onClick={onClickPaginationButtonNext}><FiChevronRight/></Button>
     </div>
   )
 }

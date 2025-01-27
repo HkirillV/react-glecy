@@ -36,8 +36,8 @@ const Catalog = () => {
   }
 
   const onClickPaginate = (pageNumber) => setCurrentPage(pageNumber)
-  const onButtonClickNext = () => setCurrentPage(prevState => prevState + 1)
-  const onButtonClickLast = () => setCurrentPage(prevState => prevState - 1)
+  const onClickButtonNext = () => setCurrentPage(prevState => prevState + 1)
+  const onClickButtonLast = () => setCurrentPage(prevState => prevState - 1)
 
   return (
     <div className="catalog">
@@ -56,8 +56,8 @@ const Catalog = () => {
         maxNumberCards={maxNumberCards}
         catalog={catalog.length}
         paginate={onClickPaginate}
-        onButtonClickNext={onButtonClickNext}
-        onButtonClickLast={onButtonClickLast}
+        onClickButtonNext={onClickButtonNext}
+        onClickButtonLast={onClickButtonLast}
       />
     </div>
   )
