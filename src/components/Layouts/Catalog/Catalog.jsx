@@ -10,7 +10,7 @@ import Pagination from "@/components/UI/Pagination";
 import './Catalog.scss'
 
 const Catalog = () => {
-  const [maxNumberCards, setMaxNumberCards] = useState(4)
+  const [maxNumberCards, setMaxNumberCards] = useState(8)
   const [currentPage, setCurrentPage] = useState(1);
   const filter = useSelector(state => state.filter)
   const catalog = useSelector((state) => state.catalog);
@@ -29,17 +29,21 @@ const Catalog = () => {
 
   const lastProductCardIndex = currentPage * maxNumberCards;
   const firstProductCardIndex = lastProductCardIndex - maxNumberCards;
-  // const currentProductCard = currentPage.slice(firstProductCardIndex, lastProductCardIndex);
+  const currentProductCard = catalog.slice(firstProductCardIndex, lastProductCardIndex);
 
   const onButtonShowMoreClick = () => {
     setMaxNumberCards(prevState => prevState + 4)
   }
 
+  const onClickPaginate = (pageNumber) => setCurrentPage(pageNumber)
+  const onButtonClickNext = () => setCurrentPage(prevState => prevState + 1)
+  const onButtonClickLast = () => setCurrentPage(prevState => prevState - 1)
+
   return (
     <div className="catalog">
       {catalog.length > 0 && (
         <ul className="catalog__list">
-          {catalog.slice(0, maxNumberCards).map((product) => (
+          {currentProductCard.map((product) => (
               <li className="catalog__item" key={product.id}>
                 <ProductCard {...product} />
               </li>
@@ -48,7 +52,13 @@ const Catalog = () => {
         </ul>
       )}
       <Button className="catalog__button button" onClick={onButtonShowMoreClick}>Показать еще</Button>
-      <Pagination maxNumberCards={maxNumberCards} catalog={catalog.length}/>
+      <Pagination
+        maxNumberCards={maxNumberCards}
+        catalog={catalog.length}
+        paginate={onClickPaginate}
+        onButtonClickNext={onButtonClickNext}
+        onButtonClickLast={onButtonClickLast}
+      />
     </div>
   )
 }

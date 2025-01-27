@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import useOutsideClick from "@/hooks/useOutsideClick";
 import {SlBasket} from "react-icons/sl";
 import classNames from "classnames";
-import {getBasketToCache, setBasketToCache} from "@/utils/toCache";
+import {setBasketToCache} from "@/utils/toCache";
 import {deleteProduct} from "@/slices/basketSlice";
 import Button from "@/components/UI/Button";
 

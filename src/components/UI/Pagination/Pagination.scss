@@ -4,6 +4,7 @@
   position: absolute;
   right: 0;
   bottom: 13px;
+  display: flex;
 
   &__list {
     display: flex;
@@ -11,7 +12,7 @@
   }
 
   &__item {
-    @include rem-font-size(16);
+    @include rem-font-size(18);
     display: flex;
     align-items: center;
     height: 24px;
@@ -22,6 +23,17 @@
   &__item:hover,
   &__item:active {
     cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+  }
+
+  &__active-btn {
     background-color: var(--basic-extra-light);
   }
 }
