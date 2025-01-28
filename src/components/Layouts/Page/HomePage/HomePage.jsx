@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {useSelector} from "react-redux";
 import catalogAPI from "@/api/catalogAPI";
 import Swiper from "@/components/Layouts/Slide";
 import Promo from "@/components/Layouts/Promo";
@@ -17,7 +18,10 @@ const HomePage = (props) => {
     isOpen,
   } = props
 
+  const catalog = useSelector((state) => state.catalog);
   const [catalogHome, setCatalogHome] = useState({});
+  const currentProductCard = catalog.slice(0, catalogHome.maxNumberCards)
+
 
   useEffect(() => {
     catalogAPI.getCatalogHome()
@@ -33,7 +37,7 @@ const HomePage = (props) => {
     <div className="home-page">
       <Swiper/>
       <Promo/>
-      <Catalog title={catalogHome.title} maxNumberCards={catalogHome.maxNumberCards}/>
+      <Catalog title={catalogHome.title} currentProductCard={currentProductCard}/>
       <BurgerMenu onClick={onClick} isOpen={isOpen}/>
       <Description/>
       <Feed/>

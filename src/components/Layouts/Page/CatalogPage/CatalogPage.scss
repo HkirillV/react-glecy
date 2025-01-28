@@ -1,4 +1,7 @@
+@import '@/styles/abstracts/mixins';
+
 .catalog-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
@@ -7,6 +10,36 @@
   &__list {
     display: flex;
     gap: 10px;
+  }
+
+  &__wrapper-button {
+    display: flex;
+    justify-content: center;
+
+    @include media-tablet-xxs {
+      justify-content: start;
+    }
+  }
+
+  &__button {
+    @include fluid-text(16, 12);
+    height: var(--button-height-sm);
+    max-width: 190px;
+    padding-inline: 32px;
+    border: var(--border-transparent-md);
+    border-radius: var(--border-raduis-md);
+    color: var(--basic-extra-dark);
+    background-clip: padding-box;
+    background-color: var(--basic-extra-light);
+    box-shadow: var(--basic-shadow-light);
+
+    @include hover {
+      background-color: var(--basic-extra-light-rgba);
+    }
+
+    @include media-tablet-xxs {
+      padding-inline: 16px;
+    }
   }
 
 }

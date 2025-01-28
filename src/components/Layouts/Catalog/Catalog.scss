@@ -1,14 +1,13 @@
 @import '@/styles/abstracts/mixins';
 
 .catalog {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 57px;
   margin-top: 80px;
 
- &__title {
+  &__title {
    text-align: center;
    max-width: 600px;
  }
@@ -34,21 +33,5 @@
     justify-content: center;
     align-items: end;
     height: 332px;
-  }
-
-  &__button {
-    @include rem-font-size(16);
-    height: var(--button-height-sm);
-    padding-inline: 32px;
-    border: var(--border-transparent-md);
-    border-radius: var(--border-raduis-md);
-    color: var(--basic-extra-dark);
-    background-clip: padding-box;
-    background-color: var(--basic-extra-light);
-    box-shadow: var(--basic-shadow-light);
-
-    @include hover {
-      background-color: var(--basic-extra-light-rgba);
-    }
   }
 }
