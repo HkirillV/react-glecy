@@ -3,8 +3,8 @@ import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
 import classNames from "classnames";
 import Button from "@/components/UI/Button/index";
 
-
 import "./Pagination.scss"
+import usePagination from "@/components/UI/Pagination/usePagination.jsx";
 
 const Pagination = (props) => {
   const {
@@ -15,12 +15,7 @@ const Pagination = (props) => {
     onClickButtonNext
   } = props
 
-  const [activeBtn, setActiveBtn] = useState(1);
-  const pageNumbers = []
-
-  for (let i = 1; i <= Math.ceil(catalog / maxNumberCards); i++) {
-    pageNumbers.push(i)
-  }
+  const { activeBtn, setActiveBtn, pageNumbers } = usePagination({ catalog, maxNumberCards })
 
   const onClickPaginationButtonLast = () => {
     if (activeBtn > 1) {

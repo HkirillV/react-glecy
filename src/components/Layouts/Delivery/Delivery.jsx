@@ -1,6 +1,5 @@
 import Button from "@/components/UI/Button"
-import Input from "@/components/UI/Input";
-
+import Field from "@/components/UI/Field";
 import "./Delivery.scss"
 
 const Delivery = () => {
@@ -15,20 +14,24 @@ const Delivery = () => {
         <p className="delivery__form-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить
           заказ.</p>
         <div className="delivery__form-container">
-          <label className="delivery__form-label">
-            Дата
-            <Input className="delivery__form-input" type="date" name="date" placeholder="01.04.2020"/>
-          </label>
-          <label className="delivery__form-label">
-            Телефон
-            <Input className="delivery__form-input" type="tel" name="iphone" placeholder="+7 800 999-00-00"/>
-          </label>
+          <Field
+            className="delivery__form-input"
+            type="date"
+            name="date"
+            placeholder="01.04.2020"
+            children="Дата"/>
+          <Field
+            className="delivery__form-input"
+            type="tel"
+            name="iphone"
+            placeholder="+7 800 999-00-00"
+            children="Телефон"/>
         </div>
-        <label className="delivery__form-label">
-          Адрес
-          <Input className="delivery__form-input" name="address"
-                 placeholder="ул. Большая Конюшенная, 19/8"/>
-        </label>
+        <Field
+          className="delivery__form-input"
+          type="text" name="address"
+          placeholder="ул. Большая Конюшенная, 19/8"
+          children="Адрес"/>
         <Button className="delivery__button button">Отправить</Button>
       </form>
     </div>

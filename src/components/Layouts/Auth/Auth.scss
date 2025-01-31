@@ -40,7 +40,7 @@
       color: var(--basic-extra-dark);
     }
 
-    &__input-email, &__input-password {
+    &__input {
       @include square(324px);
       padding-inline: 15px;
       height: var(--input-height);

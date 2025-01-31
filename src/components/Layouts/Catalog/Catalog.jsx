@@ -1,9 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import ProductCard from "@/components/UI/ProductCard";
-import catalogAPI from "@/api/catalogAPI.js";
-import addWithIdElement from "@/utils/addWithIdElement.js";
-import {setCatalog} from "@/slices/catalogSlice.js";
+import catalogAPI from "@/api/catalogAPI";
+import addWithIdElement from "@/utils/addWithIdElement";
+import {setCatalog} from "@/slices/catalogSlice";
 
 import './Catalog.scss'
 

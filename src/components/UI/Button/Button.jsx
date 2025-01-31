@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import {Link} from "react-router-dom";
+
 import "./Button.scss"
 
 const Button = (props) => {
@@ -28,9 +29,10 @@ const Button = (props) => {
 
   const Component = isLink ? (isRegularLink ? "a" : Link) : "button"
   const specificProps = isLink ? linkProps : buttonProps
+
   return (
     <Component
-      className={classNames(className)}
+      className={classNames(className, isLink ? "" : "button" )}
       {...specificProps}
     >
       {children}

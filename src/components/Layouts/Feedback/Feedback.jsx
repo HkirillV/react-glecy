@@ -25,7 +25,7 @@ const Feedback = () => {
         </address>
         <div className="feedback__contacts">
           <p className="feedback__contacts-text">Для заказов по телефону:</p>
-          <Button className="feedback__contacts-phone" href="tel:+7 (812) 812-12-12">+7 (812) 812-12-12</Button>
+          <Button className="feedback__contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</Button>
           <p className="feedback__contacts-hours">(с 10 до 20 ежедневно)</p>
         </div>
         <Button className="feedback__button button" onClick={onClick}>Форма обратной связи</Button>

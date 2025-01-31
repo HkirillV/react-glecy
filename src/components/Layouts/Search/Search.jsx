@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import {useRef, useState} from "react";
-import useOutsideClick from "@/hooks/useOutsideClick";
+import useOutsideClick from "@/hooks/useOutsideClick/useOutsideClick";
 import {FiSearch} from "react-icons/fi";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";

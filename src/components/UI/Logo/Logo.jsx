@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import {Link} from "react-router-dom";
+
 import "./Logo.scss"
 
 const Logo = (props) => {

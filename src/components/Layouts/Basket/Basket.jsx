@@ -1,6 +1,6 @@
 import {useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import useOutsideClick from "@/hooks/useOutsideClick";
+import useOutsideClick from "@/hooks/useOutsideClick/useOutsideClick";
 import {SlBasket} from "react-icons/sl";
 import classNames from "classnames";
 import {setBasketToCache} from "@/utils/toCache";
@@ -67,7 +67,9 @@ const Basket = () => {
               <div className="basket-preview__footer">
                 <Button className="basket-preview__button button">Оформить заказ</Button>
                 <p
-                  className="basket-preview__total-price">{`Итого: ${basket.reduce((acc, product) => acc + product.price, 0)} ₽`}</p>
+                  className="basket-preview__total-price">
+                  {`Итого: ${basket.reduce((acc, product) => acc + product.price, 0)} ₽`}
+                </p>
               </div>
             </>
           ) : <p className="basket__empty">Ваша корзина пока <br/> пуста</p>}

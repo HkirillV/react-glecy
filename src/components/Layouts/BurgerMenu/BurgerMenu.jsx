@@ -21,7 +21,7 @@ const BurgerMenu = (props) => {
       <div className="mobile-overlay__body">
         <ul className="mobile-overlay__list">
           <li className="mobile-overlay__link">
-            <a href="tel:+7 800 555-86-28">+7 800 555-86-28</a>
+            <a href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
           <li className="mobile-overlay__link">
             <Search/>

@@ -5,12 +5,11 @@ import store from "@/store/store";
 import Container from "@/components/Layouts/Container";
 import Header from "@/components/Layouts/Header";
 import Footer from "@/components/Layouts/Footer";
-import HomePage from "@/components/Layouts/Page/HomePage";
-import CatalogPage from "@/components/Layouts/Page/CatalogPage";
+import HomePage from "@/pages/HomePage";
+import CatalogPage from "@/pages/CatalogPage";
 import NotFound from "@/components/Layouts/NotFound";
 
 import "./styles"
-import "./App.scss"
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);

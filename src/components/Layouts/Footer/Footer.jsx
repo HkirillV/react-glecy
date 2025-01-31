@@ -1,4 +1,5 @@
 import Button from "@/components/UI/Button";
+
 import "./Footer.scss"
 
 const socials = [

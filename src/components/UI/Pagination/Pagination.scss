@@ -5,6 +5,8 @@
   right: 0;
   bottom: 13px;
   display: flex;
+  align-items: center;
+  column-gap: 5px;
 
   &__list {
     display: flex;
@@ -29,8 +31,10 @@
   &__button {
     display: flex;
     align-items: center;
+    height: 16px;
     border: none;
     background: none;
+    color: var(--basic-extra-dark);
   }
 
   &__active-btn {

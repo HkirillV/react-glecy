@@ -7,7 +7,7 @@
   padding: 64px;
   margin-top: 80px;
   border-radius: var(--border-radius-sm);
-  background-image: url("/src/assets/images/delivery/доставка.png");
+  background-image: url("@/assets/images/delivery/delivery.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -71,14 +71,6 @@
       @include  media-mobile-s {
         flex-direction: column;
       }
-    }
-
-    &-label {
-      display: flex;
-      flex-direction: column;
-      row-gap: 8px;
-      font-weight: 700;
-      width: 100%;
     }
   }
 }

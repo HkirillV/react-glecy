@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import {useRef, useState} from "react";
-import useOutsideClick from "@/hooks/useOutsideClick";
+import useOutsideClick from "@/hooks/useOutsideClick/useOutsideClick";
 import {FiLogIn} from "react-icons/fi";
 import Button from "@/components/UI/Button";
-import Input from "@/components/UI/Input";
+import Field from "@/components/UI/Field";
 
 import "./Auth.scss"
 
@@ -23,19 +23,21 @@ const Auth = () => {
 
   return (
     <div className="auth" ref={authRef}>
-      <Button className={classNames("auth__button button", {"is-active": isOpen})}
+      <Button className={classNames("auth__button", {"is-active": isOpen})}
               onClick={onAuthClick}><FiLogIn/>Вход</Button>
       {isOpen ? (
         <form className="auth-form">
           <h4 className="auth-form__title">Личный Кабинет</h4>
-          <label className="auth-form__label">
-            <Input className="auth-form__input-email" type="email" name="email" placeholder="email@example.com"/>
-          </label>
-          <label className="auth-form__label">
-            <Input className="auth-form__input-password" type="password" name="password" placeholder="******"/>
-          </label>
+          <Field
+            className="auth-form__input"
+            type="email"
+            placeholder="email@example.com"/>
+          <Field
+            className="auth-form__input"
+            type="password"
+            placeholder="******"/>
           <div className="auth-form__footer">
-            <Button className="auth-form__footer-button button">Войти</Button>
+            <Button className="auth-form__footer-button">Войти</Button>
             <ul className="auth-form__footer-list">
               <li className="auth-form__footer-item">
                 <Button className="auth-form__footer-link" href="/">Забыли пароль?</Button>

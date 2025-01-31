@@ -52,11 +52,11 @@ const Slide = () => {
                 и молока с вкуснейшим клубничным джемом –
                 это идеальный десерт для всей семьи.
               </p>
-              <Button className="slide__inner-button button">Заказать</Button>
+              <Button className="slide__inner-button">Заказать</Button>
             </div>
             <div className="slide__inner-image-wrapper">
               <img className="slide__inner-image"
-                   src="/src/assets/images/slide/мороженое_1.png"
+                   src="/src/assets/images/slide/ice-cream-1.png"
                    width="312"
                    height="507"
                    loading="lazy"
@@ -71,11 +71,11 @@ const Slide = () => {
               <p className="slide__inner-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть
                 и
                 наслаждение даже в самый жаркий летний день.</p>
-              <Button className="slide__inner-button button">Заказать</Button>
+              <Button className="slide__inner-button">Заказать</Button>
             </div>
             <div className="slide__inner-image-wrapper">
               <img className="slide__inner-image"
-                   src="/src/assets/images/slide/мороженое_2.png"
+                   src="/src/assets/images/slide/ice-cream-2.png"
                    width="312"
                    height="507"
                    loading="lazy"
@@ -95,7 +95,7 @@ const Slide = () => {
             </div>
             <div className="slide__inner-image-wrapper">
               <img className="slide__inner-image"
-                   src="/src/assets/images/slide/мороженое_3.png"
+                   src="/src/assets/images/slide/ice-cream-3.png"
                    width="312"
                    height="507"
                    loading="lazy"
@@ -119,7 +119,7 @@ const Slide = () => {
         <SwiperSlide className="sub-slide__item">
           <div className="sub-slide__wrapper">
             <img className="sub-slide__image"
-                 src="/src/assets/images/slide/subslide/мороженое_3.png"
+                 src="/src/assets/images/slide/subslide/ice-cream-3.png"
                  width="66"
                  height="150"
                  loading="lazy"
@@ -129,7 +129,7 @@ const Slide = () => {
         <SwiperSlide className="sub-slide__item">
           <div className="sub-slide__wrapper">
             <img className="sub-slide__image"
-                 src="/src/assets/images/slide/subslide/мороженое_2.png"
+                 src="/src/assets/images/slide/subslide/ice-cream-2.png"
                  width="66"
                  height="150"
                  loading="lazy"
@@ -139,7 +139,7 @@ const Slide = () => {
         <SwiperSlide className="sub-slide__item">
           <div className="sub-slide__wrapper">
             <img className="sub-slide__image"
-                 src="/src/assets/images/slide/subslide/мороженое_1.png"
+                 src="/src/assets/images/slide/subslide/ice-cream-1.png"
                  width="66"
                  height="150"
                  loading="lazy"

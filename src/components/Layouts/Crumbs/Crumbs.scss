@@ -14,13 +14,14 @@
     align-items: center;
     column-gap: 8px;
     font-weight: 700;
+  }
 
-    &_active {
-      border-bottom: var(--border-basic-extra-dark);
-    }
+  &__active {
+    border-bottom: var(--border-basic-extra-dark);
   }
 
   &__icon {
-    font-weight: 700;
+    width: 12px;
+    height: 12px;
   }
 }

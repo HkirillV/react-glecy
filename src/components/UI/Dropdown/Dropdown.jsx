@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from "react";
 import classNames from "classnames";
 import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import useOutsideClick from "@/hooks/useOutsideClick";
+import useOutsideClick from "@/hooks/useOutsideClick/useOutsideClick";
 import addWithIdElement from "@/utils/addWithIdElement";
 import {addCrumbsSlice} from "@/slices/crumbsSlice";
 import catalogAPI from "@/api/catalogAPI";
@@ -45,7 +45,7 @@ const Dropdown = () => {
   return (
     <div className="dropdown" ref={dropdownRef}>
       <Button
-        className={classNames('dropdown__button button', {"is-active": isOpen})}
+        className={classNames("dropdown__button", {"is-active": isOpen})}
         onClick={onButtonDropdownClick}>
         Каталог
         <IoIosArrowDown className={classNames({"dropdown__icon": isOpen})}/>

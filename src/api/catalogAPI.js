@@ -42,9 +42,6 @@ const catalogAPI = {
   getCatalogHome: async () => {
     return axiosClient.get("/catalogHome").then(({data}) => data);
   },
-  getCatalogPage: async () => {
-    return axiosClient.get("/catalogPage").then(({data}) => data);
-  },
   getCatalogCrumbs: async () => {
     return axiosClient.get("/crumbs").then(({data}) => data);
   },
@@ -60,6 +57,12 @@ const catalogAPI = {
   getFilterSorts: async () => {
     return axiosClient.get("/sorts").then(({data}) => data);
   },
+  getDescriptions: async () => {
+    return axiosClient.get("/descriptions").then(({data}) => data);
+  },
+  getPromo: async () => {
+    return axiosClient.get("/promo").then(({data}) => data);
+  }
 }
 
 export default catalogAPI

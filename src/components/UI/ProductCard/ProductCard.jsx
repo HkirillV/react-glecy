@@ -32,7 +32,7 @@ const ProductCard = (props) => {
       <p className="product-card__description">{description}</p>
       <div className="product-card__footer">
         <p className="product-card__price">{`${price} ₽/кг`}</p>
-        <Button className="product-card__button button"
+        <Button className="product-card__button"
                 onClick={() => onAddProductToCart({id, title, description, price, imgSrc})}><SlBasket/></Button>
       </div>
     </div>

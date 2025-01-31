@@ -19,6 +19,7 @@ const Filter = () => {
   });
 
   const [categorySort, setCategorySort] = useState("popularity")
+
   const [fat, setFat] = useState([]);
   const [fillers, setFillers] = useState([]);
   const [price, setPrice] = useState([MIN_PRICE_SLIDE, MAX_PRICE_SLIDE]);
@@ -69,16 +70,6 @@ const Filter = () => {
     })
   }
 
-  const onCheckingSelectedField = (e) => {
-    if(e.target.value === "цене") {
-      setCategorySort("price")
-    }
-
-    if(e.target.value === "по популярности") {
-      setCategorySort("popularity")
-    }
-  }
-
   return (
     <div className="filter">
       <form onSubmit={onFormSubmit} className="filter__form">
@@ -86,13 +77,15 @@ const Filter = () => {
           <div className="filter__inner">
             <p className="filter__title">Сортировка:</p>
             <label className="filter__label">
-              <select className="filter__select" onChange={onCheckingSelectedField}>
+              <select className="filter__select" onChange={({target}) => setCategorySort(target.value)}>
                 {filters.sorts.length > 0 && (
-                  filters.sorts.map(({id, categorySort}) => (
+                  filters.sorts.map(({id, categoryName, categoryValue}) => (
                     <option
                       className="filter__option"
-                      key={id}>
-                      {categorySort}
+                      key={id}
+                      value={categoryValue}
+                    >
+                      {categoryName}
                     </option>
                   ))
                 )}
@@ -127,7 +120,7 @@ const Filter = () => {
                         }}
                       />
                       <span className="filter__input-custom"></span>
-                      <p className="filter__text">{name}</p>
+                      {name}
                     </label>
                   </li>
                 ))

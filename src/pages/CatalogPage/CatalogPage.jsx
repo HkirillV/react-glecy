@@ -1,7 +1,7 @@
 import { useState} from "react";
 import { useSelector} from "react-redux";
-import Button from "@/components/UI/Button/index";
-import Pagination from "@/components/UI/Pagination/index";
+import Button from "@/components/UI/Button";
+import Pagination from "@/components/UI/Pagination";
 import Filter from "@/components/Layouts/Filter"
 import Catalog from "@/components/Layouts/Catalog"
 import Crumbs from "@/components/Layouts/Crumbs";

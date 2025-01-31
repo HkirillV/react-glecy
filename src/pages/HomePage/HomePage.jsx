@@ -12,12 +12,7 @@ import Catalog from "@/components/Layouts/Catalog";
 
 import "./HomePage.scss"
 
-const HomePage = (props) => {
-  const {
-    onClick,
-    isOpen,
-  } = props
-
+const HomePage = () => {
   const catalog = useSelector((state) => state.catalog);
   const [catalogHome, setCatalogHome] = useState({});
   const currentProductCard = catalog.slice(0, catalogHome.maxNumberCards)
@@ -38,7 +33,7 @@ const HomePage = (props) => {
       <Swiper/>
       <Promo/>
       <Catalog title={catalogHome.title} currentProductCard={currentProductCard}/>
-      <BurgerMenu onClick={onClick} isOpen={isOpen}/>
+      <BurgerMenu/>
       <Description/>
       <Feed/>
       <Delivery/>
